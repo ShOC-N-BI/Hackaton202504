@@ -5,9 +5,8 @@ WORKDIR /app
 
 #download pips requirements to container from working directry. 
 COPY . /app
-RUN pip install pandas dash plotly psycopg2-binary irc nc
+RUN pip install psycopg2-binary irc nc
 #copy files into container. if above installs pip requirements, what does is this copying??? 
 
 #RUN app??? :) example suggests to port orward.
-#CMD ["python", "IRC.py"]
-CMD ["python", "-u", "DashApper.py"]
+CMD ["python", "IRC.py"]

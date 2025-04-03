@@ -204,8 +204,13 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         if found_cyber:
             print("Found enemy Cyber:", found_cyber)
 
+<<<<<<< Updated upstream
 
 # Start the bot
 bot = IRCBot("#shoebody", "bop")  # channel, nickname
+=======
+bot = IRCBot("#shoebody", "bop")  # channel, nickname
+# please select a channel and nickname unique to you and your org
+>>>>>>> Stashed changes
 bot.start()
 # please select a channel and nickname unique to you and your org

@@ -51,6 +51,24 @@ services:
     # restart: always
     # networks:
     #   - CSEC
+    depends_on:
+      - postgresDB
 # -------------------------------------------------------------
+# irc app
+  irc_app:
+    build: ./irc_app
+    container_name: irc_app_container
+    # depends_on:
+    # - database
+    ports:
+      - "8080:8080"
+    volumes:
+    - ./irc_app:/app
+    # restart: always
+    # networks:
+    #   - CSEC
+    depends_on:
+      - postgresDB
+
 volumes:
   db_data:
