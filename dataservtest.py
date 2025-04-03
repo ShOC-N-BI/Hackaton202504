@@ -1,8 +1,6 @@
 import irc.bot
 import sys
-
 # lists
-
 # air_fighter = [
 #     "MiG-21", "MiG-15", "MiG-17", "MiG-19", "MiG-23", "MiG-25", "MiG-29", "MiG-31", 
 #     "Su-7", "Su-9", "Su-11", "Su-15", "Su-17", "Su-20", "Su-22", "Su-24", "Su-25", 
