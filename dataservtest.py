@@ -1,5 +1,6 @@
 import irc.bot
 import sys
+import re
 # lists
 # air_fighter = [
 #     "MiG-21", "MiG-15", "MiG-17", "MiG-19", "MiG-23", "MiG-25", "MiG-29", "MiG-31", 
@@ -13,12 +14,12 @@ import sys
 #     "Tu-22", "Tu-22M", "Tu-82", "Tu-85", "Tu-91", "Tu-95", "Tu-98", "Tu-160", 
 #     "Yak-28", "Yak-28B"
 # ]
-air = ["UAV", "BOGEY", "BANDIT", "AAV", "BANZAI" ]
 # maritime =["DESTROYER", "FRIGATE","CRUISER","SUBMARINE","SUB",]
-# land= ["JASSM","ATTACK"]
+# friendly =["ANGELS","ANYFACE","BIRD","BITTERSWEET","BLIND","BRUISER","BULLDOG","CHICK"]
+air = ["UAV", "BOGEY", "BANDIT", "BANZAI", "AAV" ]
+land= ["JASSM","ATTACK"]
 intel = ["RADIO", "EMISSION", "EMISSIONS","BLUR","AUTOCAT","BEAM RIDER"]
 cyber = ["FORWARD LOOKUP", "REQUEST","ALLIGATOR","NETWORK","TRAFFIC"]
-# friendly =["ANGELS","ANYFACE","BIRD","BITTERSWEET","BLIND","BRUISER","BULLDOG","CHICK"]
 
 # process message
 def extracted_chat(message):
@@ -30,18 +31,18 @@ def extracted_chat(message):
     
     # Extracts the message after the second '('
     if second_parenthesis_pos != -1:
-        text_second_parenthesis = message[second_parenthesis_pos + 1:]  # Everything after the second '('
-        
+        text_second_parenthesis = message[second_parenthesis_pos + 1:]#Everything after the second '('
+
+        words = re.findall(r'\b\w+\b', text_second_parenthesis)  # Extract words only (ignores punctuation)
         # Split the extracted text into words
-        words = text_second_parenthesis.split()  # Split into words
-        first_8_words = words[:9]  # Only the first 8 words
+        # words = text_second_parenthesis.split()  # Split into words
+        first_words = words[:13]  # Only the first 8 words
         
         # lists 
         found_air = []
         found_intel = []
         found_cyber = []
-        # found_maritime = []
-        # found_land =[]
+        found_land =[]
 
         # Check each word and categorize it
         # for word in first_8_words:
@@ -54,19 +55,21 @@ def extracted_chat(message):
         #     elif word in cyber:
         #         found_cyber.append(word)
 
-        for word in first_8_words:
-            if word.lower() in [x.lower() for x in air]:  # Convert both to lowercase 
+        for word in first_words:
+            filtered_word = re.sub(r'[^a-zA-Z]', '', word)
+            #checks words in list
+            if filtered_word.lower() in [x.lower() for x in air]:  # Convert both to lowercase 
                 found_air.append(word)
-            # elif word.lower() in [x.lower() for x in maritime]:  
-            #     found_maritime.append(word)
-            elif word.lower() in [x.lower() for x in intel]:
+            elif filtered_word.lower() in [x.lower() for x in land]:  
+                found_land.append(word)
+            elif filtered_word.lower() in [x.lower() for x in intel]:
                 found_intel.append(word)
-            elif word.lower() in [x.lower() for x in cyber]:
+            elif filtered_word.lower() in [x.lower() for x in cyber]:
                 found_cyber.append(word)
 
         # Return the categorized lists
-        return found_air, found_intel, found_cyber, #found_maritime
-    return [], [], []#, []  # If none return empty list
+        return found_air, found_intel, found_cyber, found_land
+    return [], [], [], []  # If none return empty list
 
 # IRCBot
 class IRCBot(irc.bot.SingleServerIRCBot):
@@ -93,11 +96,11 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         print(f"Received message: {message}")
 
         # Process message from chat
-        found_enemy, found_intel, found_cyber = extracted_chat(message)
+        found_enemy, found_intel, found_cyber, found_land= extracted_chat(message)
 
         # Print the results separately for each category
         print("Found Air enemy:", found_enemy)
-        # print("Found maritime enemy:", found_maritime)
+        print("Found land enemy:", found_land)
         print("Found enemy Intel:", found_intel)
         print("Found enemy Cyber:", found_cyber)
 
