@@ -1,75 +1,49 @@
-import irc.bot
-import sys
+import dash
+from dash import dcc, html, Input, Output
+import plotly.express as px
+import pandas as pd
+import queue
 
-class IRCBot(irc.bot.SingleServerIRCBot):
-    def __init__(self, channel, nickname, server="10.10.21.52", port=6667):
-        irc.bot.SingleServerIRCBot.__init__(self, [(server, port)], nickname, nickname)
-        self.channel = channel
+msg_queue = queue.Queue()
+
+# Dash app setup
+app = dash.Dash(__name__)
+
+# Store user message counts
+user_message_counts = {}
+
+def get_latest_messages():
+    """Pulls new messages from the queue and updates user message counts."""
+    while not msg_queue.empty():
+        msg = msg_queue.get()
+        user = msg["user"]
+        user_message_counts[user] = user_message_counts.get(user, 0) + 1  # Count messages per user
+
+# Dash layout
+app.layout = html.Div([
+    html.H1("Live IRC Chat Activity"),
+    dcc.Graph(id='live-graph'),
+    dcc.Interval(
+        id='interval-component',
+        interval=10 * 1000,  # 10 seconds
+        n_intervals=0
+    )
+])
+
+# Callback to update graph
+@app.callback(
+    Output('live-graph', 'figure'),
+    Input('interval-component', 'n_intervals')
+)
+def update_graph(n):
+    get_latest_messages()  # Get new messages
+    df = pd.DataFrame({
+        "User": list(user_message_counts.keys()),
+        "Messages Sent": list(user_message_counts.values())
+    })
     
-    def on_welcome(self, connection, event):
-        print("WELCOME")
-        connection.join(self.channel)
-    
-    def on_join(self, connection, event):
-        print(f"JOIN {self.channel}")
+    fig = px.bar(df, x="User", y="Messages Sent", title="User Message Activity in #shoebody")
+    return fig
 
-    def on_disconnect(self, connection, event):
-        print("DISCONNECT")
-        sys.exit(0)
-    
-    def on_pubmsg(self, connection, event):
-        print(f"{event.source} {event.target} > {event.arguments[0]}")
-
-bot = IRCBot("#test", "my_bot") # channel, nickname
-bot.start()
-
-while True:
-    print('.')
-    time.sleep(10)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# import dash
-# from dash import dcc, html
-# import plotly.express as px
-# import pandas as pd
-
-
-
-# # Dash app setup
-# app = dash.Dash(__name__)
-
-# # Hardcoded data
-# data = {
-#     'category': ['A', 'B', 'C', 'D', 'E'],
-#     'values': [10, 20, 30, 40, 50]
-# }
-
-# df = pd.DataFrame(data)
-
-# # Create a bar plot using the hardcoded data
-# fig = px.bar(df, x='category', y='values', title='Hardcoded Data Bar Chart')
-
-# # Dash layout
-# app.layout = html.Div([
-#     html.H1("Dash App with Hardcoded DEta"),
-#     dcc.Graph(figure=fig)
-# ])
-
-# if __name__ == '__main__':
-#     app.run(debug=True, host='0.0.0.0', port=8050)
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=8050)
