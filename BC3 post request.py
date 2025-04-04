@@ -18,3 +18,9 @@ print(f"Status Code: {response.status_code}")
 #push data from BC3 to dash app. 
 
 
+def send_request_to_bc3(ip, port, json_example):
+    url = f'http://{ip}:{port}/endpoint'
+    response = requests.get(url)
+    print(f"Status Code: {response.status_code}")
+    
+    return response

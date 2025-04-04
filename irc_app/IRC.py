@@ -2,7 +2,9 @@ import irc.bot
 import sys
 import psycopg2
 from DataResponse import extracted_chat
-
+ip = '10.10.26.105'
+port = 5001
+url = f'http://{ip}:{port}/endpoint'
 
 
 # Track number,e1.category, e1.trackId, e12.callsign
