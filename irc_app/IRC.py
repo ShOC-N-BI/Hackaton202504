@@ -4,6 +4,9 @@ import psycopg2
 from DataResponse import extracted_chat
 
 # Database connection
+print("Script running...")
+
+
 def get_db_connection():
     conn = psycopg2.connect(
         dbname="postgresDB",
@@ -16,13 +19,19 @@ def get_db_connection():
 
 # Function to insert message into PostgreSQL
 def insert_message(message):
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
-    conn.commit()
-    cur.close()
-    conn.close()
-    print(f"Message inserted into DB: {message}")
+    try: 
+        print("Begin inserting message")
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
+        # future input 
+        # cur.execute("INSERT INTO irc_messages (entity, action1, action2, action3) VALUES (%s)", (entity_desc, action1, action2, action3))
+        conn.commit()
+        cur.close()
+        conn.close()
+        print(f"Message inserted into DB: {message}")
+    except:
+        print("Message insert fail")
 
 class IRCBot(irc.bot.SingleServerIRCBot):
     def __init__(self, channel, nickname, server="10.10.21.52", port=6667):
@@ -55,9 +64,9 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         print("Found enemy Cyber:", found_cyber)
 
 def start_irc_bot():
-    bot = IRCBot("#shoebody", "S_Mendoza")
+    bot = IRCBot("#shoebody", "Skibby_Mendoza")
     print("IRC listener starting...")
     bot.start()
 
-if __name__ == "__main__":
-    start_irc_bot()
+
+start_irc_bot()
