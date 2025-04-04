@@ -14,7 +14,41 @@
 
 
 # friendly =["ANGELS","ANYFACE","BIRD","BITTERSWEET","BLIND","BRUISER","BULLDOG","CHICK"]
-air_friendly =[]
+
+air_friendly = [
+    "Bird", "Bird(s) affirm", "Bird(s) away", "Bird(s) negat", "Bittersweet", 
+    "Blue on blue", "Bruiser", "Buddy lock", "Buddy spike", "Bulldog", 
+    "Cherubs", "Chicks", "Clean", "Chattermark"
+]
+
+
+sea_friendly = [
+    "Bassett", "Bruiser", "Bulldog", "Cobra", "Cowboys", "Cyclops", "Deadeye"
+]
+
+land_friendly = [
+    "Base (number)", "Banzai", "Bracket", "Burn glint", "Buster", 
+    "Blank", "Bulldog", "Bump/Bump-up", "Brevity", "Burn glint", "Buster"
+]
+
+
+air_enemy = [
+    "Bandit", "Bogey", "Bogey dope", "Blow through", "Bloodhound", "Bracket", 
+    "Break (direction)", "Breakaway", "Bingo", "Brevity", "Bruiser", 
+    "Buddy lock", "Buddy spike", "Bugout", "Buster"
+]
+
+land_enemy = [
+    "Banzai", "Bracket", "Bump/Bump-up", "Burn glint", "Buster", "Blank", 
+    "Bulldog", "Brevity"
+]
+
+
+sea_enemy = [
+    "Bandit", "Bogey", "Bassett", "Bruiser", "Bulldog", "Cobra", "Cowboys", 
+    "Cyclops", "Deadeye"
+]
+
 
 rsam = [
     "SA-1 Guild", "SA-2 Guideline", "SA-3 Goa", "SA-4 Ganef", "SA-5 Gammon", 
@@ -124,19 +158,19 @@ def extracted_chat(message):
             # Check if word matches any entry in the categories
             if filtered_word_singular in [x.upper() for x in air_fighter]:
                 found_air.append(filtered_word_singular)
-            elif filtered_word in [x.upper() for x in air]:  
+            elif filtered_word_singular in [x.upper() for x in air]:  
                 found_air.append(filtered_word_singular)
 
-            elif filtered_word in [x.upper() for x in land]:  
+            elif filtered_word_singular in [x.upper() for x in land]:  
                 found_land.append(filtered_word_singular)
 
-            elif filtered_word in [x.upper() for x in navy]:  
+            elif filtered_word_singular in [x.upper() for x in navy]:  
                 found_navy.append(filtered_word_singular)
                 
-            elif filtered_word in [x.upper() for x in intel]:  
+            elif filtered_word_singular in [x.upper() for x in intel]:  
                 found_intel.append(filtered_word_singular)
 
-            elif filtered_word in [x.upper() for x in cyber]:  
+            elif filtered_word_singular in [x.upper() for x in cyber]:  
                 found_cyber.append(filtered_word_singular)
 
         # Prompt actions for found entities
