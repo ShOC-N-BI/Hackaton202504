@@ -3,6 +3,10 @@ import sys
 import psycopg2
 from DataResponse import extracted_chat
 
+
+
+# Track number,e1.category, e1.trackId, e12.callsign
+
 # Database connection
 def get_db_connection():
     conn = psycopg2.connect(
