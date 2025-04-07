@@ -22,20 +22,25 @@ def get_db_connection():
     return conn
 
 # Function to insert message into PostgreSQL
-def insert_message(message):
+def insert_message(message, entity, action1, action2, action3):
     try: 
         print("Begin inserting message")
         conn = get_db_connection()
         cur = conn.cursor()
-        # cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
+        cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
+        print("Main message inserted")
         # future input 
-        cur.execute("INSERT INTO pae (entity, action1, action2, action3) VALUES (%s)", (entity_desc, action1, action2, action3))
+        print(entity)
+        print(action1)
+        print(action2)
+        print(action3)
+        cur.execute("INSERT INTO pae (entity, action1, action2, action3) VALUES (%s, %s, %s, %s)", (entity, action1, action2, action3,))
         conn.commit()
         cur.close()
         conn.close()
         print(f"Message inserted into DB: {message}")
     except:
-        print("Message insert fail")
+        print("Message insert fail 1")
 
 class IRCBot(irc.bot.SingleServerIRCBot):
     def __init__(self, channel, nickname, server="10.10.21.52", port=6667):
@@ -57,10 +62,14 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         # Capture the IRC message
         message = event.arguments[0]
         print(f"Received message: {message}")
-        found_entity, action1, action2, action3 = extracted_chat(message)
+        try:
+            found_entity, action1, action2, action3 = extracted_chat(message)
+            insert_message(message, found_entity, action1, action2, action3)
+        except:
+            print("bad input")
         
         # Insert message into PostgreSQL
-        insert_message(message)
+        
 
         # Process message from chat
         

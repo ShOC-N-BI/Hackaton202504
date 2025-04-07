@@ -55,33 +55,42 @@ app = dash.Dash(__name__)
 app.layout = html.Div([
     html.H1("Live IRC Chat Activity", style={'textAlign': 'center', 'marginBottom': '30px'}),
     html.H2("Perceived Actionable Entity", style={'marginLeft': '.5vw'}),
-    html.H3("Description here", style={'marginLeft': '3vw'}),
+    html.Div(id='entity-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
+    #html.H3("Description here", style={'marginLeft': '3vw'}),
     html.H2("Battle Effect 1", style={'marginLeft': '2vw'}),
-    html.H3("Description here", style={'marginLeft': '4vw'}),
+    html.Div(id='action1-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
+    #html.H3("Description here", style={'marginLeft': '4vw'}),
     html.H2("Battle Effect 2", style={'marginLeft': '2vw'}),
-    html.H3("Description here", style={'marginLeft': '4vw'}),
+    html.Div(id='action2-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
+    #html.H3("Description here", style={'marginLeft': '4vw'}),
     html.H2("Battle Effect 3", style={'marginLeft': '2vw'}),
-    html.H3("Description here", style={'marginLeft': '4vw'}),
+    html.Div(id='action3-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
+    #html.H3("Description here", style={'marginLeft': '4vw'}),
     #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
     #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
     #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
-    dcc.Graph(id='live-graph'),
-    html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
+    #dcc.Graph(id='live-graph'),
+    html.Div(id='latest-message', style={'marginTop': '200px', 'fontSize': '18px', 'fontWeight': 'bold'}),
     dcc.Interval(
         id='interval-component',
-        interval=10 * 1000,  # 10 seconds
+        interval=1 * 1000,  # 1 seconds
         n_intervals=0
     )
 ])
 
 # Callback to update graph every 10 seconds
 @app.callback(
-    Output('live-graph', 'figure'),
+    Output('entity-message', 'children'),
+    Output('action1-message', 'children'),
+    Output('action2-message', 'children'),
+    Output('action3-message', 'children'),
+    #Output('live-graph', 'figure'),
     Output('latest-message', 'children'),
     Input('interval-component', 'n_intervals')
 )
 def update_graph(n):
     users_count = get_user_message_counts()  # Update counts
+    entity_msg = ""
 
     # Fetch latest message from DB
     try:
@@ -89,11 +98,30 @@ def update_graph(n):
         cur = conn.cursor()
         cur.execute("SELECT message FROM irc_messages ORDER BY timestamp DESC LIMIT 1")
         messages = cur.fetchall()
+
+        cur.execute("SELECT entity FROM pae ORDER BY timestamp DESC LIMIT 1")
+        pae_e = cur.fetchall()
+
+        cur.execute("SELECT action1 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        pae_1 = cur.fetchall()
+        
+        cur.execute("SELECT action2 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        pae_2 = cur.fetchall()
+
+        cur.execute("SELECT action3 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        pae_3 = cur.fetchall()
+
         cur.close()
         conn.close()
+
         latest_msg = messages[0][0] if messages else "No message found."
+        entity_msg = pae_e[0][0] if pae_e else "No message found"
+        action1_msg = pae_1[0][0] if pae_1 else "No message found"
+        action2_msg = pae_2[0][0] if pae_2 else "No message found"
+        action3_msg = pae_3[0][0] if pae_3 else "No message found"
     except:
         latest_msg = "Message pull failed."
+        print("Message pull failed.")
 
     # Create bar chart
     df = pd.DataFrame({
@@ -102,7 +130,7 @@ def update_graph(n):
     })
     fig = px.bar(df, x="User", y="Messages", title="User Message Activity in #tm_c2_coord")
 
-    return fig, f"Latest Message: {latest_msg}"
+    return f"{entity_msg}", f"{action1_msg}", f"{action2_msg}", f"{action3_msg}", f"Latest Message: {latest_msg}"
 
 if __name__ == '__main__':
     print("Starting Dash App...")
