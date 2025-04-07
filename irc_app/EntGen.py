@@ -50,25 +50,25 @@ def extracted_chat(message):
             if filtered_word in air_enemy:
                 entity, action1, action2, action3 = action_prompt(filtered_word)
                 print(f"Found Air Enemy: {filtered_word}")
-                break
+                return entity, action1, action2, action3
             elif filtered_word in surface:
                 entity, action1, action2, action3 = action_prompt(filtered_word)
                 print(f"Found Surface Entity: {filtered_word}")
-                break
+                return entity, action1, action2, action3
             elif filtered_word in intel:
                 entity, action1, action2, action3 = action_prompt(filtered_word)
                 print(f"Found Intel Entity: {filtered_word}")
-                break
+                return entity, action1, action2, action3
             elif filtered_word in cyber:
                 entity, action1, action2, action3 = action_prompt(filtered_word)
                 print(f"Found Cyber Entity: {filtered_word}")
-                break
+                return entity, action1, action2, action3
             elif filtered_word in civilian:
                 entity, action1, action2, action3 = action_prompt(filtered_word)
                 print(f"Found Civilian: {filtered_word}")
-                break
+                return entity, action1, action2, action3
     
-    # Return entity and actions found
+    # Return entity and actions if no entity is found
     print(f"Entity: {entity}")
     print(f"Actions: {action1}, {action2}, {action3}")
     return entity, action1, action2, action3
