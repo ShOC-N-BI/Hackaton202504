@@ -23,7 +23,7 @@ surface = ["DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SU
     "LHA", "T-AKE", "AOR", "LST", "T-AO"
 ]
 
-intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER"]
+intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN"]
 
 cyber = ["FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"]
 
@@ -32,8 +32,10 @@ civilian = [
 ]
 
 # Sample message to process
-message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
+#message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x j-16s were Yak-28s on UAV Imagery jassm  carrier on aav apron forward J-8 aircraft CV commercial vessel 25.045310306035184, -77.464458773165 in Lane Flamingo"
+message = "[10:59:16] Hydro_MSO: Intel,, Radio color tN 44840/41"
+
 def action_prompt(entity, description=""):
     if description:
         print(f"  Description: {description}")
@@ -53,7 +55,7 @@ def action_prompt(entity, description=""):
         actions = ["Investigate", "Communicate", "Ignore"]
 
     # Printing actions separately
-    print(f"  Actions for {entity}:")
+    # print(f"  Actions for {entity}:")
     for idx, action in enumerate(actions, 1):
         print(f"{idx}. {action}")
     # for action in actions:
