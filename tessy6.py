@@ -34,31 +34,34 @@ civilian = [
 # Sample message to process
 message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x j-16s were Yak-28s on UAV Imagery jassm  carrier on aav apron forward J-8 aircraft CV commercial vessel 25.045310306035184, -77.464458773165 in Lane Flamingo"
-def action_prompt(entity_type, entity, description=""):
+def action_prompt(entity, description=""):
     if description:
         print(f"  Description: {description}")
 
-    # print(f"  Actions you can take for {entity_type} '{entity}':")
-    # Different actions 
+    # Different actions
     if entity in air_enemy:
-        actions = ["Jam", "Attack", "Investigate", "Communicate"]
+        actions = ["Attack", "Investigate", "Communicate"]
     elif entity in surface:
-        actions = ["Jam", "Attack", "Investigate", "Communicate"]
+        actions = ["Attack", "Investigate", "Communicate"]
     elif entity in intel:
         actions = ["Jam", "Communicate", "Investigate"]
     elif entity in cyber:
         actions = ["Jam", "Hack", "Counter"]
     elif entity in civilian:
-        actions = ["Monitor", "Investigate", "Communicate", "Protect"]
+        actions = ["Monitor", "Investigate", "Communicate"]
     else:
-        actions = ["Investigate", "Communicate", "", ""]
+        actions = ["Investigate", "Communicate", "Ignore"]
 
-    print(f"  Actions for {entity}: {', '.join(actions)}")
+    # Printing actions separately
+    print(f"  Actions for {entity}:")
+    for idx, action in enumerate(actions, 1):
+        print(f"{idx}. {action}")
+    # for action in actions:
+    #     print(f"    - {action}")
     
-    # default action
+    # Default action
     chosen_action = actions[0]
     
-    print(f"  Action for {entity}: {chosen_action}")
     return chosen_action
 
 
@@ -88,39 +91,44 @@ def extracted_chat(message):
             # Clean up the word by keeping only alphanumeric characters or hyphens and make it uppercase
             filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
 
-            # Remove the 's' at the end for singular match (if any)
+            # Remove the 's' at the end for singular match
             filtered_s = filtered_word.rstrip('S')
 
             # Check the word against all categories 
             if filtered_s in air_enemy:  
                 found_air.append(filtered_s)
-                description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                print(f"Found Aircraft: {filtered_s}")
-                action_prompt("Air Enemy", filtered_s, description)
+                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
+                print(f"Found enemy Aircraft: {filtered_s}")
+                # action_prompt("Air Enemy", filtered_s, description)
+                action_prompt(filtered_s)
 
             elif filtered_s in surface:  
                 found_surface.append(filtered_s)
-                description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
+                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
                 print(f"Found Surface enemy: {filtered_s}")
-                action_prompt("Surface Enemy", filtered_s, description)
+                # action_prompt("Surface Enemy", filtered_s, description)
+                action_prompt(filtered_s)
 
             elif filtered_s in intel:  
                 found_intel.append(filtered_s)
-                description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
+                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
                 print(f"Found enemy Intel: {filtered_s}")
-                action_prompt("Intel", filtered_s, description)
-                
+                # action_prompt("Intel", filtered_s, description)
+                action_prompt(filtered_s)
+
             elif filtered_s in cyber:  
                 found_cyber.append(filtered_s)
-                description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
+                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
                 print(f"Found enemy Cyber: {filtered_s}")
-                action_prompt("Cyber", filtered_s, description)
+                # action_prompt("Cyber", filtered_s, description)
+                action_prompt(filtered_s)
 
             elif filtered_s in civilian:
                 found_civilian.append(filtered_s)
-                description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
+                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
                 print(f"Found Civilian: {filtered_s}")
-                action_prompt("Civilian", filtered_s, description)
+                # action_prompt("Civilian", filtered_s, description)
+                action_prompt(filtered_s)
         
         # Output the results               
         return found_air, found_surface, found_intel, found_cyber, found_civilian
