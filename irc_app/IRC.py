@@ -1,8 +1,8 @@
 import irc.bot
 import sys
 import psycopg2
-from DataResponse import extracted_chat
-
+# from DataResponse import extracted_chat
+from EntGen import extracted_chat
 
 
 # Track number,e1.category, e1.trackId, e12.callsign
@@ -27,9 +27,9 @@ def insert_message(message):
         print("Begin inserting message")
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
+        # cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
         # future input 
-        # cur.execute("INSERT INTO irc_messages (entity, action1, action2, action3) VALUES (%s)", (entity_desc, action1, action2, action3))
+        cur.execute("INSERT INTO pae (entity, action1, action2, action3) VALUES (%s)", (entity_desc, action1, action2, action3))
         conn.commit()
         cur.close()
         conn.close()
@@ -57,15 +57,13 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         # Capture the IRC message
         message = event.arguments[0]
         print(f"Received message: {message}")
+        found_entity, action1, action2, action3 = extracted_chat(message)
         
         # Insert message into PostgreSQL
         insert_message(message)
 
         # Process message from chat
-        found_enemy, found_intel, found_cyber = extracted_chat(message)
-        print("Found Air enemy:", found_enemy)
-        print("Found enemy Intel:", found_intel)
-        print("Found enemy Cyber:", found_cyber)
+        
 
 def start_irc_bot():
     bot = IRCBot("#shoebody", "Skibby_Mendoza")
