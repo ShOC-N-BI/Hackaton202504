@@ -53,30 +53,93 @@ app = dash.Dash(__name__)
 
 # Dash layout
 app.layout = html.Div([
-    html.H1("Live IRC Chat Activity", style={'textAlign': 'center', 'marginBottom': '30px'}),
-    html.H2("Perceived Actionable Entity", style={'marginLeft': '.5vw'}),
-    html.Div(id='entity-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
-    #html.H3("Description here", style={'marginLeft': '3vw'}),
-    html.H2("Battle Effect 1", style={'marginLeft': '2vw'}),
-    html.Div(id='action1-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
-    #html.H3("Description here", style={'marginLeft': '4vw'}),
-    html.H2("Battle Effect 2", style={'marginLeft': '2vw'}),
-    html.Div(id='action2-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
-    #html.H3("Description here", style={'marginLeft': '4vw'}),
-    html.H2("Battle Effect 3", style={'marginLeft': '2vw'}),
-    html.Div(id='action3-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold', 'marginLeft': '4vw'}),
-    #html.H3("Description here", style={'marginLeft': '4vw'}),
-    #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
-    #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
-    #html.Div(id='latest-message', style={'marginTop': '20px', 'fontSize': '18px', 'fontWeight': 'bold'}),
-    #dcc.Graph(id='live-graph'),
-    html.Div(id='latest-message', style={'marginTop': '200px', 'fontSize': '18px', 'fontWeight': 'bold'}),
-    dcc.Interval(
-        id='interval-component',
-        interval=1 * 1000,  # 1 seconds
-        n_intervals=0
-    )
+    html.Div([
+        html.H1("Live IRC Chat Activity", style={
+            'textAlign': 'center',
+            'marginBottom': '30px',
+            'fontSize': '40px'
+        }),
+
+        html.Div([
+            html.H2("Perceived Actionable Entity:"),
+            html.Div(id='entity-message')
+        ], style={
+            # 'backgroundColor': '#f9f9f9',
+            # 'border': '2px solid #ccc',
+            # 'borderRadius': '10px',
+            'padding': '20px',
+            'margin': '10px 4vw',
+            # 'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
+            'fontSize': '18px',
+            'fontWeight': 'bold'
+        }),
+
+        html.Div([
+            #html.H6("Battle Effect 1"),
+            html.Div(id='action1-message')
+        ], style={
+            'backgroundColor': '#f9f9f9',
+            'border': '2px solid #ccc',
+            'borderRadius': '10px',
+            'padding': '20px',
+            'margin': '10px 4vw',
+            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
+            'fontSize': '30px',
+            'fontWeight': 'bold'
+        }),
+
+        html.Div([
+            #html.H2("Battle Effect 2"),
+            html.Div(id='action2-message')
+        ], style={
+            'backgroundColor': '#f9f9f9',
+            'border': '2px solid #ccc',
+            'borderRadius': '10px',
+            'padding': '20px',
+            'margin': '10px 4vw',
+            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
+            'fontSize': '30px',
+            'fontWeight': 'bold'
+        }),
+
+        html.Div([
+            #html.H2("Battle Effect 3"),
+            html.Div(id='action3-message')
+        ], style={
+            'backgroundColor': '#f9f9f9',
+            'border': '2px solid #ccc',
+            'borderRadius': '10px',
+            'padding': '20px',
+            'margin': '10px 4vw',
+            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
+            'fontSize': '30px',
+            'fontWeight': 'bold'
+        }),
+
+        html.Div(id='latest-message', style={
+            'marginTop': '100px',
+            'fontSize': '16px',
+            'padding': '20px',
+            'textAlign': 'center',
+            'color': '#888'
+        }),
+
+        dcc.Interval(
+            id='interval-component',
+            interval=1 * 1000,
+            n_intervals=0
+        )
+    ], style={
+        'backgroundColor': '#dddddd',
+        'border': '4px solid #ccc',
+        'borderRadius': '20px',
+        'padding': '30px',
+        'margin': '40px auto',
+        'maxWidth': '90vw',
+        'boxShadow': '0 4px 16px rgba(0, 0, 0, 0.1)'
+    })
 ])
+
 
 # Callback to update graph every 10 seconds
 @app.callback(
