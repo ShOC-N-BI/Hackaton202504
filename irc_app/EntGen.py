@@ -35,18 +35,33 @@ surface = ["DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SU
     "CYCLOPS", "DEADEYE", "JASSM", "ATTACK", "AAV", "DDG", "CVN", "DDG", "CG", "LHD", "LPD", "LCS", "SSN", "SSBN", 
     "LHA", "T-AKE", "AOR", "LST", "T-AO", "FFG", "RADAR", "VESSEL", "SHIP", 
 ]
-Incoming = ["MISSILE", "ROCKET", "TORPEDO", "BOMB", "TORP", "CRUISE", "BALLISTIC MISSILE", "ANTI-SHIP MISSILE", "ANTI-AIR MISSILE", "AIR-TO-GROUND MISSILE", "SURFACE-TO-AIR MISSILE", "SURFACE-TO-SURFACE MISSILE", "LAND ATTACK CRUISE MISSILE", "SUBMARINE LAUNCHED CRUISE MISSILE", "SUBMARINE LAUNCHED BALLISTIC MISSILE", "SUBMARINE LAUNCHED ANTI-SHIP MISSILE", "SUBMARINE LAUNCHED LAND ATTACK CRUISE MISSILE"]
+Incoming = ["MISSILE", "ROCKET", "TORPEDO", "BOMB", "TORP", "CRUISE", "BALLISTIC","LAUNCHED", "LAUNCH", "FIRE", "ENGAGED",
+             "ANTI-SHIP MISSILE", "ASW", "AAM", "AGM", "A/S", "A/G", "A/A", "A/T", "A/D", "A/P", "A/L",
+               "SURFACE-TO-AIR",     "CRUISE-MISSILE","CRUISE"
+    "BALLISTIC-MISSILE",
+    "ANTI-SHIP-MISSILE",
+    "ANTI-AIR-MISSILE",
+    "AIR-TO-GROUND-MISSILE",
+    "SURFACE-TO-AIR-MISSILE",
+    "SURFACE-TO-SURFACE-MISSILE",
+    "LAND-ATTACK-CRUISE-MISSILE",
+    "SUBMARINE-LAUNCHED-CRUISE-MISSILE",
+    "SUBMARINE-LAUNCHED-BALLISTIC-MISSILE",
+    "SUBMARINE-LAUNCHED-ANTI-SHIP-MISSILE",
+    "SUBMARINE-LAUNCHED-LAND-ATTACK-CRUISE-MISSILE"
+    "SUBMARINE-LAUNCHED-ANTI-AIR-MISSILE"
+    ]
 
-intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR"]
+intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR","NOISE","SIGNAL","JAMMING"]
 
 cyber = ["FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"]
 
 civilian = [
-    "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN AREA", "HUMANITARIAN MISSION", "COMMERCIAL", "COMMERCIAL VESSEL", "COMMERCIAL PLANE", "COMMERCIAL A/C"
+    "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN-AREA", "HUMANITARIAN-MISSION", "COMMERCIAL", "COMMERCIAL-VESSEL", "COMMERCIAL-PLANE", "COMMERCIAL A/C"
 ]
-enemy = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"]
+enem = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"]
 
-rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN"]
+rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"]
 
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
@@ -73,6 +88,8 @@ def action_prompt(entity, description=""):
         elif i in cyber:
             actions = ["Jam", "Hack", "Counter"]
         elif i in civilian:
+            actions = ["Monitor", "Investigate", "Communicate"]
+        elif i in rando:
             actions = ["Monitor", "Investigate", "Communicate"]
         else:
             actions = None, None, None
@@ -120,6 +137,7 @@ def extracted_chat(message):
     found_civilian = []
     found_defend = []
     found_rando = []
+    found_enemy =[]
 
     for i, word in enumerate(words):
         filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
@@ -180,6 +198,15 @@ def extracted_chat(message):
             actions = action_prompt(filtered_s)
             action1, action2, action3 = actions[:3]
             return filtered_s, action1, action2, action3
+        
+        elif filtered_s in enem:
+            found_enemy.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
     
     return None, None, None, None
 
