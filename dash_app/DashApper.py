@@ -117,7 +117,7 @@ app.layout = html.Div([
         }),
 
         html.Div(id='latest-message', style={
-            'marginTop': '100px',
+            'marginTop': '50px',
             'fontSize': '16px',
             'padding': '20px',
             'textAlign': 'center',
