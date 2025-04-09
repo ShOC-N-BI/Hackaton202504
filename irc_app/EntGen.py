@@ -1,6 +1,5 @@
 import re
 
-
 air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "BANDIT", "BOGEY", "BOGEY DOPE", "BLOW THROUGH", "BLOODHOUND", "BRACKET", 
     "BREAK (DIRECTION)", "BREAKAWAY", "BINGO", "BREVITY", "BRUISER", "BUGOUT", "BUSTER", "MIG-21", "MIG-15", "MIG-17", "MIG-19", "MIG-23", "MIG-25", "MIG-29", "MIG-31",
@@ -15,141 +14,179 @@ air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "YY-20", "HY-6", "Il-78", "JZ-8", "JZ-7", "MIG-29", "MIG-31", "MIG-35", "SU-27", "SU-30", "SU-34", "SU-35", "SU-57", 
     "SU-24", "SU-25", "MI-8", "MI-24", "MI-28", "KA-52", "KA-60", "ANSAT", 
     "PANTHER", "IL-76", "IL-78", "IL-112", "IL-214", "AN-26", "AN-72", 
-    "BE-200", "TU-22M", "TU-160", "TU-95", "B-2", "S-400", "T-50", "T-14", "AWACS"
+    "BE-200", "TU-22M", "TU-160", "TU-95", "B-2", "S-400", "T-50", "T-14", 
+    "AWACS", "AIRCRAFT", "HELICOPTER", "HELO", "BOMBER", "BOMBERS", "FIGHTER", "FIGHTERS", "A/C", "AIRCRAFTS",
+    "MIG21", "MIG15", "MIG17", "MIG19", "MIG23", "MIG25", "MIG29", "MIG31",
+    "SU7", "SU9", "SU11", "SU15", "SU17", "SU20", "SU22", "SU24", "SU25",
+    "SU27", "SU30", "SU33", "SU35", "SU57", "YAK9", "YAK23", "YAK25", "YAK28",
+    "YAK38", "YAK41", "J16", "J50", "J36", "J35", "J20", "J15", "J16", "J10B", "J11B", "J10", "FC1", 
+    "JH7", "Su30MK2", "Su30MKK", "Su35S", "J11D", "J13", "J12", "J11", "J9", 
+    "J8", "J7", "J6", "J5", "J2", "MiG9", "Su27", "Q5", "Q6", "J16D", "J15D", 
+    "H20", "H8", "H7", "H6", "H5", "Tu14", "Tu2", "KJ600", "KJ500", "KJ2000", 
+    "Y9JZ ELINT", "Y8CB", "Y8DZ", "Y8G", "Y8GX3", "Y8JB", "Y8T", "Y8W", "Y8EW", 
+    "ZDK03", "Y8J", "KJ200", "Y7", "KJ1 AEWC", "An30",
+    "YY20", "HY6", "Il78", "JZ8", "JZ7", "MIG29", "MIG31", "MIG35", "SU27", "SU30", "SU34", "SU35", "SU57", 
+    "SU24", "SU25", "MI8", "MI24", "MI28", "KA52", "KA60", "IL76", "IL78", "IL112", "IL214", "AN26", "AN72", 
+    "BE200", "TU22M", "TU160", "TU95", "B2", "S400", "T50", "T14"
 ]
 
 surface = ["DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SUB", "CARRIER", "CV", "BANZAI", "BRACKET", "BUMP/BUMP-UP", "BURN GLINT", "BUSTER", "BLANK", 
     "BULLDOG", "BREVITY", "BANDIT", "BOGEY", "BASSETT", "BRUISER", "BULLDOG", "COBRA", "COWBOYS", 
     "CYCLOPS", "DEADEYE", "JASSM", "ATTACK", "AAV", "DDG", "CVN", "DDG", "CG", "LHD", "LPD", "LCS", "SSN", "SSBN", 
-    "LHA", "T-AKE", "AOR", "LST", "T-AO"
+    "LHA", "T-AKE", "AOR", "LST", "T-AO", "FFG", "RADAR", "VESSEL", "SHIP", 
 ]
+Incoming = ["MISSILE", "ROCKET", "TORPEDO", "BOMB", "TORP", "CRUISE", "BALLISTIC MISSILE", "ANTI-SHIP MISSILE", "ANTI-AIR MISSILE", "AIR-TO-GROUND MISSILE", "SURFACE-TO-AIR MISSILE", "SURFACE-TO-SURFACE MISSILE", "LAND ATTACK CRUISE MISSILE", "SUBMARINE LAUNCHED CRUISE MISSILE", "SUBMARINE LAUNCHED BALLISTIC MISSILE", "SUBMARINE LAUNCHED ANTI-SHIP MISSILE", "SUBMARINE LAUNCHED LAND ATTACK CRUISE MISSILE"]
 
-intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN"]
+intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR"]
 
 cyber = ["FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"]
 
 civilian = [
     "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN AREA", "HUMANITARIAN MISSION", "COMMERCIAL", "COMMERCIAL VESSEL", "COMMERCIAL PLANE", "COMMERCIAL A/C"
 ]
+enemy = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"]
 
-# Sample message to process
-#message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
-# message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x j-16s were Yak-28s on UAV Imagery jassm  carrier on aav apron forward J-8 aircraft CV commercial vessel 25.045310306035184, -77.464458773165 in Lane Flamingo"
-# message = "[10:59:16] Hydro_MSO: Intel,, Radio color tN 44840/41"
+rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN"]
+
+#message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
+#message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
+#message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 # extracted_chat(message)
-#message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
+# message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
+#message = "[11:22:33] WF_FYST: IntelOps: @ Hydro_MSO, TN 44993/94/95/96 are all 1x J-15 each track."
+# def get_description(words, index, max_words=5):
+#     description = ' '.join(words[index+1:index+max_words]) if index + max_words <= len(words) else ' '.join(words[index+1:])
+
 def action_prompt(entity, description=""):
     if description:
         print(f"  Description: {description}")
 
-    # Different actions
-    if entity in air_enemy:
-        actions = ["Attack", "Investigate", "Communicate"]
-    elif entity in surface:
-        actions = ["Attack", "Investigate", "Communicate"]
-    elif entity in intel:
-        actions = ["Jam", "Communicate", "Investigate"]
-    elif entity in cyber:
-        actions = ["Jam", "Hack", "Counter"]
-    elif entity in civilian:
-        actions = ["Monitor", "Investigate", "Communicate"]
-    else:
-        actions = ["Investigate", "Communicate", "Ignore"]
-
-    # Printing actions separately
-    # print(f"  Actions for {entity}:")
-    # for idx, action in enumerate(actions, 1):
-    #     print(f"{idx}. {action}")
-    
+    for i in entity.split():
+        if i in air_enemy:
+            actions = ["Attack", "Investigate", "Communicate"]
+        elif i in Incoming:
+            actions = ["Counter", "Evade", "Brace for impact"]
+        elif i in surface:
+            actions = ["Attack", "Investigate", "Communicate"]
+        elif i in intel:
+            actions = ["Jam", "Communicate", "Investigate"]
+        elif i in cyber:
+            actions = ["Jam", "Hack", "Counter"]
+        elif i in civilian:
+            actions = ["Monitor", "Investigate", "Communicate"]
+        else:
+            actions = None, None, None
+        break
     return actions
 
+def get_description(words, index, max_words=4):
+    description = ""
+    # Check if the word before the current entity is present and does not contain a colon or closing parenthesis
+    if index > 0 and (':' not in words[index - 1] and ')' not in words[index - 1]):
+        description = words[index - 1] + " "
+
+    # Now, add the entity and additional words to the description
+    for i in range(1, max_words + 1):
+        if index + i < len(words):
+            description += words[index + i] + " "
+
+    return description.strip()
 
 def extracted_chat(message):
-    # Convert the message to uppercase 
-    message_upper = message.upper()  
-
-    # Find second ')' character
-    first_parenthesis_pos = message_upper.find(')') 
+    message_upper = message.upper()
+    
+    # Find the positions of the second parenthesis ')'
+    first_parenthesis_pos = message_upper.find(')')
     second_parenthesis_pos = message_upper.find(')', first_parenthesis_pos + 1)
     
-    # Extract the text after second ')'
-    if second_parenthesis_pos != -1:
-        text_second_parenthesis = message_upper[second_parenthesis_pos + 1:]  # Everything after the second ')'
-        
-        # Split the message into words
-        words = text_second_parenthesis.split()
-
-        # Lists to hold found words 
-        found_air = []
-        found_intel = []
-        found_cyber = []
-        found_surface = []
-        found_civilian = []
-
-        for i, word in enumerate(words):
-            # Clean up the word by keeping only alphanumeric characters or hyphens and make it uppercase
-            filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
-
-            # Remove the 's' at the end for singular match
-            filtered_s = filtered_word.rstrip('S')
-            # Check the word against all categories 
-            if filtered_s in air_enemy:  
-                found_air.append(filtered_s)
-                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                # print(f"Found enemy Aircraft: {filtered_s}")
-                # action_prompt("Air Enemy", filtered_s, description)
-                actions = action_prompt(filtered_s)  # Get actions for entity
-                action1, action2, action3 = actions[:3]  # top3 actions
-                # print(f"Found enemy Aircraft: {filtered_s}")
-                return filtered_s, action1, action2, action3
-
-            elif filtered_s in surface:  
-                found_surface.append(filtered_s)
-                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                # print(f"Found Surface enemy: {filtered_s}")
-                # action_prompt("Surface Enemy", filtered_s, description)
-                actions = action_prompt(filtered_s)  # Get actions for entity
-                action1, action2, action3 = actions[:3]  # top 3 actions
-                # print(f"Found Surface enemy: {filtered_s}")
-                return filtered_s, action1, action2, action3
-
-            elif filtered_s in intel:  
-                found_intel.append(filtered_s)
-                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                # print(f"Found enemy Intel: {filtered_s}")
-                # action_prompt("Intel", filtered_s, description)
-                actions = action_prompt(filtered_s)  # Get actions for entity
-                action1, action2, action3 = actions[:3]  # top 3 actions
-                # print(f"Found enemy Intel: {filtered_s}")
-                return filtered_s, action1, action2, action3
-
-            elif filtered_s in cyber:  
-                found_cyber.append(filtered_s)
-                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                # print(f"Found enemy Cyber: {filtered_s}")
-                # action_prompt("Cyber", filtered_s, description)
-                actions = action_prompt(filtered_s)  # Get actions for entity
-                action1, action2, action3 = actions[:3]  # top 3 actions
-                # print(f"Found enemy Cyber: {filtered_s}")
-                return filtered_s, action1, action2, action3
-
-            elif filtered_s in civilian:
-                found_civilian.append(filtered_s)
-                # description = ' '.join(words[i+1:i+3]) if i + 2 < len(words) else ""
-                # print(f"Found Civilian: {filtered_s}")
-                # action_prompt("Civilian", filtered_s, description)
-                actions = action_prompt(filtered_s)  # Get actions for entity
-                action1, action2, action3 = actions[:3]  # top 3 actions
-                # print(f"Found Civilian: {filtered_s}")
-                return filtered_s, action1, action2, action3
+    # Find the second colon ':'
+    second_colon_pos = message_upper.find(':', message_upper.find(':') + 1)
     
-        return None, None, None, None
-    # insert code here may?
+    # If a second colon is found, start from that position
+    if second_colon_pos != -1:
+        start_pos = second_colon_pos + 1
+    else:
+        start_pos = second_parenthesis_pos + 1 if second_parenthesis_pos != -1 else 0  # Fallback to second parenthesis position if no second colon
+    
+    # Extract the message text starting from the found position (after second colon or second parenthesis)
+    text_to_process = message[start_pos:].strip()
+    
+    words = text_to_process.split()
 
-#filtered_s, action1, action2, action3 = extracted_chat(message)
+    found_air = []
+    found_intel = []
+    found_cyber = []
+    found_surface = []
+    found_civilian = []
+    found_defend = []
+    found_rando = []
+
+    for i, word in enumerate(words):
+        filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
+        filtered_s = filtered_word.rstrip('S')
+
+        if filtered_s in air_enemy:
+            found_air.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
+        if filtered_s in Incoming:
+            found_defend.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
+        elif filtered_s in surface:
+            found_surface.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
+        elif filtered_s in intel:
+            found_intel.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
+        elif filtered_s in cyber:
+            found_cyber.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+
+        elif filtered_s in civilian:
+            found_civilian.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+        
+        elif filtered_s in rando:
+            found_rando.append(filtered_s)
+            description = get_description(words, i)
+            filtered_s = filtered_s + " " + description
+            actions = action_prompt(filtered_s)
+            action1, action2, action3 = actions[:3]
+            return filtered_s, action1, action2, action3
+    
+    return None, None, None, None
+
+# filtered_s, action1, action2, action3 = extracted_chat(message)
 
 # Print test
-#print(f"Entity: {filtered_s}")
-#print(f"Action 1: {action1}")
-#print(f"Action 2: {action2}")
-#print(f"Action 3: {action3}")
+# print(f"Entity: {filtered_s}")
+# print(f"Action 1: {action1}")
+# print(f"Action 2: {action2}")
+# print(f"Action 3: {action3}")
