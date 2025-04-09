@@ -64,7 +64,8 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         print(f"Received message: {message}")
         try:
             found_entity, action1, action2, action3 = extracted_chat(message)
-            insert_message(message, found_entity, action1, action2, action3)
+            if found_entity is not None:
+                insert_message(message, found_entity, action1, action2, action3)
         except:
             print("bad input")
         
@@ -75,7 +76,7 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         
 
 def start_irc_bot():
-    bot = IRCBot("#shoebody", "Skibby_Mendoza")
+    bot = IRCBot("#tm_c2_coord", "Skibby_Mendoza")
     print("IRC listener starting...")
     bot.start()
 
