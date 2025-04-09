@@ -30,14 +30,26 @@ air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "BE200", "TU22M", "TU160", "TU95", "B2", "S400", "T50", "T14"
 ]
 
-surface = ["DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SUB", "CARRIER", "CV", "BANZAI", "BRACKET", "BUMP/BUMP-UP", "BURN GLINT", "BUSTER", "BLANK", 
-    "BULLDOG", "BREVITY", "BANDIT", "BOGEY", "BASSETT", "BRUISER", "BULLDOG", "COBRA", "COWBOYS", 
-    "CYCLOPS", "DEADEYE", "JASSM", "ATTACK", "AAV", "DDG", "CVN", "DDG", "CG", "LHD", "LPD", "LCS", "SSN", "SSBN", 
-    "LHA", "T-AKE", "AOR", "LST", "T-AO", "FFG", "RADAR", "VESSEL", "SHIP", 
+surface = ["DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SUB", 
+    "CARRIER", "CV", "BANZAI", "BRACKET", "BUMP/BUMP-UP", "BURN-GLINT", "BUSTER", 
+    "BLANK", "BULLDOG", "BREVITY", "BANDIT", "BOGEY", "BASSETT", "BRUISER", "COBRA", 
+    "COWBOYS", "CYCLOPS", "DEADEYE", "JASSM", "ATTACK", "AAV", "DDG", "CVN", "CG", 
+    "LHD", "LPD", "LCS", "SSN", "SSBN", "LHA", "T-AKE", "AOR", "LST", "T-AO", "FFG", 
+    "RADAR", "VESSEL", "SHIP", "BB", "CA", "SSGN", "LSD", "AO", "AE", "AK", "AR", "PC", 
+    "PY", "MCM", "MSC", "AIRCRAFT-CARRIER", "NUCLEAR-POWERED-AIRCRAFT-CARRIER", "BATTLESHIP", 
+    "HEAVY-CRUISER", "GUIDED-MISSILE-CRUISER", "DESTROYER", "GUIDED-MISSILE-DESTROYER", 
+    "FRIGATE", "GUIDED-MISSILE-FRIGATE", "SUBMARINE-(DIESEL-ELECTRIC)", 
+    "NUCLEAR-POWERED-SUBMARINE-(ATTACK)", "NUCLEAR-POWERED-BALLISTIC-MISSILE-SUBMARINE", 
+    "NUCLEAR-POWERED-GUIDED-MISSILE-SUBMARINE", "AMPHIBIOUS-ASSAULT-SHIP", 
+    "AMPHIBIOUS-ASSAULT-SHIP-(DIFFERENT-CONFIGURATION)", "AMPHIBIOUS-TRANSPORT-DOCK", 
+    "LANDING-SHIP-TANK", "DOCK-LANDING-SHIP", "FLEET-OILER", "AMMUNITION-SHIP", 
+    "CARGO-SHIP", "REPAIR-SHIP", "PATROL-CRAFT", "PATROL-YACHT", 
+    "MINE-COUNTERMEASURES-SHIP", "MINESWEEPER-COMMAND-SHIP"
+
 ]
 Incoming = ["MISSILE", "ROCKET", "TORPEDO", "BOMB", "TORP", "CRUISE", "BALLISTIC","LAUNCHED", "LAUNCH", "FIRE", "ENGAGED",
              "ANTI-SHIP MISSILE", "ASW", "AAM", "AGM", "A/S", "A/G", "A/A", "A/T", "A/D", "A/P", "A/L",
-               "SURFACE-TO-AIR",     "CRUISE-MISSILE","CRUISE"
+               "SURFACE-TO-AIR", "CRUISE-MISSILE","CRUISE",
     "BALLISTIC-MISSILE",
     "ANTI-SHIP-MISSILE",
     "ANTI-AIR-MISSILE",
@@ -62,7 +74,7 @@ civilian = [
 enem = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"]
 
 rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"]
-
+out =["SWIM","BEER"]
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
 #message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
@@ -91,6 +103,8 @@ def action_prompt(entity, description=""):
             actions = ["Monitor", "Investigate", "Communicate"]
         elif i in rando:
             actions = ["Monitor", "Investigate", "Communicate"]
+        elif i in enem:
+            actions = ["Attack","Psyop","Harass"]
         else:
             actions = None, None, None
         break
