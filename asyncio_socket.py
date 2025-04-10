@@ -4,6 +4,7 @@ import socket
 import json
 import datetime
 
+# Configuration for BC3 and chat server
 BC3HOST = "10.10.26.105"
 BC3PORT = 5001
 CHATHOST = "10.10.21.52"
@@ -13,6 +14,7 @@ CHATPASS = ""
 CHATCHANNEL = "#tm_c2_coord"
 CHATNICK = "Operator04"
 
+# Global DataFrame to store BC3 data
 global_bc3 = pd.DataFrame(columns=['trackNumber', 'timestamp'])
 global_bc3.set_index('trackNumber', inplace=True)
 
@@ -114,5 +116,6 @@ async def main():
     except asyncio.CancelledError:
         print("Server tasks cancelled")
 
+# Run the main function
 if __name__ == "__main__":
     asyncio.run(main())
