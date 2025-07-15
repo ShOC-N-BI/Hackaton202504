@@ -2,6 +2,7 @@ import re
 import json
 import sys
 import os
+import csv
 
 air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "BANDIT", "BOGEY", "BOGEY DOPE", "BLOW THROUGH", "BLOODHOUND", "BRACKET", 
@@ -139,7 +140,6 @@ def extract_and_classify_entities(message):
                 entity["location"] = None
 
             # Direction parsing
-            directions = []
             dir_keywords = [
                 "NORTH", "N", 
                 "NNE", "NE", "ENE",
@@ -152,11 +152,13 @@ def extract_and_classify_entities(message):
             ]
 
             context = ' '.join(words[max(0, i - 500):i + 500])
+            direction_found = None
             for d in dir_keywords:
                 if re.search(r'\b{}\b'.format(re.escape(d)), context):
-                    directions.append(d)
-            directions = list(set(directions))
-            entity["direction"] = ' '.join(directions) if directions else "unknown"
+                    direction_found = d
+                    break  # Stop after first match
+
+            entity["direction"] = direction_found if direction_found else "unknown"
 
             observed_entities.append(entity)
 
@@ -167,8 +169,8 @@ def process_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
-            if not line:
-                continue
+            if not line or ")" not in line:
+                continue  # Skip if empty or no closing parenthesis
             extracted = extract_and_classify_entities(line)
             if extracted:
                 results.append({
@@ -177,9 +179,9 @@ def process_file(filename):
                 })
     return results
 
+
 if __name__ == '__main__':
-    # Set your chat file path here:
-    input_file = 'data/chat.txt'  # <--- Change this path if needed
+    input_file = 'data/chat.txt'
 
     if not os.path.isfile(input_file):
         print(f"Input file not found: {input_file}")
@@ -189,7 +191,7 @@ if __name__ == '__main__':
 
     os.makedirs('data', exist_ok=True)
 
-    output_path = os.path.join('data', 'output.json')
+    output_path = os.path.join('src/data', 'output.json')
     with open(output_path, 'w', encoding='utf-8') as outfile:
         json.dump(output_data, outfile, indent=2)
 

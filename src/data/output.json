@@ -1,0 +1,346 @@
+[
+  {
+    "message": "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible UAV swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH"
+      },
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH"
+      },
+      {
+        "desc": "UNK",
+        "type": "rando",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "J-16",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 2,
+        "location": [
+          25.045310306035184,
+          -77.464458773165
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.045310306035184,
+          -77.464458773165
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:51:58] WF_Clark: Floater05_OPS (USS Guam DDG): @Maritime_OPS (Maritime Operations Center) Starting to recover first wave of AAVs.  Will start loading in about 15 min and it will take 1.5 hours to launch the second wave",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "AAV",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:55:00] WF_Clark: Analysis_Center01 (Analysis Center): @AOC_Ops (Air Operations Center) Possible Launch 26.341260817358034, -80.07799795384776 in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          26.341260817358034,
+          -80.07799795384776
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:57:09] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1210Z to 1215Z Radio emmission were detected at location D operating on high frequencies. in Lane Luxor",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:58:57] WF_Clark: CyberCOM_OPS (Cyber Command Unit): @Cyber_Ops (Cyber Defense Unit) Ref network A, event: Unsual amount of  forward lookup requests to evilattacker.com, suspect DNS exfiltration",
+    "observed_entities": [
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "REQUEST",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          27.689097938330395,
+          -80.38238737940404
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:02:08] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1207Z to 1212Z Radio emmission were detected at location G operating on low frequencies. in Lane Mandalay",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:08:00] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1210Z to 1215Z Radio emmission were detected IVO 28.387296666883145, -80.61614972659227 operating on VHF. in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          28.387296666883145,
+          -80.61614972659227
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:10:00] WF_Clark: WOC_OPS (Wing Operations Center): @AOC_Ops (Air Operations Center) Currently have lightening within 5, all aircraft on a ground stop.",
+    "observed_entities": [
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:12:18] WF_Clark: SCREWTOP (E-2D HAWKEYE): @AOC_Ops (Air Operations Center) SPIRIT22 (B-2) is fragged minus 1 LRASM in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "B-2",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "E"
+      }
+    ]
+  },
+  {
+    "message": "[11:17:22] WF_Clark: CyberCOM_OPS (Cyber Command Unit): @Cyber_Ops (Cyber Operations Center) Ref network 1, event: change in suspicious scan network traffic found on Airbase Donatello unclassified network",
+    "observed_entities": [
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "TRAFFIC",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:19:03] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1201Z to 1203Z Radio emmission were detected IVO 29.21303916211979, -81.01108978876046 operating on VHF in Lane Mandalay",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          29.21303916211979,
+          -81.01108978876046
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:24:04] WF_Clark: Floater09_OPS (USS McCain DDG): @Maritime_OPS (Maritime Operations Center) Engaging Civilan ship at 25.39474562731325, -75.85869068354299 in self-defense in Lane Bellagio",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:26:12] WF_Clark: Floater08_OPS (USS Liberty DDG): @Maritime_OPS (Maritime Operations Center) Responding to Freedoms' (LCS) distress call",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:28:28] WF_Clark: Floater11_OPS (USS Zumwalt DDG): @Maritime_OPS (Maritime Operations Center) Initiated strike on target BE-121, 24 TLAMS launched, 38 TLAMS remaining in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "TARGET",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "LAUNCHED",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:30:01] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1228Z Radio emmission were detected IVO 29.21303916211979, -81.01108978876046 operating on VHF in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          29.21303916211979,
+          -81.01108978876046
+        ],
+        "direction": "unknown"
+      }
+    ]
+  }
+]

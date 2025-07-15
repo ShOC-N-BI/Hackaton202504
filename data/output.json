@@ -1,0 +1,1348 @@
+[
+  {
+    "message": "[10:41:13] Hydro_MSO: Intel, request status on TN 44834",
+    "observed_entities": [
+      {
+        "desc": "REQUEST",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:42:54] WF_FYST: IntelOPS: @ Hydro_MSO 44642 is civilian aircraft.",
+    "observed_entities": [
+      {
+        "desc": "CIVILIAN",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:43:01] Hydro_MSO: c, civ",
+    "observed_entities": [
+      {
+        "desc": "CIV",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:43:42] Hydro_MSO: c, TN44642 is civ",
+    "observed_entities": [
+      {
+        "desc": "CIV",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:44:13] WF_Shoresy8: Space_Ops @Hydro_SL TN 44834 Adversary DDG1",
+    "observed_entities": [
+      {
+        "desc": "ADVERSARY",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:44:44] Hydro_SL: @AOC CCO_ , tn44834 upgrade ID To hostile, DDG1",
+    "observed_entities": [
+      {
+        "desc": "HOSTILE",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:44:52] Hydro_MSO: c, TN44834 DDG 1",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:44:58] WF_FYST: Intel OPS: @Hydro_MSO 44834 is adversary naval guided missile destroyer",
+    "observed_entities": [
+      {
+        "desc": "ADVERSARY",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "MISSILE",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "DESTROYER",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible UAV swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH WNW"
+      },
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH WNW"
+      },
+      {
+        "desc": "UNK",
+        "type": "rando",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH WNW"
+      }
+    ]
+  },
+  {
+    "message": "[10:45:22] Hydro_SL: @Cyber ups, req intele possible UAV swarm",
+    "observed_entities": [
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:46:00] Hydro_SL: @Cyberops, approaching from south, type unk. Main generator still inop, drifting WNW at 5 knots",
+    "observed_entities": [
+      {
+        "desc": "UNK",
+        "type": "rando",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "SOUTH WNW"
+      }
+    ]
+  },
+  {
+    "message": "[10:47:13] WF_Shoresy8: Cyber_Ops @Hydro_SL Confirm UAV swarm 6x group 1 UAV, ISR dones",
+    "observed_entities": [
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:47:28] WF_FYST: Intel OPS: @Hydro_MSO TN 44846 is fishing vessel",
+    "observed_entities": [
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:00] Hydro_MSO: c, 44846 fishing vessel",
+    "observed_entities": [
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:18] Hydro_SL: @Cyber ops copy UAV swarm",
+    "observed_entities": [
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:31] WF_FYST: Intel OPS: Hydro_MSO TN 44640 is civilian aircraft",
+    "observed_entities": [
+      {
+        "desc": "CIVILIAN",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:31] Hydro_SL: @ROck SL, update Cyber_Ops @Hydro_SL Confirm UAV swarm 6x group 1 UAV, ISR dones",
+    "observed_entities": [
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "UAV",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "J-16",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 2,
+        "location": [
+          25.045310306035184,
+          -77.464458773165
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.045310306035184,
+          -77.464458773165
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:50:25] wf_beep: AOC_CCO: Hydro_MSO c 44846 civilian, assume the unknown ID is just a link thing?",
+    "observed_entities": [
+      {
+        "desc": "CIVILIAN",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "UNKNOWN",
+        "type": "rando",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:50:42] Hydro_SL: @IntelOps, c J-16's please update if J16's takeoff",
+    "observed_entities": [
+      {
+        "desc": "J-16",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "S"
+      },
+      {
+        "desc": "J16",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "S"
+      }
+    ]
+  },
+  {
+    "message": "[10:50:43] WF_Chairman: ROCK_SL: AOC_CCO, TR34 updating mission SMACK TN44833 hostile DDG Type 2",
+    "observed_entities": [
+      {
+        "desc": "HOSTILE",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:51:58] WF_Clark: Floater05_OPS (USS Guam DDG): @Maritime_OPS (Maritime Operations Center) Starting to recover first wave of AAVs.  Will start loading in about 15 min and it will take 1.5 hours to launch the second wave",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "AAV",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:54:33] WF_Shoresy8: Intel_Ops: Hydro_SL TN 44849 fishing vessel",
+    "observed_entities": [
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:55:00] WF_Clark: Analysis_Center01 (Analysis Center): @AOC_Ops (Air Operations Center) Possible Launch 26.341260817358034, -80.07799795384776 in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          26.341260817358034,
+          -80.07799795384776
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:55:13] Hydro_MSO: c, tag TN 44849 fishing vessel",
+    "observed_entities": [
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:55:22] Hydro_SL: @Rock_SL tgt lane crosser tn 44641 , BE 289/102, 31K hostile",
+    "observed_entities": [
+      {
+        "desc": "HOSTILE",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:55:23] WF_Shoresy8: Intel_Ops: Hydro_SL TN 44845, 44848, 44847   J-15",
+    "observed_entities": [
+      {
+        "desc": "J-15",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:56:36] Hydro_SL: @Boulder SL, poss launch in flamingo status assets",
+    "observed_entities": [
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:56:50] Hydro_SL: @Intel ops, status poss launch lane flamingo Possible Launch 26.341260817358034, -80.07799795384776 in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          26.341260817358034,
+          -80.07799795384776
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          26.341260817358034,
+          -80.07799795384776
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:56:56] Hydro_MSO: c, tab TN 44845/47/48 J15",
+    "observed_entities": [
+      {
+        "desc": "J15",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:57:09] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1210Z to 1215Z Radio emmission were detected at location D operating on high frequencies. in Lane Luxor",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:58:48] WF_Shoresy8: intel_ops: Hydro_SL Neg Launch. Overhead IR indicates test event",
+    "observed_entities": [
+      {
+        "desc": "LAUNCH",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[10:58:57] WF_Clark: CyberCOM_OPS (Cyber Command Unit): @Cyber_Ops (Cyber Defense Unit) Ref network A, event: Unsual amount of  forward lookup requests to evilattacker.com, suspect DNS exfiltration",
+    "observed_entities": [
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "REQUEST",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          27.689097938330395,
+          -80.38238737940404
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:00:14] Hydro_SL: @Rock_SL hostile grp 541/52 untgt'd lane 2",
+    "observed_entities": [
+      {
+        "desc": "HOSTILE",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:00:52] Hydro_SL: @Intel ops , status emissions on VHF when able.",
+    "observed_entities": [
+      {
+        "desc": "EMISSION",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:02:02] Hydro_SL: @AOC tasking inv to Tiger flight when threat is attrited to sfc tracks",
+    "observed_entities": [
+      {
+        "desc": "THREAT",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:02:08] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1207Z to 1212Z Radio emmission were detected at location G operating on low frequencies. in Lane Mandalay",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:03:24] WF_Chairman: ROCK_SL: Hydro_SL, TR34 targeted TN 44836 4x ship J-10",
+    "observed_entities": [
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "J-10",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:03:51] Hydro_MSO: c, TN44836 tagged J10",
+    "observed_entities": [
+      {
+        "desc": "J10",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:04:21] WF_Chairman: Rock_SL: @AOC_CCO, Splash TN 44836 4x ship",
+    "observed_entities": [
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:04:32] WF_Shoresy8: Intel_Ops: Hydro_MSO TN 44868 1xDDG, TN 44869  1x DDG",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:04:57] WF_FYST: intelops: @ Hydro_SL TN# 40 = 4x J-11, 35 = 4x J-10",
+    "observed_entities": [
+      {
+        "desc": "J-11",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "J-10",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:05:10] Hydro_MSO: c, TN44868/69 tagged DDG",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:05:47] Hydro_MSO: c, TN44840 tagged 4x J-11 and 35 4x J10",
+    "observed_entities": [
+      {
+        "desc": "J-11",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "J10",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 4,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:06:41] Hydro_SL: @AOC , tasking TR71 smack 2x DDG TN 44868/69",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 2,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:08:00] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1210Z to 1215Z Radio emmission were detected IVO 28.387296666883145, -80.61614972659227 operating on VHF. in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          28.387296666883145,
+          -80.61614972659227
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:08:30] Hydro_SL: @JPR OSC unable due to threat",
+    "observed_entities": [
+      {
+        "desc": "THREAT",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:09:00] Hydro_SL: DDG",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:10:00] WF_Clark: WOC_OPS (Wing Operations Center): @AOC_Ops (Air Operations Center) Currently have lightening within 5, all aircraft on a ground stop.",
+    "observed_entities": [
+      {
+        "desc": "AIRCRAFT",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:11:00] Hydro_SL: @AOC Wz01/02 providing sead for smack 2x DDG 44868/69",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 2,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:12:18] WF_Clark: SCREWTOP (E-2D HAWKEYE): @AOC_Ops (Air Operations Center) SPIRIT22 (B-2) is fragged minus 1 LRASM in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "B-2",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "E"
+      }
+    ]
+  },
+  {
+    "message": "[11:12:41] wf_beep: AOC_CCO: @Hydro copy wx, do you need the John Paul Jones to target anything ivo Lane Wynn?",
+    "observed_entities": [
+      {
+        "desc": "TARGET",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:13:10] WF_FYST: IntelOPS: @ Hydro_SL TN 44869 is commercial vessel",
+    "observed_entities": [
+      {
+        "desc": "COMMERCIAL",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:13:35] WF_Chairman: ROCK_SL: Hydro_SL, TN44968 commercial a/c headed to Lane Wynn",
+    "observed_entities": [
+      {
+        "desc": "COMMERCIAL",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:13:35] WF_FYST: IntelOPS: @ Hydro_SL correction TN 44896 is commercial vessel",
+    "observed_entities": [
+      {
+        "desc": "COMMERCIAL",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:13:38] Hydro_MSO: c, tagging 69 comm vessel",
+    "observed_entities": [
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:14:55] Hydro_SL: @AOC , hostile single contact",
+    "observed_entities": [
+      {
+        "desc": "HOSTILE",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:14:58] wf_beep: JPJ_CIC: @Hydro, c target tn 44853, birds affirm, any friends nearby?",
+    "observed_entities": [
+      {
+        "desc": "TARGET",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:16:04] WF_Shoresy8: Cyber_Ops: Hydro_SL TN44849 Commercial Vessel, TN44896 DDG 1, TN4897 Commercial vessel",
+    "observed_entities": [
+      {
+        "desc": "COMMERCIAL",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "COMMERCIAL",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "VESSEL",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:17:22] WF_Clark: CyberCOM_OPS (Cyber Command Unit): @Cyber_Ops (Cyber Operations Center) Ref network 1, event: change in suspicious scan network traffic found on Airbase Donatello unclassified network",
+    "observed_entities": [
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "TRAFFIC",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "NETWORK",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:19:03] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1201Z to 1203Z Radio emmission were detected IVO 29.21303916211979, -81.01108978876046 operating on VHF in Lane Mandalay",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          29.21303916211979,
+          -81.01108978876046
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:20:31] Hydro_SL: @Boulder SL, did you copy intel update for emissions",
+    "observed_entities": [
+      {
+        "desc": "EMISSION",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:21:04] Hydro_SL: @ISR, req slew radars for update on lane mandalay for possible adversary activity",
+    "observed_entities": [
+      {
+        "desc": "RADAR",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "ADVERSARY",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:22:33] WF_FYST: IntelOps: @ Hydro_MSO, TN 44993/94/95/96 are all 1x J-15 each track.",
+    "observed_entities": [
+      {
+        "desc": "J-15",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:22:52] Hydro_MSO: c, tagging 93/94/95/96 J15",
+    "observed_entities": [
+      {
+        "desc": "J15",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:24:04] WF_Clark: Floater09_OPS (USS McCain DDG): @Maritime_OPS (Maritime Operations Center) Engaging Civilan ship at 25.39474562731325, -75.85869068354299 in self-defense in Lane Bellagio",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:24:32] Hydro_SL: @Bldr SL timestamp 11:18:38 for emissions",
+    "observed_entities": [
+      {
+        "desc": "EMISSION",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:25:08] Hydro_SL: @maritiime civ ship",
+    "observed_entities": [
+      {
+        "desc": "CIV",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:25:52] Hydro_SL: @AOC req ftr support to inv civ ship  25.39474562731325, -75.85869068354299",
+    "observed_entities": [
+      {
+        "desc": "CIV",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      },
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          25.39474562731325,
+          -75.85869068354299
+        ],
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:26:08] Hydro_MSO: Intel, request color TN 45013/14",
+    "observed_entities": [
+      {
+        "desc": "REQUEST",
+        "type": "cyber",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:26:12] WF_Clark: Floater08_OPS (USS Liberty DDG): @Maritime_OPS (Maritime Operations Center) Responding to Freedoms' (LCS) distress call",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:26:21] wf_beep: AOC_CCO: @Hydro_SL working civ ship spt",
+    "observed_entities": [
+      {
+        "desc": "CIV",
+        "type": "civilian",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "SHIP",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:26:37] WF_Chairman: Boulder_SL: Hydro_SL, copy chat ref emissions",
+    "observed_entities": [
+      {
+        "desc": "EMISSION",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:28:00] Hydro_SL: @AOC TR81 flameout, eng fire",
+    "observed_entities": [
+      {
+        "desc": "FIRE",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:28:20] WF_FYST: IntelOPS: @ Hydro_MSO TNs 13/14  are J-15s",
+    "observed_entities": [
+      {
+        "desc": "J-15",
+        "type": "air",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:28:28] WF_Clark: Floater11_OPS (USS Zumwalt DDG): @Maritime_OPS (Maritime Operations Center) Initiated strike on target BE-121, 24 TLAMS launched, 38 TLAMS remaining in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "DDG",
+        "type": "surface",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "TARGET",
+        "type": "enem",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      },
+      {
+        "desc": "LAUNCHED",
+        "type": "incoming",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:29:38] wf_beep: JPRC: @Hydro c, we're outa schlitz here, hope folks remember how to swim...",
+    "observed_entities": [
+      {
+        "desc": "SWIM",
+        "type": "out",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": null,
+        "direction": "unknown"
+      }
+    ]
+  },
+  {
+    "message": "[11:30:01] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1228Z Radio emmission were detected IVO 29.21303916211979, -81.01108978876046 operating on VHF in Lane Flamingo",
+    "observed_entities": [
+      {
+        "desc": "RADIO",
+        "type": "intel",
+        "affiliation": "unknown",
+        "count": 1,
+        "location": [
+          29.21303916211979,
+          -81.01108978876046
+        ],
+        "direction": "unknown"
+      }
+    ]
+  }
+]
