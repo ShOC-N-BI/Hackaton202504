@@ -1,0 +1,68 @@
+# === ENTITY EXTRACTION FUNCTION ===
+def extract_and_classify_entities(message):
+    message_upper = message.upper()
+    words = message_upper.split()
+
+    observed_entities = []
+
+    for i, word in enumerate(words):
+        word_clean = re.sub(r'[^\w\-]', '', word).rstrip('S')
+        entity_type = classify_entity(word_clean)
+
+        if entity_type:
+            entity = {
+                "desc": word_clean,
+                "type": entity_type,
+                "affiliation": "unknown"
+            }
+
+            # Count detection
+            if i > 0 and re.match(r'\d+X', words[i - 1]):
+                entity["count"] = int(words[i - 1][:-1])
+            else:
+                entity["count"] = 1
+
+            # Location extraction
+            latlon_matches = re.findall(r"(-?\d{1,3}\.\d+),\s*(-?\d{1,3}\.\d+)", message)
+            if latlon_matches:
+                lat, lon = latlon_matches[0]
+                entity["location"] = [float(lat), float(lon)]
+            else:
+                entity["location"] = None
+
+            # Direction parsing
+            directions = []
+            dir_keywords = ["NORTH", "SOUTH", "EAST", "WEST", "N", "S", "E", "W", "NE", "NW", "SE", "SW"]
+            context = ' '.join(words[max(0, i - 5):i + 5])
+            for d in dir_keywords:
+                if re.search(r'\b{}\b'.format(re.escape(d)), context):
+                    directions.append(d)
+            directions = list(set(directions))
+            entity["direction"] = ' '.join(directions) if directions else "unknown"
+
+            observed_entities.append(entity)
+            break  # Stop at first match for now
+
+    return {"observed_entities": observed_entities} if observed_entities else None
+
+# === MAIN ===
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Usage: python entity_parser.py <path_to_messages.txt>")
+        sys.exit(1)
+
+    file_path = sys.argv[1]
+
+    try:
+        with open(file_path, 'r') as f:
+            lines = f.readlines()
+
+        for line in lines:
+            result = extract_and_classify_entities(line.strip())
+            if result:  # Only print if entity was found
+                print(json.dumps(result, indent=2))
+
+    except FileNotFoundError:
+        print(f"Error: File not found: {file_path}")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")

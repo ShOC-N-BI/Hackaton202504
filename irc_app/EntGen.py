@@ -1,4 +1,6 @@
 import re
+import json
+import sys
 
 air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "BANDIT", "BOGEY", "BOGEY DOPE", "BLOW THROUGH", "BLOODHOUND", "BRACKET", 
@@ -84,150 +86,86 @@ out =["SWIM","BEER"]
 # def get_description(words, index, max_words=5):
 #     description = ' '.join(words[index+1:index+max_words]) if index + max_words <= len(words) else ' '.join(words[index+1:])
 
-def action_prompt(entity, description=""):
-    if description:
-        print(f"  Description: {description}")
+# === CLASSIFICATION FUNCTION ===
+def classify_entity(word):
+    if word in air_enemy:
+        return "air"
+    elif word in Incoming:
+        return "incoming"
+    elif word in surface:
+        return "surface"
+    elif word in intel:
+        return "intel"
+    elif word in cyber:
+        return "cyber"
+    elif word in civilian:
+        return "civilian"
+    elif word in enem:
+        return "enem"
+    elif word in rando:
+        return "rando"
+    elif word in out:
+        return "out"
+    return None
 
-    for i in entity.split():
-        if i in air_enemy:
-            actions = ["Attack", "Investigate", "Communicate"]
-        elif i in Incoming:
-            actions = ["Counter", "Evade", "Brace for impact"]
-        elif i in surface:
-            actions = ["Attack", "Investigate", "Communicate"]
-        elif i in intel:
-            actions = ["Jam", "Communicate", "Investigate"]
-        elif i in cyber:
-            actions = ["Jam", "Hack", "Counter"]
-        elif i in civilian:
-            actions = ["Monitor", "Investigate", "Communicate"]
-        elif i in rando:
-            actions = ["Monitor", "Investigate", "Communicate"]
-        elif i in enem:
-            actions = ["Attack","Psyop","Harass"]
-        else:
-            actions = None, None, None
-        break
-    return actions
-
-def get_description(words, index, max_words=4):
-    description = ""
-    # Check if the word before the current entity is present and does not contain a colon or closing parenthesis
-    if index > 0 and (':' not in words[index - 1] and ')' not in words[index - 1]):
-        description = words[index - 1] + " "
-
-    # Now, add the entity and additional words to the description
-    for i in range(1, max_words + 1):
-        if index + i < len(words):
-            description += words[index + i] + " "
-
-    return description.strip()
-
-def extracted_chat(message):
+# === ENTITY EXTRACTION ===
+def extract_and_classify_entities(message):
     message_upper = message.upper()
-    
-    # Find the positions of the second parenthesis ')'
-    first_parenthesis_pos = message_upper.find(')')
-    second_parenthesis_pos = message_upper.find(')', first_parenthesis_pos + 1)
-    
-    # Find the second colon ':'
-    second_colon_pos = message_upper.find(':', message_upper.find(':') + 1)
-    
-    # If a second colon is found, start from that position
-    if second_colon_pos != -1:
-        start_pos = second_colon_pos + 1
-    else:
-        start_pos = second_parenthesis_pos + 1 if second_parenthesis_pos != -1 else 0  # Fallback to second parenthesis position if no second colon
-    
-    # Extract the message text starting from the found position (after second colon or second parenthesis)
-    text_to_process = message[start_pos:].strip()
-    
-    words = text_to_process.split()
+    words = message_upper.split()
 
-    found_air = []
-    found_intel = []
-    found_cyber = []
-    found_surface = []
-    found_civilian = []
-    found_defend = []
-    found_rando = []
-    found_enemy =[]
+    observed_entities = []
 
     for i, word in enumerate(words):
-        filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
-        filtered_s = filtered_word.rstrip('S')
+        word_clean = re.sub(r'[^\w\-]', '', word).rstrip('S')
 
-        if filtered_s in air_enemy:
-            found_air.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+        entity_type = classify_entity(word_clean)
+        if entity_type:
+            entity = {}
+            entity["desc"] = word_clean
+            entity["type"] = entity_type
+            entity["affiliation"] = "unknown"
 
-        if filtered_s in Incoming:
-            found_defend.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+            # Count detection
+            if i > 0 and re.match(r'\d+X', words[i - 1]):
+                entity["count"] = int(words[i - 1][:-1])
+            else:
+                entity["count"] = 1
 
-        elif filtered_s in surface:
-            found_surface.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+            # Location extraction
+            latlon_matches = re.findall(r"(-?\d{1,3}\.\d+),\s*(-?\d{1,3}\.\d+)", message)
+            if latlon_matches:
+                lat, lon = latlon_matches[0]
+                entity["location"] = [float(lat), float(lon)]
+            else:
+                entity["location"] = None
 
-        elif filtered_s in intel:
-            found_intel.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+            # Direction parsing
+            directions = []
+            dir_keywords = ["NORTH", "SOUTH", "EAST", "WEST", "N", "S", "E", "W", "NE", "NW", "SE", "SW"]
+            context = ' '.join(words[max(0, i - 500):i + 500])
+            for d in dir_keywords:
+                if re.search(r'\b{}\b'.format(re.escape(d)), context):
+                    directions.append(d)
+            directions = list(set(directions))
+            entity["direction"] = ' '.join(directions) if directions else "unknown"
 
-        elif filtered_s in cyber:
-            found_cyber.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+            observed_entities.append(entity)
+            break  # Stop at first match for now
 
-        elif filtered_s in civilian:
-            found_civilian.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
-        
-        elif filtered_s in rando:
-            found_rando.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
-        
-        elif filtered_s in enem:
-            found_enemy.append(filtered_s)
-            description = get_description(words, i)
-            filtered_s = filtered_s + " " + description
-            actions = action_prompt(filtered_s)
-            action1, action2, action3 = actions[:3]
-            return filtered_s, action1, action2, action3
+    return {"observed_entities": observed_entities}
 
-    
-    return None, None, None, None
+# === MAIN (TERMINAL EXECUTION) ===
+if __name__ == '__main__':
+    import sys
 
-# filtered_s, action1, action2, action3 = extracted_chat(message)
+    if len(sys.argv) < 2:
+        print("Usage: python app.py \"<message text>\"")
+        sys.exit(1)
 
-# Print test
-# print(f"Entity: {filtered_s}")
-# print(f"Action 1: {action1}")
-# print(f"Action 2: {action2}")
-# print(f"Action 3: {action3}")
+    message_input = sys.argv[1]
+    result = extract_and_classify_entities(message_input)
+    print(json.dumps(result, indent=2))
+
+
+# Testing Json
+# python irc_app/EntGen.py "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 500x BEERs were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo Heading SW"
