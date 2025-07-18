@@ -9,4 +9,4 @@ RUN pip install psycopg2-binary irc nc
 #copy files into container. if above installs pip requirements, what does is this copying??? 
 
 #RUN app??? :) example suggests to port orward.
-CMD ["python", "-u", "/IRC.py"]
+CMD ["python", "-u", "/app/IRC.py"]
