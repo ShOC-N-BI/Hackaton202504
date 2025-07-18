@@ -75,10 +75,10 @@ enem = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION
 
 rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"]
 out =["SWIM","BEER"]
-#message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
-#message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
-#message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
-# extracted_chat(message)
+
+# message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
+# message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
+# message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 # message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x J-16s were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:22:33] WF_FYST: IntelOps: @ Hydro_MSO, TN 44993/94/95/96 are all 1x J-15 each track."
 # def get_description(words, index, max_words=5):
@@ -90,7 +90,7 @@ def action_prompt(entity, description=""):
 
     for i in entity.split():
         if i in air_enemy:
-            actions = ["Attack", "Investigate", "Communicate"]
+            actions = ["Attack", "Investigate", "Communicate", "Destroy"]
         elif i in Incoming:
             actions = ["Counter", "Evade", "Brace for impact"]
         elif i in surface:
@@ -225,8 +225,6 @@ def extracted_chat(message):
     return None, None, None, None
 
 # filtered_s, action1, action2, action3 = extracted_chat(message)
-
-# Print test
 # print(f"Entity: {filtered_s}")
 # print(f"Action 1: {action1}")
 # print(f"Action 2: {action2}")

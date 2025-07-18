@@ -17,10 +17,10 @@ users_count = {
 # Database connection
 def get_db_connection():
     conn = psycopg2.connect(
-        dbname="postgresDB",
-        user="kyle",
-        password="123",
-        host="postgresDB",
+        host="10.5.185.53",
+        dbname="shooca_db",
+        user="shooca",
+        password="shooca222",
         port="5432"
     )
     return conn
@@ -31,7 +31,7 @@ def get_user_message_counts():
     try:
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT message FROM irc_messages order by timestamp desc limit 1")
+        cur.execute("SELECT message FROM pae_data order by timestamp desc limit 1")
         messages = cur.fetchall()
         cur.close()
         conn.close()
@@ -40,7 +40,7 @@ def get_user_message_counts():
         print(messages[0][0])
         
     except:
-        print("Message pull fail")
+        print("Message pull fail from base text")
 
     user = "User0"  # This is just an example, you can refine the logic to detect the actual user
     if user in users_count:
@@ -159,33 +159,34 @@ def update_graph(n):
     try:
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT message FROM irc_messages ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT message FROM pae_data ORDER BY timestamp DESC LIMIT 1")
         messages = cur.fetchall()
 
-        cur.execute("SELECT entity FROM pae ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT entity FROM pae_data ORDER BY timestamp DESC LIMIT 1")
         pae_e = cur.fetchall()
 
-        cur.execute("SELECT action1 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action1 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
         pae_1 = cur.fetchall()
         
-        cur.execute("SELECT action2 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action2 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
         pae_2 = cur.fetchall()
 
-        cur.execute("SELECT action3 FROM pae ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action3 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
         pae_3 = cur.fetchall()
 
         cur.close()
         conn.close()
 
-        latest_msg = messages[0][0] if messages else "No message found."
-        entity_msg = pae_e[0][0] if pae_e else "No message found"
-        action1_msg = pae_1[0][0] if pae_1 else "No message found"
-        action2_msg = pae_2[0][0] if pae_2 else "No message found"
-        action3_msg = pae_3[0][0] if pae_3 else "No message found"
+        
     except:
         latest_msg = "Message pull failed."
         print("Message pull failed.")
 
+    latest_msg = messages[0][0] if messages else "No latest message found."
+    entity_msg = pae_e[0][0] if pae_e else "No message found for description"
+    action1_msg = pae_1[0][0] if pae_1 else "No message found for action 1"
+    action2_msg = pae_2[0][0] if pae_2 else "No message found for action 2"
+    action3_msg = pae_3[0][0] if pae_3 else "No message found for action 3"
     # Create bar chart
     df = pd.DataFrame({
         "User": list(users_count.keys()),

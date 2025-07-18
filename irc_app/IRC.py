@@ -13,10 +13,10 @@ print("Script running...")
 
 def get_db_connection():
     conn = psycopg2.connect(
-        dbname="postgresDB",
-        user="kyle",
-        password="123",
-        host="postgresDB",
+        host="10.5.185.53",
+        dbname="shooca_db",
+        user="shooca",
+        password="shooca222",
         port="5432"
     )
     return conn
@@ -27,14 +27,15 @@ def insert_message(message, entity, action1, action2, action3):
         print("Begin inserting message")
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("INSERT INTO irc_messages (message) VALUES (%s)", (message,))
+        # cur.execute("INSERT INTO pae_data (message) VALUES (%s)", (message,))
         print("Main message inserted")
         # future input 
         print(entity)
         print(action1)
         print(action2)
         print(action3)
-        cur.execute("INSERT INTO pae (entity, action1, action2, action3) VALUES (%s, %s, %s, %s)", (entity, action1, action2, action3,))
+        print(message)
+        cur.execute("INSERT INTO pae_data (entity, action1, action2, action3, message) VALUES (%s, %s, %s, %s, %s)", (entity, action1, action2, action3, message,))
         conn.commit()
         cur.close()
         conn.close()
@@ -43,7 +44,7 @@ def insert_message(message, entity, action1, action2, action3):
         print("Message insert fail 1")
 
 class IRCBot(irc.bot.SingleServerIRCBot):
-    def __init__(self, channel, nickname, server="10.10.21.52", port=6667):
+    def __init__(self, channel, nickname, server="10.5.185.72", port=6667):
         irc.bot.SingleServerIRCBot.__init__(self, [(server, port)], nickname, nickname)
         self.channel = channel
 
@@ -76,7 +77,7 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         
 
 def start_irc_bot():
-    bot = IRCBot("#tm_c2_coord", "Skibby_Mendoza")
+    bot = IRCBot("#app_dev", "Skibby_Mendoza")
     print("IRC listener starting...")
     bot.start()
 
