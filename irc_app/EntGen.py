@@ -76,6 +76,21 @@ enem = ["ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION
 rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"]
 out =["SWIM","BEER"]
 
+battle_effect_dict = {
+    "Attack":["Attack, Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade", "Advance", "Shoot", "Suppress", "Disable"],
+    "Investigate":["Investigate", "Consider", "Examine", "Explore", "Inspect", "Interrogate", "Probe", "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow"],
+    "Communicate":["Communicate", "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out", "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report"],
+    "Destroy":["Destroy", "Kill", "Nullify", "Terminate", "Vanish"],
+    "Counter":["Counter", "Hinder", "Counteract", "Oppose", "Respond", "Retaliate"],
+    "Evade":["Evade", "Avoid", "Circumvent", "Conceal", "Elude", "Escape", "Fend Off", "Flee", "Hide"],
+    "Brace for Impact": ["Brace for Impact", "Prepare", "Fortify"],
+    "Jam":["Jam", "Block", "Bind", "Congest"],
+    "Hack":["Hack"],
+    "Counter":["Counter", "Hinder", "Counteract", "Oppose", "Respond", "Retaliate"],
+    "Psyop":["Psyop", "Propaganda"],
+    "Harass":["Harass", "Hassle", "Intimidate", "Torment", "Disturb"]
+}
+
 # message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 # message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
 # message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
