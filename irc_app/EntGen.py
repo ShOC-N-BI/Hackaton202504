@@ -91,21 +91,21 @@ battle_effect_dict = {
     "Harass":["Harass", "Hassle", "Intimidate", "Torment", "Disturb"]
 }
 category_lists = {
-                    "air_enemy": air_enemy,
+                    "Air Enemy": air_enemy,
                     "Incoming": Incoming,
-                    "surface": surface,
-                    "intel": intel,
-                    "cyber": cyber,
-                    "civilian": civilian,
-                    "rando": rando,
-                    "enem": enem
+                    "Surface": surface,
+                    "Intel": intel,
+                    "Cyber": cyber,
+                    "Civilian": civilian,
+                    "Rando": rando,
+                    "Enem": enem
                 }
 tracking_number=[]
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo 18675 were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 12054 to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
 #message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
-#message = "afc_watch:  SINATRA DIRECTS  smack cttn 43769 cttn 43770, tot asap pls"
+#message = "afc_watch:  SINATRA DIRECTS bandit cttn 43769 cttn 43770, tot asap pls"
 
 def action_prompt(entity, description=""):
     if description:
@@ -162,7 +162,7 @@ def match_entity(filtered_s, words, index, category_lists, message):
             entity = filtered_s + " " + description
             actions = action_prompt(entity)
             if tracking_number:
-                entity = ", ".join(tracking_number)
+                entity = ", ".join(tracking_number) + " ("+label+") "
                 return entity, *actions[:3]
             else:
                  return entity, *actions[:3]
