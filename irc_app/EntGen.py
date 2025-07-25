@@ -162,7 +162,7 @@ def match_entity(filtered_s, words, index, category_lists, message):
             entity = filtered_s + " " + description
             actions = action_prompt(entity)
             if tracking_number:
-                entity = "".join(tracking_number)
+                entity = ", ".join(tracking_number)
                 return entity, *actions[:3]
             else:
                  return entity, *actions[:3]
