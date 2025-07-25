@@ -77,7 +77,8 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         
 
 def start_irc_bot():
-    bot = IRCBot("#app_dev", "Skibby_Mendoza")
+    #bot = IRCBot('#tm_c2_coord', 'NP_Bot')
+    bot = IRCBot("#app_dev", "NP_Bot")
     print("IRC listener starting...")
     bot.start()
 
