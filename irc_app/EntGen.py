@@ -64,7 +64,7 @@ Incoming = ["MISSILE", "ROCKET", "TORPEDO", "BOMB", "TORP", "CRUISE", "BALLISTIC
     "SUBMARINE-LAUNCHED-ANTI-AIR-MISSILE"
     ]
 
-intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR","NOISE","SIGNAL","JAMMING"]
+intel = ["RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","RADAR","NOISE","SIGNAL","JAMMING"]
 
 cyber = ["FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"]
 
@@ -77,7 +77,7 @@ rando = ["RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN",
 out =["SWIM","BEER"]
 
 battle_effect_dict = {
-    "Attack":["Attack, Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade", "Advance", "Shoot", "Suppress", "Disable"],
+    "Attack":["Attack, Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade", "Advance", "Shoot", "Suppress", "Disable","Smack"],
     "Investigate":["Investigate", "Consider", "Examine", "Explore", "Inspect", "Interrogate", "Probe", "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow"],
     "Communicate":["Communicate", "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out", "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report"],
     "Destroy":["Destroy", "Kill", "Nullify", "Terminate", "Vanish"],
@@ -190,11 +190,10 @@ def extracted_chat(message):
     for i, word in enumerate(words):
         filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
         filtered_s = filtered_word.rstrip('S')
-        result = match_entity(filtered_s, words, i, category_lists)
+        result = match_entity(filtered_s, words, i, category_lists, message)
         if result:
             return result       
     return None, None, None, None
-
 
 
 
