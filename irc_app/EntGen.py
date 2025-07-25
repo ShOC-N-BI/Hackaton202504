@@ -106,8 +106,6 @@ tracking_number=[]
 #message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
 #message = "afc_watch:  SINATRA DIRECTS  smack cttn 43769 cttn 43770, tot asap pls"
-# def get_description(words, index, max_words=5):
-#     description = ' '.join(words[index+1:index+max_words]) if index + max_words <= len(words) else ' '.join(words[index+1:])
 
 def action_prompt(entity, description=""):
     if description:
@@ -164,7 +162,7 @@ def match_entity(filtered_s, words, index, category_lists, message):
             entity = filtered_s + " " + description
             actions = action_prompt(entity)
             if tracking_number:
-                entity = tracking_number
+                entity = "".join(tracking_number)
                 return entity, *actions[:3]
             else:
                  return entity, *actions[:3]
