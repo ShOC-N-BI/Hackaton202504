@@ -1,13 +1,13 @@
 {
     "ACTIONS": {
-        "AIR": ["Attack", "Investigate", "Communicate", "Destroy"],
-        "INCOMING": ["Counter", "Evade", "Brace for impact"],
-        "SURFACE": ["Attack", "Investigate", "Communicate"],
-        "INTEL": ["Jam", "Communicate", "Investigate"],
-        "CYBER": ["Jam", "Hack", "Counter"],
-        "CIVILIAN": ["Monitor", "Investigate", "Communicate"],
-        "RANDOM": ["Monitor", "Investigate", "Communicate"],
-        "ENEMIES": ["Attack","Psyop","Harass"]
+        "AIR": ["ATTACK", "INVESTIGATE", "COMMUNICATE", "DESTROY"],
+        "INCOMING": ["COUNTER", "EVADE", "BRACE FOR IMPACT"],
+        "SURFACE": ["ATTACK", "INVESTIGATE", "COMMUNICATE"],
+        "INTEL": ["JAM", "COMMUNICATE", "INVESTIGATE"],
+        "CYBER": ["JAM", "HACK", "COUNTER"],
+        "CIVILIAN": ["MONITOR", "INVESTIGATE", "COMMUNICATE"],
+        "RANDOM": ["MONITOR", "INVESTIGATE", "COMMUNICATE"],
+        "ENEMIES": ["ATTACK","PSYOP","HARASS"]
     },
     "WORDS" : {
         "AIR": [
@@ -17,12 +17,12 @@
             "SU-7", "SU-9", "SU-11", "SU-15", "SU-17", "SU-20", "SU-22", "SU-24", "SU-25",
             "SU-27", "SU-30", "SU-33", "SU-35", "SU-57", "YAK-9", "YAK-23", "YAK-25", "YAK-28",
             "YAK-38", "YAK-41", "J-16", "J-50", "J-36", "J-35", "J-20", "J-15", "J-16", "J-10B", "J-11B", "J-10", "FC-1", 
-            "JH-7", "Su-30MK2", "Su-30MKK", "Su-35S", "J-11D", "J-13", "J-12", "J-11", "J-9", 
-            "J-8", "J-7", "J-6", "J-5", "J-2", "MiG-9", "Su-27", "Q-5", "Q-6", "J-16D", "J-15D", 
-            "H-20", "H-8", "H-7", "H-6", "H-5", "Tu-14", "Tu-2", "KJ-600", "KJ-500", "KJ-2000", 
+            "JH-7", "SU-30MK2", "SU-30MKK", "SU-35S", "J-11D", "J-13", "J-12", "J-11", "J-9", 
+            "J-8", "J-7", "J-6", "J-5", "J-2", "MIG-9", "SU-27", "Q-5", "Q-6", "J-16D", "J-15D", 
+            "H-20", "H-8", "H-7", "H-6", "H-5", "TU-14", "TU-2", "KJ-600", "KJ-500", "KJ-2000", 
             "Y-9JZ ELINT", "Y-8CB", "Y-8DZ", "Y-8G", "Y-8GX3", "Y-8JB", "Y-8T", "Y-8W", "Y-8EW", 
-            "ZDK03", "Y-8J", "KJ-200", "Y-7", "KJ-1 AEWC", "An-30", "CIOMP", 
-            "YY-20", "HY-6", "Il-78", "JZ-8", "JZ-7", "MIG-29", "MIG-31", "MIG-35", "SU-27", "SU-30", "SU-34", "SU-35", "SU-57", 
+            "ZDK03", "Y-8J", "KJ-200", "Y-7", "KJ-1 AEWC", "AN-30", "CIOMP", 
+            "YY-20", "HY-6", "IL-78", "JZ-8", "JZ-7", "MIG-29", "MIG-31", "MIG-35", "SU-27", "SU-30", "SU-34", "SU-35", "SU-57", 
             "SU-24", "SU-25", "MI-8", "MI-24", "MI-28", "KA-52", "KA-60", "ANSAT", 
             "PANTHER", "IL-76", "IL-78", "IL-112", "IL-214", "AN-26", "AN-72", 
             "BE-200", "TU-22M", "TU-160", "TU-95", "B-2", "S-400", "T-50", "T-14", 
@@ -31,12 +31,12 @@
             "SU7", "SU9", "SU11", "SU15", "SU17", "SU20", "SU22", "SU24", "SU25",
             "SU27", "SU30", "SU33", "SU35", "SU57", "YAK9", "YAK23", "YAK25", "YAK28",
             "YAK38", "YAK41", "J16", "J50", "J36", "J35", "J20", "J15", "J16", "J10B", "J11B", "J10", "FC1", 
-            "JH7", "Su30MK2", "Su30MKK", "Su35S", "J11D", "J13", "J12", "J11", "J9", 
-            "J8", "J7", "J6", "J5", "J2", "MiG9", "Su27", "Q5", "Q6", "J16D", "J15D", 
-            "H20", "H8", "H7", "H6", "H5", "Tu14", "Tu2", "KJ600", "KJ500", "KJ2000", 
+            "JH7", "SU30MK2", "SU30MKK", "SU35S", "J11D", "J13", "J12", "J11", "J9", 
+            "J8", "J7", "J6", "J5", "J2", "MIG9", "SU27", "Q5", "Q6", "J16D", "J15D", 
+            "H20", "H8", "H7", "H6", "H5", "TU14", "TU2", "KJ600", "KJ500", "KJ2000", 
             "Y9JZ ELINT", "Y8CB", "Y8DZ", "Y8G", "Y8GX3", "Y8JB", "Y8T", "Y8W", "Y8EW", 
-            "ZDK03", "Y8J", "KJ200", "Y7", "KJ1 AEWC", "An30",
-            "YY20", "HY6", "Il78", "JZ8", "JZ7", "MIG29", "MIG31", "MIG35", "SU27", "SU30", "SU34", "SU35", "SU57", 
+            "ZDK03", "Y8J", "KJ200", "Y7", "KJ1 AEWC", "AN30",
+            "YY20", "HY6", "IL78", "JZ8", "JZ7", "MIG29", "MIG31", "MIG35", "SU27", "SU30", "SU34", "SU35", "SU57", 
             "SU24", "SU25", "MI8", "MI24", "MI28", "KA52", "KA60", "IL76", "IL78", "IL112", "IL214", "AN26", "AN72", 
             "BE200", "TU22M", "TU160", "TU95", "B2", "S400", "T50", "T14"
         ],
@@ -87,7 +87,40 @@
         ],
         "ENEMIES": [
             "ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"
-        ]
+        ],
 
+        "ATTACK": [
+            "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE", "ADVANCE", "SHOOT", "SUPPRESS", "DISABLE"
+        ],
+        "INVESTIGATE": [
+            "INVESTIGATE", "CONSIDER", "EXAMINE", "EXPLORE", "INSPECT", "INTERROGATE", "PROBE", "QUESTION", "REVIEW", "SEARCH", "STUDY", "INQUIRE", "RESEARCH", "FADED", "FADE", "SHADOW"
+        ],
+        "COMMUNICATE": [
+            "COMMUNICATE", "BROADCAST", "CONTACT", "CONVEY", "CORRESPOND", "DISCLOSE", "REACH OUT", "PASS ON", "TELL", "TRANSFER", "TRANSMIT", "DISCOVER", "RELAY", "REPORT"
+        ],
+        "DESTROY": [
+            "DESTROY", "KILL", "NULLIFY", "TERMINATE", "VANISH"
+        ],
+        "COUNTER": [
+            "COUNTER", "HINDER", "COUNTERACT", "OPPOSE", "RESPOND", "RETALIATE"
+        ],
+        "EVADE": [
+            "EVADE", "AVOID", "CIRCUMVENT", "CONCEAL", "ELUDE", "ESCAPE", "FEND OFF", "FLEE", "HIDE"
+        ],
+        "BRACE FOR IMPACT": [
+            "BRACE FOR IMPACT", "PREPARE", "FORTIFY"
+        ],
+        "JAM":[
+            "JAM", "BLOCK", "BIND", "CONGEST"
+        ],
+        "HACK":[
+            "HACK"
+        ],
+        "PSYOP":[
+            "PSYOP", "PROPAGANDA"
+        ],
+        "HARASS": [
+            "HARASS", "HASSLE", "INTIMIDATE", "TORMENT", "DISTURB"
+        ]
     }
 }
