@@ -39,11 +39,11 @@ for f_to_test in cases.keys():
 
         if len(error) != 0:
             errors_found += len(error)
-            print(f"Errors ({len(error)}) found in function 'extracted_chat': \n\t{'\n\t'.join(error)}")
+            print(f"Errors ({len(error)}) found in function 'extracted_chat ({'\n\t,'.join(case['parameters'])})': \n\t\t{'\n\t\t'.join(error)}")
 
 
 
 if errors_found != 0:
-    raise CustomError(f"\nFound {errors_found} errors when testing project, please review the errors and fix.")
+    raise Exception(f"\nFound {errors_found} errors when testing project, please review the errors and fix.")
 else:
     print(f"Success, no errors found")
