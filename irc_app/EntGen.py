@@ -1,4 +1,5 @@
 import re
+import psycopg2
 
 air_enemy = ["UAV", "BOGEY", "BANDIT", "BANZAI",
     "BANDIT", "BOGEY", "BOGEY DOPE", "BLOW THROUGH", "BLOODHOUND", "BRACKET", 
@@ -100,12 +101,23 @@ category_lists = {
                     "Rando": rando,
                     "Enem": enem
                 }
-tracking_number=[]
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo 18675 were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 12054 to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
 #message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
-#message = "afc_watch:  SINATRA DIRECTS bandit cttn 43769 cttn 43770, tot asap pls"
+#message = "afc_watch:  SINATRA DIRECTS bandit cttn 14754, tot asap pls"
+
+def get_db_connection():
+    conn = psycopg2.connect(
+        host="10.5.185.53",
+        dbname="shooca_db",
+        user="shooca",
+        password="shooca222",
+        port="5432"
+    )
+    return conn
+
+# discover possible battle effectors
 
 def action_prompt(entity, description=""):
     if description:
@@ -134,7 +146,7 @@ def action_prompt(entity, description=""):
     return actions
 
 def get_description(words, index, max_words=4):
-    """not sure what this does, but it seems to be getting the description of the entity"""
+    # Generates a description based on the entity and the words that follow it`
     description = ""
     # Check if the word before the current entity is present and does not contain a colon or closing parenthesis
     if index > 0 and (':' not in words[index - 1] and ')' not in words[index - 1]):
@@ -147,47 +159,93 @@ def get_description(words, index, max_words=4):
 
     return description.strip()
 
+def tracking_number_information(tracking_number):
+
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        # Fetch information based on the tracking number
+        try:
+            cur.execute("SELECT * FROM bc3_with_all_vw WHERE tracknumber = %s", (tracking_number,))
+          
+        except Exception as e:
+            print("Tracking number not found in the database.")
+        result = cur.fetchone()
+        # If no results are found in the tracknumber query, try the bc3_jtn query
+        if result is None:
+            try:
+                cur.execute("SELECT * FROM bc3_with_all_vw WHERE bc3_jtn = %s", (tracking_number,))
+                result = cur.fetchone()
+            except Exception as e:
+                print("Tracking number not found in the database.")
+                return "Tracking number not found in the database."
+        cur.close()
+        conn.close()
+
+        if result:
+            call_sign = result[13]
+            type_of_entity = result[7] 
+            frnd_or_foe = result[8]
+            aircraft_type = result[18]
+            return call_sign,type_of_entity, frnd_or_foe, aircraft_type           
+    except Exception as e:
+        
+        return None, None, None, None
+
 def extract_five_digit_numbers(text):
-        """looks for 5 digit tracking numbers in the message"""
+        # looks for 5 digit tracking numbers in the message 
         pattern = r'\b(?:tn:?|TN:?|cttn:?|CTTN:?|tn?|TN?|)[\s-]*?(\d{5})\b'
         return re.findall(pattern, text)
 
 def match_entity(filtered_s, words, index, category_lists, message):
-    """Iterates through message to see if it has any of the key words above and returns battle effectors"""
-    extract_five_digit_numbers(message)
+    # Iterates through message to see if it has any of the key words above and returns battle effectors
     tracking_number = extract_five_digit_numbers(message)
+
+    # if tracking number is found pull infromation on it from the DB
+    if tracking_number:      
+        c_s,t_o_e,f_o_f,a_t = tracking_number_information(tracking_number[0])
+    
+    # discover possible entity and actions
     for label, category in category_lists.items():
         if filtered_s in category:
             description = get_description(words, index)
             entity = filtered_s + " " + description
             actions = action_prompt(entity)
             if tracking_number:
-                entity = ", ".join(tracking_number) + " ("+label+") "
+                entity = ", ".join(tracking_number) + f" (CallSign: {c_s}, Track Cat: {t_o_e}, Track ID: {f_o_f}, Aircraft Type: {a_t}) " 
                 return entity, *actions[:3]
             else:
                  return entity, *actions[:3]
     return None
 
 def extracted_chat(message):
-    """Extracts entity and actions from the message."""
+    # Extracts entity and actions from the message.
+    # Convert message to uppercase for case-insensitive matching
     message_upper = message.upper()
 
+    # Find the first occurrence of a parenthesis and colon
     first_parenthesis_pos = message_upper.find(')')
     second_parenthesis_pos = message_upper.find(')', first_parenthesis_pos + 1)
     second_colon_pos = message_upper.find(':', message_upper.find(':') + 1)
 
-    
+    # Determine the starting position for text extraction
     if second_colon_pos != -1:
         start_pos = second_colon_pos + 1
     else:
         start_pos = second_parenthesis_pos + 1 if second_parenthesis_pos != -1 else 0
 
+    # Extract the text after the first parenthesis or colon
     text_to_process = message[start_pos:].strip()
+    # create list of words from the text
     words = text_to_process.split()
 
+
     for i, word in enumerate(words):
+        # filters out any characters that are not alphanumeric or hyphens, joins the remaining characters into a new string
         filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
+        # remove all trailing 'S' from the filtered word (possibly remove in the future)
         filtered_s = filtered_word.rstrip('S')
+        # Check if the filtered word is in any of the category lists
         result = match_entity(filtered_s, words, i, category_lists, message)
         if result:
             return result       

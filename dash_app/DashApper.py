@@ -61,7 +61,7 @@ app.layout = html.Div([
         }),
 
         html.Div([
-            html.H2("Perceived Actionable Entity:"),
+            html.H2("Match Effectors:"),
             html.Div(id='entity-message')
         ], style={
             # 'backgroundColor': '#f9f9f9',
