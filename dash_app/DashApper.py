@@ -31,7 +31,7 @@ def get_user_message_counts():
     try:
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT message FROM pae_data order by timestamp desc limit 1")
+        cur.execute("SELECT message FROM mef_data order by timestamp desc limit 1")
         messages = cur.fetchall()
         cur.close()
         conn.close()
@@ -61,7 +61,7 @@ app.layout = html.Div([
         }),
 
         html.Div([
-            html.H2("Perceived Actionable Entity:"),
+            html.H2("Match Effectors:"),
             html.Div(id='entity-message')
         ], style={
             # 'backgroundColor': '#f9f9f9',
@@ -159,19 +159,19 @@ def update_graph(n):
     try:
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("SELECT message FROM pae_data ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT message FROM mef_data ORDER BY timestamp DESC LIMIT 1")
         messages = cur.fetchall()
 
-        cur.execute("SELECT entity FROM pae_data ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT entity FROM mef_data ORDER BY timestamp DESC LIMIT 1")
         pae_e = cur.fetchall()
 
-        cur.execute("SELECT action1 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action1 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
         pae_1 = cur.fetchall()
         
-        cur.execute("SELECT action2 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action2 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
         pae_2 = cur.fetchall()
 
-        cur.execute("SELECT action3 FROM pae_data ORDER BY timestamp DESC LIMIT 1")
+        cur.execute("SELECT action3 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
         pae_3 = cur.fetchall()
 
         cur.close()
