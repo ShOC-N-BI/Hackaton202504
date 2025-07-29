@@ -1,28 +1,29 @@
 {
     "ACTIONS": {
         "AIR": [
-            "ATTACK", "INVESTIGATE", "COMMUNICATE", "DESTROY"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "INCOMING": [
-            "COUNTER", "EVADE", "BRACE FOR IMPACT"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "SURFACE": [
-            "ATTACK", "INVESTIGATE", "COMMUNICATE"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "INTEL": [
-            "JAM", "COMMUNICATE", "INVESTIGATE"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "CYBER": [
-            "JAM", "HACK", "COUNTER"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
+        
         "CIVILIAN": [
-            "MONITOR", "INVESTIGATE", "COMMUNICATE"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "RANDOM": [
-            "MONITOR", "INVESTIGATE", "COMMUNICATE"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ],
         "ENEMIES": [
-            "ATTACK","PSYOP","HARASS"
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ]
     },
     "WORDS" : {
@@ -88,105 +89,34 @@
             "LANDING-SHIP-TANK", "DOCK-LANDING-SHIP", "FLEET-OILER", "AMMUNITION-SHIP", 
             "CARGO-SHIP", "REPAIR-SHIP", "PATROL-CRAFT", "PATROL-YACHT", 
             "MINE-COUNTERMEASURES-SHIP", "MINESWEEPER-COMMAND-SHIP"
-        ],
-        "INTEL": [
-            "RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR","NOISE","SIGNAL",
-            "JAMMING"
-        ],
-        "CYBER": [
-            "FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"
-        ],
-        "CIVILIAN": [
-            "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN-AREA", 
-            "HUMANITARIAN-MISSION", "COMMERCIAL", "COMMERCIAL-VESSEL", "COMMERCIAL-PLANE", "COMMERCIAL A/C"
-        ],
-        "RANDOM": [
-            "RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"
-        ],
-        "ENEMIES": [
-            "ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", 
-            "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"
-        ],
-
-        "ATTACK": [
-            "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE", "ADVANCE",
-             "SHOOT", "SUPPRESS", "DISABLE"
-        ],
-        "INVESTIGATE": [
-            "INVESTIGATE", "CONSIDER", "EXAMINE", "EXPLORE", "INSPECT", "INTERROGATE", "PROBE", "QUESTION",
-             "REVIEW", "SEARCH", "STUDY", "INQUIRE", "RESEARCH", "FADED", "FADE", "SHADOW"
-        ],
-        "COMMUNICATE": [
-            "COMMUNICATE", "BROADCAST", "CONTACT", "CONVEY", "CORRESPOND", "DISCLOSE", "REACH OUT", "PASS ON",
-             "TELL", "TRANSFER", "TRANSMIT", "DISCOVER", "RELAY", "REPORT"
-        ],
-        "DESTROY": [
-            "DESTROY", "KILL", "NULLIFY", "TERMINATE", "VANISH"
-        ],
-        "COUNTER": [
-            "COUNTER", "HINDER", "COUNTERACT", "OPPOSE", "RESPOND", "RETALIATE"
-        ],
-        "EVADE": [
-            "EVADE", "AVOID", "CIRCUMVENT", "CONCEAL", "ELUDE", "ESCAPE", "FEND OFF", "FLEE", "HIDE"
-        ],
-        "BRACE FOR IMPACT": [
-            "BRACE FOR IMPACT", "PREPARE", "FORTIFY"
-        ],
-        "JAM":[
-            "JAM", "BLOCK", "BIND", "CONGEST"
-        ],
-        "HACK":[
-            "HACK"
-        ],
-        "PSYOP":[
-            "PSYOP", "PROPAGANDA"
-        ],
-        "HARASS": [
-            "HARASS", "HASSLE", "INTIMIDATE", "TORMENT", "DISTURB"
         ]
+        
     },
     "BATTLE DICTIONARY":{
         "Attack":[
-            "Attack, Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade",
-            "Advance", "Shoot", "Suppress", "Disable","Smack"
+            "Attack", "Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade",
+            "Advance", "Shoot", "Suppress", "Disable","Smack","Destroy", "Kill", "Nullify", "Terminate", "Vanish" , 
+            "Retaliate","Brace for Impact", "Prepare", "Fortify", "Engage"
         ],
 
         "Investigate":[
             "Investigate", "Consider", "Examine", "Explore", "Inspect", "Interrogate", "Probe",
-        "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow"
+        "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow","Communicate", 
+        "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out",
+        "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report", "Respond","Capture","Image",
+        "Idendtify", "Recognize", "Spot", "Track", "Locate", "Pinpoint", "Detect", "Find", "Uncover", "Reveal",
+         "Expose", "Unravel", "Collect","Monitor","Seen", "Witness", "Observe", "Watch", "View", "Perceive","Listen"
         ],
 
-        "Communicate":[
-            "Communicate", "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out",
-        "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report"
+        "Degrade":[
+            "Degrade","Deceive", "Deny","Delay", "Diminish", "Reduce", "Weaken", "Impair", "Deteriorate","Counter", "Hinder", "Counteract", 
+            "Oppose","Jam", "Block", "Bind", "Congest","Hack", "Harass", "Hassle", "Intimidate", "Torment", 
+            "Disturb","Psyop", "Propaganda"
         ],
 
-        "Destroy":[
-            "Destroy", "Kill", "Nullify", "Terminate", "Vanish"
-        ],
-
-        "Counter":[
-            "Counter", "Hinder", "Counteract", "Oppose", "Respond", "Retaliate"
-        ],
-
-        "Evade":[
-            "Evade", "Avoid", "Circumvent", "Conceal", "Elude", "Escape", "Fend Off", "Flee", "Hide"
-        ],
-        "Brace for Impact": [
-            "Brace for Impact", "Prepare", "Fortify"
-        ],
-        "Jam":[
-            "Jam", "Block", "Bind", "Congest"
-    
-        ],
-        "Hack":[
-            "Hack"
-        ],
-        "Psyop":[
-            "Psyop", "Propaganda"
-        ],
-        "Harass":[
-            "Harass", "Hassle", "Intimidate", "Torment", "Disturb"
+        "Rescue":[
+            "Rescue", "Repair", "Save", "Recover", "Retrieve", "Free", "Liberate", "Release", "Protect", "Shield",
+             "Evade", "Avoid", "Circumvent", "Conceal", "Elude", "Escape", "Fend Off", "Flee", "Hide"
         ]
     }
 }

@@ -8,13 +8,25 @@ script_dir = os.path.dirname(__file__)
 with open(os.path.join(script_dir, 'words.json'), 'r') as file:
     words = json.load(file)
     ACTIONS = words["ACTIONS"]
-    WORDS = words["WORDS"]  
+    WORDS = words["WORDS"]
+    BATTLE_DICTIONARY = words["BATTLE DICTIONARY"]  
 
+    # Flatten all battle dictionary keywords into a single set (lowercased for case-insensitive matching)
+battle_words = set(
+    word.upper()
+    for category in words["BATTLE DICTIONARY"].values()
+    for word in category
+)
+battle_lookup = {}
+for category, words in BATTLE_DICTIONARY.items():
+    for word in words:
+        battle_lookup[word.upper()] = category
 #message = "[10:48:58] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 2x Torpedo 18675 were observed on EO/IR Imagery located on parking apron forward of aircraft hangers IVO 25.045310306035184, -77.464458773165 in Lane Flamingo"
 #message = "[11:00:11] WF_Clark: Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 12054 to 2111Z Radio emmission were detected at location  27.689097938330395, -80.38238737940404 operating on VHF. in Lane Bellagio"
 #message = "[10:45:02] WF_Clark: Floater03_OPS (USS Cole DDG): @Maritime_OPS (Maritime Operations Center) Possible helos swarm approaching from south, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Lane Ceasars"
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
-#message = "afc_watch:  SINATRA DIRECTS bandit cttn 14754, tot asap pls"
+#message = "afc_watch:  SINATRA DIRECTS attack bandit cttn 14754, tot asap pls"
+#message = "SINATRA DIRECTS bandit cttn 14754, tot asap pls"
 
 def get_db_connection():
     conn = psycopg2.connect(
@@ -33,14 +45,20 @@ def action_prompt(entity, description=""):
     Check and see if the entity passed can be found in the "WORDS" lists, if so then retrieve the associated "ACTIONS" and return them
     TO-DO: Review why is there a description parameter that we don't need
     """
+    matched = extract_battle_effectors(message) 
     if description:
         print(f"  Description: {description}")
 
-    i = entity.split()[0]
-    for k in WORDS.keys():
-        if i in WORDS[k]:
-            return ACTIONS[k]
-    
+
+    if matched !=[]:
+        #print(f"Battle Effectors: {matched}")
+        return matched, matched, matched
+    else:
+        i = entity.split()[0]
+        for k in WORDS.keys():
+            if i in WORDS[k]:
+                return ACTIONS[k]
+        
     return None, None, None
 
 
@@ -117,6 +135,24 @@ def match_entity(filtered_s, words, index, category_lists, message):
                  return entity, *actions[:3]
     return None
 
+
+def extract_battle_effectors(message):
+    # Extracts words from text that match entries in the battle dictionary.
+    # Returns a list of matched keywords.
+
+    # Normalize the input text to lowercase and tokenize using regex to catch words and phrases
+    good_words = re.findall(r'\b\w[\w\-]*\b', message.upper())
+    matched = []
+    matched_cleaned = []
+    # Check for single-word matches
+    for word in good_words:
+        if word in battle_lookup:
+            matched.append(battle_lookup[word])
+            matched_cleaned = ''.join(matched)
+        return matched_cleaned 
+    
+
+
 def extracted_chat(message):
     # Extracts entity and actions from the message.
     # Convert message to uppercase for case-insensitive matching
@@ -144,8 +180,8 @@ def extracted_chat(message):
         filtered_word = ''.join(e for e in word if e.isalnum() or e == '-').upper()
         # remove all trailing 'S' from the filtered word (possibly remove in the future)
         filtered_s = filtered_word.rstrip('S')
-        # Check if the filtered word is in any of the category lists
-        result = match_entity(filtered_s,words, i, WORDS, message)
+        # Check if the filtered word is in the words dictionary
+        result = match_entity(filtered_s,words, i, WORDS, message,)
         if result:
             return result       
     return None, None, None, None
