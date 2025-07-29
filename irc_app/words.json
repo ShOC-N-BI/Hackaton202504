@@ -1,13 +1,29 @@
 {
     "ACTIONS": {
-        "AIR": ["ATTACK", "INVESTIGATE", "COMMUNICATE", "DESTROY"],
-        "INCOMING": ["COUNTER", "EVADE", "BRACE FOR IMPACT"],
-        "SURFACE": ["ATTACK", "INVESTIGATE", "COMMUNICATE"],
-        "INTEL": ["JAM", "COMMUNICATE", "INVESTIGATE"],
-        "CYBER": ["JAM", "HACK", "COUNTER"],
-        "CIVILIAN": ["MONITOR", "INVESTIGATE", "COMMUNICATE"],
-        "RANDOM": ["MONITOR", "INVESTIGATE", "COMMUNICATE"],
-        "ENEMIES": ["ATTACK","PSYOP","HARASS"]
+        "AIR": [
+            "ATTACK", "INVESTIGATE", "COMMUNICATE", "DESTROY"
+        ],
+        "INCOMING": [
+            "COUNTER", "EVADE", "BRACE FOR IMPACT"
+        ],
+        "SURFACE": [
+            "ATTACK", "INVESTIGATE", "COMMUNICATE"
+        ],
+        "INTEL": [
+            "JAM", "COMMUNICATE", "INVESTIGATE"
+        ],
+        "CYBER": [
+            "JAM", "HACK", "COUNTER"
+        ],
+        "CIVILIAN": [
+            "MONITOR", "INVESTIGATE", "COMMUNICATE"
+        ],
+        "RANDOM": [
+            "MONITOR", "INVESTIGATE", "COMMUNICATE"
+        ],
+        "ENEMIES": [
+            "ATTACK","PSYOP","HARASS"
+        ]
     },
     "WORDS" : {
         "AIR": [
@@ -74,29 +90,35 @@
             "MINE-COUNTERMEASURES-SHIP", "MINESWEEPER-COMMAND-SHIP"
         ],
         "INTEL": [
-            "RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR","NOISE","SIGNAL","JAMMING"
+            "RADIO", "EMISSION", "EMISSIONS", "BLUR", "AUTOCAT", "BEAM RIDER","CTTN","RADAR","NOISE","SIGNAL",
+            "JAMMING"
         ],
         "CYBER": [
             "FORWARD LOOKUP", "REQUEST", "ALLIGATOR", "NETWORK", "TRAFFIC"
         ],
         "CIVILIAN": [
-            "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN-AREA", "HUMANITARIAN-MISSION", "COMMERCIAL", "COMMERCIAL-VESSEL", "COMMERCIAL-PLANE", "COMMERCIAL A/C"
+            "CIVILIAN", "CIV", "NON-COMBATANT", "NON-HOSTILE", "HUMANITARIAN", "REFUGEE", "CIVILIAN-AREA", 
+            "HUMANITARIAN-MISSION", "COMMERCIAL", "COMMERCIAL-VESSEL", "COMMERCIAL-PLANE", "COMMERCIAL A/C"
         ],
         "RANDOM": [
             "RANDOM", "UNKNOWN", "UNK", "UNIDENTIFIED", "UNCONFIRMED", "UNCERTAIN", "POTENTIAL"
         ],
         "ENEMIES": [
-            "ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"
+            "ENEMY", "HOSTILE", "THREAT", "TARGET","ADVERSARY", "OPFOR", "OPPOSITION", "FOE", "RIVAL", 
+            "AGGRESSOR", "ANTAGONIST", "BANDIT", "BOGEY"
         ],
 
         "ATTACK": [
-            "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE", "ADVANCE", "SHOOT", "SUPPRESS", "DISABLE"
+            "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE", "ADVANCE",
+             "SHOOT", "SUPPRESS", "DISABLE"
         ],
         "INVESTIGATE": [
-            "INVESTIGATE", "CONSIDER", "EXAMINE", "EXPLORE", "INSPECT", "INTERROGATE", "PROBE", "QUESTION", "REVIEW", "SEARCH", "STUDY", "INQUIRE", "RESEARCH", "FADED", "FADE", "SHADOW"
+            "INVESTIGATE", "CONSIDER", "EXAMINE", "EXPLORE", "INSPECT", "INTERROGATE", "PROBE", "QUESTION",
+             "REVIEW", "SEARCH", "STUDY", "INQUIRE", "RESEARCH", "FADED", "FADE", "SHADOW"
         ],
         "COMMUNICATE": [
-            "COMMUNICATE", "BROADCAST", "CONTACT", "CONVEY", "CORRESPOND", "DISCLOSE", "REACH OUT", "PASS ON", "TELL", "TRANSFER", "TRANSMIT", "DISCOVER", "RELAY", "REPORT"
+            "COMMUNICATE", "BROADCAST", "CONTACT", "CONVEY", "CORRESPOND", "DISCLOSE", "REACH OUT", "PASS ON",
+             "TELL", "TRANSFER", "TRANSMIT", "DISCOVER", "RELAY", "REPORT"
         ],
         "DESTROY": [
             "DESTROY", "KILL", "NULLIFY", "TERMINATE", "VANISH"
@@ -121,6 +143,50 @@
         ],
         "HARASS": [
             "HARASS", "HASSLE", "INTIMIDATE", "TORMENT", "DISTURB"
+        ]
+    },
+    "BATTLE DICTIONARY":{
+        "Attack":[
+            "Attack, Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade",
+            "Advance", "Shoot", "Suppress", "Disable","Smack"
+        ],
+
+        "Investigate":[
+            "Investigate", "Consider", "Examine", "Explore", "Inspect", "Interrogate", "Probe",
+        "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow"
+        ],
+
+        "Communicate":[
+            "Communicate", "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out",
+        "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report"
+        ],
+
+        "Destroy":[
+            "Destroy", "Kill", "Nullify", "Terminate", "Vanish"
+        ],
+
+        "Counter":[
+            "Counter", "Hinder", "Counteract", "Oppose", "Respond", "Retaliate"
+        ],
+
+        "Evade":[
+            "Evade", "Avoid", "Circumvent", "Conceal", "Elude", "Escape", "Fend Off", "Flee", "Hide"
+        ],
+        "Brace for Impact": [
+            "Brace for Impact", "Prepare", "Fortify"
+        ],
+        "Jam":[
+            "Jam", "Block", "Bind", "Congest"
+    
+        ],
+        "Hack":[
+            "Hack"
+        ],
+        "Psyop":[
+            "Psyop", "Propaganda"
+        ],
+        "Harass":[
+            "Harass", "Hassle", "Intimidate", "Torment", "Disturb"
         ]
     }
 }
