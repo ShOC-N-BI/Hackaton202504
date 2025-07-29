@@ -18,7 +18,7 @@ with open(file_path, 'r') as file:
     cases = json.load(file)
 
 if cases is None:
-    raise CustomError("Error loading case file, unable to find test cases.")
+    raise Exception("Error loading case file, unable to find test cases.")
 
 
 errors_found = 0
