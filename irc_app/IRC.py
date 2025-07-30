@@ -66,6 +66,7 @@ class IRCBot(irc.bot.SingleServerIRCBot):
         try:
             found_entity, action1, action2, action3 = extracted_chat(message)
             if found_entity is not None:
+                print('Entity found')
                 insert_message(message, found_entity, action1, action2, action3)
         except:
             print("bad input")
@@ -78,7 +79,7 @@ class IRCBot(irc.bot.SingleServerIRCBot):
 
 def start_irc_bot():
     #bot = IRCBot('#tm_c2_coord', 'NP_Bot')
-    bot = IRCBot("#app_dev", "NP_Bot")
+    bot = IRCBot("#app_dev", "CD_Bot")
     print("IRC listener starting...")
     bot.start()
 

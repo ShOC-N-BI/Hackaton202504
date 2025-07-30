@@ -24,6 +24,9 @@
         ],
         "ENEMIES": [
             "INVESTIGATE", "ATTACK", "DEGRADE"
+        ],
+        "LAND": [
+            "INVESTIGATE", "ATTACK", "DEGRADE"
         ]
     },
     "WORDS" : {
@@ -77,7 +80,7 @@
             "DESTROYER", "DD", "FRIGATE", "FF", "CRUISER", "CC", "SUBMARINE", "SUB", 
             "CARRIER", "CV", "BANZAI", "BRACKET", "BUMP/BUMP-UP", "BURN-GLINT", "BUSTER", 
             "BLANK", "BULLDOG", "BREVITY", "BANDIT", "BOGEY", "BASSETT", "BRUISER", "COBRA", 
-            "COWBOYS", "CYCLOPS", "DEADEYE", "JASSM", "ATTACK", "AAV", "DDG", "CVN", "CG", 
+            "COWBOYS", "CYCLOPS", "DEADEYE", "JASSM", "AAV", "DDG", "CVN", "CG", 
             "LHD", "LPD", "LCS", "SSN", "SSBN", "LHA", "T-AKE", "AOR", "LST", "T-AO", "FFG", 
             "RADAR", "VESSEL", "SHIP", "BB", "CA", "SSGN", "LSD", "AO", "AE", "AK", "AR", "PC", 
             "PY", "MCM", "MSC", "AIRCRAFT-CARRIER", "NUCLEAR-POWERED-AIRCRAFT-CARRIER", "BATTLESHIP", 
@@ -94,29 +97,32 @@
     },
     "BATTLE DICTIONARY":{
         "Attack":[
-            "Attack", "Intercept", "Ambush", "Assail", "Assault", "Strike", "Hit", "Raid", "Invade",
-            "Advance", "Shoot", "Suppress", "Disable","Smack","Destroy", "Kill", "Nullify", "Terminate", "Vanish" , 
-            "Retaliate","Brace for Impact", "Prepare", "Fortify", "Engage"
+            "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE",
+            "ADVANCE", "SHOOT", "SUPPRESS", "DISABLE", "SMACK", "DESTROY", "KILL", "NULLIFY", "TERMINATE", "VANISH",
+            "RETALIATE", "BRACE FOR IMPACT", "PREPARE", "FORTIFY", "ENGAGE"
         ],
 
         "Investigate":[
-            "Investigate", "Consider", "Examine", "Explore", "Inspect", "Interrogate", "Probe",
-        "Question", "Review", "Search", "Study", "Inquire", "Research", "Faded", "Fade", "Shadow","Communicate", 
-        "Broadcast", "Contact", "Convey", "Correspond", "Disclose", "Reach out",
-        "Pass On", "Tell", "Transfer", "Transmit", "Discover", "Relay", "Report", "Respond","Capture","Image",
-        "Idendtify", "Recognize", "Spot", "Track", "Locate", "Pinpoint", "Detect", "Find", "Uncover", "Reveal",
-         "Expose", "Unravel", "Collect","Monitor","Seen", "Witness", "Observe", "Watch", "View", "Perceive","Listen"
+            "INVESTIGATE", "CONSIDER", "EXAMINE", "EXPLORE", "INSPECT", "INTERROGATE", "PROBE",
+            "QUESTION", "REVIEW", "SEARCH", "STUDY", "INQUIRE", "RESEARCH", "FADED", "FADE", "SHADOW", "COMMUNICATE", 
+            "BROADCAST", "CONVEY", "CORRESPOND", "DISCLOSE", "REACH OUT",
+            "PASS ON", "TELL", "TRANSFER", "TRANSMIT", "DISCOVER", "RELAY", "REPORT", "RESPOND", "CAPTURE", "IMAGE",
+            "IDENTIFY", "RECOGNIZE", "SPOT", "TRACK", "LOCATE", "PINPOINT", "DETECT", "FIND", "UNCOVER", "REVEAL",
+            "EXPOSE", "UNRAVEL", "COLLECT", "MONITOR", "SEEN", "WITNESS", "OBSERVE", "WATCH", "VIEW", "PERCEIVE", "LISTEN"
+
         ],
 
         "Degrade":[
-            "Degrade","Deceive", "Deny","Delay", "Diminish", "Reduce", "Weaken", "Impair", "Deteriorate","Counter", "Hinder", "Counteract", 
-            "Oppose","Jam", "Block", "Bind", "Congest","Hack", "Harass", "Hassle", "Intimidate", "Torment", 
-            "Disturb","Psyop", "Propaganda"
+            "DEGRADE", "DECEIVE", "DENY", "DELAY", "DIMINISH", "REDUCE", "WEAKEN", "IMPAIR", "DETERIORATE", "COUNTER", "HINDER", "COUNTERACT", 
+            "OPPOSE", "JAM", "BLOCK", "BIND", "CONGEST", "HACK", "HARASS", "HASSLE", "INTIMIDATE", "TORMENT", 
+            "DISTURB", "PSYOP", "PROPAGANDA"
+
         ],
 
         "Rescue":[
-            "Rescue", "Repair", "Save", "Recover", "Retrieve", "Free", "Liberate", "Release", "Protect", "Shield",
-             "Evade", "Avoid", "Circumvent", "Conceal", "Elude", "Escape", "Fend Off", "Flee", "Hide"
+            "RESCUE", "REPAIR", "SAVE", "RECOVER", "RETRIEVE", "FREE", "LIBERATE", "RELEASE", "PROTECT", "SHIELD",
+            "EVADE", "AVOID", "CIRCUMVENT", "CONCEAL", "ELUDE", "ESCAPE", "FEND OFF", "FLEE", "HIDE"
+
         ]
     }
 }

@@ -46,8 +46,8 @@ def action_prompt(entity, description=""):
     TO-DO: Review why is there a description parameter that we don't need
     """
     matched = extract_battle_effectors(message) 
-    if description:
-        print(f"  Description: {description}")
+    #if description:
+    #    print(f"  Description: {description}")
 
 
     if matched !=[]:
@@ -115,26 +115,47 @@ def extract_five_digit_numbers(text):
         return re.findall(pattern, text)
 
 def match_entity(filtered_s, words, index, category_lists, message):
-    # Iterates through message to see if it has any of the key words above and returns battle effectors
-    tracking_number = extract_five_digit_numbers(message)
-
-    # if tracking number is found pull infromation on it from the DB
-    if tracking_number:      
-        c_s,t_o_e,f_o_f,a_t = tracking_number_information(tracking_number[0])
-    
     # discover possible entity and actions
-    for label, category in category_lists.items():
-        if filtered_s in category:
-            description = get_description(words, index)
-            entity = filtered_s + " " + description
-            actions = action_prompt(entity)
-            if tracking_number:
-                entity = ", ".join(tracking_number) + f" (CallSign: {c_s}, Track Cat: {t_o_e}, Track ID: {f_o_f}, Aircraft Type: {a_t}) " 
-                return entity, *actions[:3]
-            else:
-                 return entity, *actions[:3]
-    return None
+    for label, category in BATTLE_DICTIONARY.items():
+        if filtered_s.upper() in category:
+            print(f"Match found {filtered_s}")
+            print(f"Battle Effect is: {label}")
+            tracking_number = extract_five_digit_numbers(message)
 
+            if tracking_number:
+                c_s,t_o_e,f_o_f,a_t = tracking_number_information(tracking_number[0])
+                entity = ", ".join(tracking_number) + f" (CallSign: {c_s}, Track Cat: {t_o_e}, Track ID: {f_o_f}, Aircraft Type: {a_t}) "
+                actions = label, label, label 
+                print(f'Confirmed tracking number - {tracking_number} and Battle Effect - {label}')
+            else:
+                description = get_description(words, index)
+                print(f"description: {description}")
+                # entity = filtered_s + " " + description
+                entity, track_cat = extract_entity_in_message(words)
+                print(f"entity: {entity}")
+                actions =  "INVESTIGATE", "ATTACK", "DEGRADE"
+                print(f'Confirmed entity - {entity} and Battle Effect - {label}')
+                entity = extract_entity_in_message(words) + " " + description
+            
+            print("actions:")
+            print(f"1. {actions[0]}")
+            print(f"1. {actions[1]}")
+            print(f"1. {actions[2]}")
+            return entity, *actions[:3]
+    return None, None, None, None
+
+
+def extract_entity_in_message(words):
+    print("   EXTRACTING IN MESSAGE")
+    print(words)
+    for i in words:
+        for label, category in WORDS.items():
+                i = i.rstrip('s')
+                i = i.upper()
+                if i in category:
+                    print(f"{i} is {label}")
+                    return i, label
+    return None, None
 
 def extract_battle_effectors(message):
     # Extracts words from text that match entries in the battle dictionary.
@@ -181,9 +202,14 @@ def extracted_chat(message):
         # remove all trailing 'S' from the filtered word (possibly remove in the future)
         filtered_s = filtered_word.rstrip('S')
         # Check if the filtered word is in the words dictionary
-        result = match_entity(filtered_s,words, i, WORDS, message,)
-        if result:
-            return result       
+        print(f"Working on word: {filtered_s} --------------------")
+        final_entity, act1, act2, act3 = match_entity(filtered_s,words, i, WORDS, message,)
+        print(f"End on work: {filtered_s} -----------------------")
+        if final_entity != None:
+           print(f"result true")
+           return final_entity, act1, act2, act3       
+        else:
+           print(f"Result false")
     return None, None, None, None
 
 
