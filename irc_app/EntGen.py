@@ -27,7 +27,7 @@ for category, words in BATTLE_DICTIONARY.items():
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
 #message = "afc_watch:  SINATRA DIRECTS attack bandit cttn 14754, tot asap pls"
 #message = "SINATRA DIRECTS bandit cttn 14754, tot asap pls"
-message = "@hydro_Surv miami tracks appear to be fighters possibly j-15s"
+#message = "@hydro_Surv miami tracks appear to be fighters possibly j-15s"
 
 def get_db_connection():
     conn = psycopg2.connect(
@@ -218,8 +218,8 @@ def extracted_chat(message):
 
 
 
-filtered_s, action1, action2, action3 = extracted_chat(message)
-print(f"Entity: {filtered_s}")
-print(f"Action 1: {action1}")
-print(f"Action 2: {action2}")
-print(f"Action 3: {action3}")
+# filtered_s, action1, action2, action3 = extracted_chat(message)
+# print(f"Entity: {filtered_s}")
+# print(f"Action 1: {action1}")
+# print(f"Action 2: {action2}")
+# print(f"Action 3: {action3}")
