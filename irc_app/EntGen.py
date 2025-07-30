@@ -27,6 +27,7 @@ for category, words in BATTLE_DICTIONARY.items():
 #message = "TN:43773 Rank 1. Harpy 2. Gismo 3. Thor"
 #message = "afc_watch:  SINATRA DIRECTS attack bandit cttn 14754, tot asap pls"
 #message = "SINATRA DIRECTS bandit cttn 14754, tot asap pls"
+message = "@hydro_Surv miami tracks appear to be fighters possibly j-15s"
 
 def get_db_connection():
     conn = psycopg2.connect(
@@ -121,21 +122,23 @@ def match_entity(filtered_s, words, index, category_lists, message):
             print(f"Match found {filtered_s}")
             print(f"Battle Effect is: {label}")
             tracking_number = extract_five_digit_numbers(message)
-
+            # CRITERIA 1 if tracking number and battle effect is found, then return that.
             if tracking_number:
                 c_s,t_o_e,f_o_f,a_t = tracking_number_information(tracking_number[0])
                 entity = ", ".join(tracking_number) + f" (CallSign: {c_s}, Track Cat: {t_o_e}, Track ID: {f_o_f}, Aircraft Type: {a_t}) "
                 actions = label, label, label 
                 print(f'Confirmed tracking number - {tracking_number} and Battle Effect - {label}')
+            #CRITERIA 3 entity and battle effect is found, then return that.
             else:
                 description = get_description(words, index)
                 print(f"description: {description}")
                 # entity = filtered_s + " " + description
-                entity, track_cat = extract_entity_in_message(words)
+                entity = extract_entity_in_message(words)
                 print(f"entity: {entity}")
-                actions =  "INVESTIGATE", "ATTACK", "DEGRADE"
+                actions =  label, label, label
                 print(f'Confirmed entity - {entity} and Battle Effect - {label}')
-                entity = extract_entity_in_message(words) + " " + description
+                extracted_entity = extract_entity_in_message(words) 
+                entity = " ".join(extracted_entity)+ " (" + description + ")"
             
             print("actions:")
             print(f"1. {actions[0]}")
@@ -215,8 +218,8 @@ def extracted_chat(message):
 
 
 
-# filtered_s, action1, action2, action3 = extracted_chat(message)
-# print(f"Entity: {filtered_s}")
-# print(f"Action 1: {action1}")
-# print(f"Action 2: {action2}")
-# print(f"Action 3: {action3}")
+filtered_s, action1, action2, action3 = extracted_chat(message)
+print(f"Entity: {filtered_s}")
+print(f"Action 1: {action1}")
+print(f"Action 2: {action2}")
+print(f"Action 3: {action3}")
