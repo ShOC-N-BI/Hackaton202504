@@ -1,201 +1,304 @@
 import dash
-from dash import dcc, html, Input, Output
-import plotly.express as px
-import pandas as pd
+from dash import dcc, html, Input, Output, State, ctx
 import psycopg2
-import time
-import datetime
+import hashlib
+from datetime import datetime, timezone
 
-# Placeholder for user message counts
-users_count = {
-    'User0': 0,
-    'User1': 2,
-    'User2': 7,
-    'User3': 3
-}
+app = dash.Dash(__name__)
 
-# Database connection
 def get_db_connection():
-    conn = psycopg2.connect(
+    return psycopg2.connect(
         host="10.5.185.53",
         dbname="shooca_db",
         user="shooca",
         password="shooca222",
         port="5432"
     )
-    return conn
 
-# Function to fetch latest message counts from PostgreSQL
-def get_user_message_counts():
-    global user_count
-    try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute("SELECT message FROM mef_data order by timestamp desc limit 1")
-        messages = cur.fetchall()
-        cur.close()
-        conn.close()
+def format_elapsed_time(timestamp_str):
+    ts = datetime.fromisoformat(timestamp_str)
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    diff = now - ts
+    total_seconds = int(diff.total_seconds())
+    minutes = total_seconds // 60
+    seconds = total_seconds % 60
+    return f"{minutes:02d}:{seconds:02d} ago"
 
-        print("Message below:")
-        print(messages[0][0])
-        
-    except:
-        print("Message pull fail from base text")
 
-    user = "User0"  # This is just an example, you can refine the logic to detect the actual user
-    if user in users_count:
-        users_count[user] += 1
+ACTION_STYLE = {
+    'backgroundColor': '#ffffff',
+    'borderRadius': '15px',
+    'boxShadow': '0 6px 12px rgba(0,0,0,0.1)',
+    'padding': '25px 40px',
+    'flex': '1 1 250px',
+    'minWidth': '250px',
+    'fontSize': '28px',
+    'fontWeight': '600',
+    'color': '#2a4365',
+    'textAlign': 'center',
+    'transition': 'background-color 0.3s ease, box-shadow 0.3s ease',
+    'userSelect': 'none',
+    'cursor': 'default',
+}
 
-    return users_count
-
-# Dash app setup
-app = dash.Dash(__name__)
-
-# Dash layout
+# Layout
 app.layout = html.Div([
+    # html.H1("Live IRC Chat Activity", style={
+    #     'textAlign': 'center',
+    #     'marginBottom': '40px',
+    #     'fontSize': '48px',
+    #     'fontWeight': '900',
+    #     'fontFamily': "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    #     'color': '#222',
+    #     'textShadow': '0 1px 3px rgba(0,0,0,0.1)'
+    # }),
+
     html.Div([
-        html.H1("Live IRC Chat Activity", style={
-            'textAlign': 'center',
-            'marginBottom': '30px',
-            'fontSize': '40px'
+        html.H2("Match Effectors:", style={
+            'fontWeight': '700',
+            'fontSize': '24px',
+            'marginBottom': '20px',
+            'color': '#444'
         }),
-
-        html.Div([
-            html.H2("Match Effectors:"),
-            html.Div(id='entity-message')
-        ], style={
-            # 'backgroundColor': '#f9f9f9',
-            # 'border': '2px solid #ccc',
-            # 'borderRadius': '10px',
-            'padding': '20px',
-            'margin': '10px 4vw',
-            # 'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
-            'fontSize': '18px',
-            'fontWeight': 'bold'
+        html.Div(id='entity-message', style={
+            'fontSize': '28px',
+            'fontWeight': '700',
+            'color': '#0B5394',
+            'marginBottom': '25px',
+            'minHeight': '40px',
+            'letterSpacing': '0.05em'
         }),
-
-        html.Div([
-            #html.H6("Battle Effect 1"),
-            html.Div(id='action1-message')
-        ], style={
-            'backgroundColor': '#f9f9f9',
-            'border': '2px solid #ccc',
-            'borderRadius': '10px',
-            'padding': '20px',
-            'margin': '10px 4vw',
-            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
-            'fontSize': '30px',
-            'fontWeight': 'bold'
-        }),
-
-        html.Div([
-            #html.H2("Battle Effect 2"),
-            html.Div(id='action2-message')
-        ], style={
-            'backgroundColor': '#f9f9f9',
-            'border': '2px solid #ccc',
-            'borderRadius': '10px',
-            'padding': '20px',
-            'margin': '10px 4vw',
-            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
-            'fontSize': '30px',
-            'fontWeight': 'bold'
-        }),
-
-        html.Div([
-            #html.H2("Battle Effect 3"),
-            html.Div(id='action3-message')
-        ], style={
-            'backgroundColor': '#f9f9f9',
-            'border': '2px solid #ccc',
-            'borderRadius': '10px',
-            'padding': '20px',
-            'margin': '10px 4vw',
-            'boxShadow': '2px 2px 10px rgba(0,0,0,0.05)',
-            'fontSize': '30px',
-            'fontWeight': 'bold'
-        }),
-
-        html.Div(id='latest-message', style={
-            'marginTop': '50px',
-            'fontSize': '16px',
-            'padding': '20px',
-            'textAlign': 'center',
-            'color': '#888'
-        }),
-
-        dcc.Interval(
-            id='interval-component',
-            interval=1 * 1000,
-            n_intervals=0
-        )
     ], style={
-        'backgroundColor': '#dddddd',
-        'border': '4px solid #ccc',
-        'borderRadius': '20px',
-        'padding': '30px',
-        'margin': '40px auto',
-        'maxWidth': '90vw',
-        'boxShadow': '0 4px 16px rgba(0, 0, 0, 0.1)'
-    })
-])
+        'padding': '0 30px',
+        'borderBottom': '2px solid #ccc',
+        'marginBottom': '30px'
+    }),
 
+    html.Div([
+        html.Div(id='action1-message', style=ACTION_STYLE),
+        html.Div(id='action2-message', style=ACTION_STYLE),
+        html.Div(id='action3-message', style=ACTION_STYLE),
+    ], style={
+        'display': 'flex',
+        'justifyContent': 'space-around',
+        'marginBottom': '50px',
+        'gap': '20px',
+        'flexWrap': 'wrap',
+        'padding': '0 30px'
+    }),
 
-# Callback to update graph every 10 seconds
+    html.Div(id='latest-message', style={
+        'fontSize': '18px',
+        'fontStyle': 'italic',
+        'color': '#666',
+        'textAlign': 'center',
+        'marginBottom': '40px',
+        'minHeight': '30px',
+        'fontFamily': "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+    }),
+
+    html.Div(id='history-buttons', style={
+        'textAlign': 'center',
+        'padding': '10px 20px',
+        'maxWidth': '800px',
+        'margin': '0 auto',
+        'display': 'flex',
+        'flexWrap': 'wrap',
+        'justifyContent': 'center',
+        'gap': '15px'
+    }),
+
+    dcc.Store(id='stored-messages'),
+    dcc.Store(id='selected-index', data=0),
+    dcc.Store(id='messages-hash', data=''),
+
+    dcc.Interval(id='interval-component', interval=1000, n_intervals=0)
+], style={
+    'backgroundColor': '#f5f8fa',
+    'border': '1px solid #ddd',
+    'borderRadius': '20px',
+    'padding': '40px 20px 60px 20px',
+    'margin': '40px auto',
+    'maxWidth': '960px',
+    'boxShadow': '0 8px 30px rgba(0,0,0,0.12)',
+    'fontFamily': "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    'color': '#333',
+})
+
+# Style for action boxes
+ACTION_STYLE = {
+    'backgroundColor': '#ffffff',
+    'borderRadius': '15px',
+    'boxShadow': '0 6px 12px rgba(0,0,0,0.1)',
+    'padding': '25px 40px',
+    'flex': '1 1 250px',
+    'minWidth': '250px',
+    'fontSize': '28px',
+    'fontWeight': '600',
+    'color': '#2a4365',
+    'textAlign': 'center',
+    'transition': 'background-color 0.3s ease, box-shadow 0.3s ease',
+    'userSelect': 'none',
+    'cursor': 'default',
+}
+
+def get_latest_messages():
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT timestamp, entity, action1, action2, action3, message
+        FROM mef_data
+        ORDER BY timestamp DESC
+        LIMIT 5
+    """)
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+
+    messages = [{
+        'timestamp': str(r[0]),
+        'entity': r[1],
+        'action1': r[2],
+        'action2': r[3],
+        'action3': r[4],
+        'message': r[5]
+    } for r in rows]
+    return messages
+
+# Callback A: Only update messages and buttons if messages changed
+@app.callback(
+    Output('stored-messages', 'data'),
+    Output('messages-hash', 'data'),
+    Output('history-buttons', 'children', allow_duplicate=True),
+    Input('interval-component', 'n_intervals'),
+    State('messages-hash', 'data'),
+    prevent_initial_call='initial_duplicate'
+)
+def maybe_update_messages(n, current_hash):
+    messages = get_latest_messages()
+    hash_str = hashlib.md5(''.join(m['timestamp'] for m in messages).encode()).hexdigest()
+
+    if hash_str == current_hash:
+        raise dash.exceptions.PreventUpdate
+
+    buttons = []
+    for i, m in enumerate(messages):
+        elapsed = format_elapsed_time(m['timestamp'])
+        label = f"{m['entity']} ({elapsed})"
+        if i == 0:
+            label += " (most recent)"
+        buttons.append(
+            html.Button(label, id={'type': 'history-button', 'index': i}, n_clicks=0, style=BUTTON_STYLE)
+        )
+    return messages, hash_str, buttons
+
+# Callback B: Handle selection from button click
+@app.callback(
+    Output('selected-index', 'data'),
+    Input({'type': 'history-button', 'index': dash.ALL}, 'n_clicks'),
+    State('selected-index', 'data'),
+    prevent_initial_call=True
+)
+def update_selected(n_clicks, current_index):
+    triggered = ctx.triggered_id
+    if isinstance(triggered, dict) and 'index' in triggered:
+        return triggered['index']
+    return current_index
+
+# Callback C: Display selected message + highlight active button
 @app.callback(
     Output('entity-message', 'children'),
     Output('action1-message', 'children'),
     Output('action2-message', 'children'),
     Output('action3-message', 'children'),
-    #Output('live-graph', 'figure'),
     Output('latest-message', 'children'),
-    Input('interval-component', 'n_intervals')
+    Output('history-buttons', 'children'),
+    Input('stored-messages', 'data'),
+    Input('selected-index', 'data'),
+    prevent_initial_call=True
 )
-def update_graph(n):
-    users_count = get_user_message_counts()  # Update counts
-    entity_msg = ""
+def show_selected_message(messages, selected_index):
+    if not messages or selected_index >= len(messages):
+        return "", "", "", "", "No message available", dash.no_update
 
-    # Fetch latest message from DB
-    try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute("SELECT message FROM mef_data ORDER BY timestamp DESC LIMIT 1")
-        messages = cur.fetchall()
+    msg = messages[selected_index]
+    buttons = []
+    for i, m in enumerate(messages):
+        elapsed = format_elapsed_time(m['timestamp'])
+        label = f"{m['entity']} ({elapsed})"
+        if i == 0:
+            label += " (most recent)"
+        # Active button green, others gray with hover effect
+        color = '#4CAF50' if i == selected_index else '#e1e1e1'
+        hover_bg = '#45a049' if i == selected_index else '#d5d5d5'
+        buttons.append(
+            html.Button(label, id={'type': 'history-button', 'index': i}, n_clicks=0, style={
+                **BUTTON_STYLE,
+                'backgroundColor': color,
+                'transition': 'background-color 0.3s ease',
+                'border': i == selected_index and '2px solid #388e3c' or '2px solid #ccc',
+            })
+        )
 
-        cur.execute("SELECT entity FROM mef_data ORDER BY timestamp DESC LIMIT 1")
-        pae_e = cur.fetchall()
+    return (
+        msg['entity'],
+        msg['action1'],
+        msg['action2'],
+        msg['action3'],
+        f"Latest Message: {msg['message']}",
+        buttons
+    )
 
-        cur.execute("SELECT action1 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
-        pae_1 = cur.fetchall()
-        
-        cur.execute("SELECT action2 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
-        pae_2 = cur.fetchall()
+# Base style for buttons with hover via CSS trick (since Dash inline styles can't do :hover, we add a stylesheet below)
+BUTTON_STYLE = {
+    'margin': '5px',
+    'padding': '12px 28px',
+    'backgroundColor': '#e1e1e1',
+    'borderRadius': '8px',
+    'border': '2px solid #ccc',
+    'cursor': 'pointer',
+    'fontWeight': '600',
+    'fontSize': '16px',
+    'color': '#333',
+    'boxShadow': '0 2px 5px rgba(0,0,0,0.1)',
+    'userSelect': 'none',
+    'transition': 'background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease'
+}
 
-        cur.execute("SELECT action3 FROM mef_data ORDER BY timestamp DESC LIMIT 1")
-        pae_3 = cur.fetchall()
-
-        cur.close()
-        conn.close()
-
-        
-    except:
-        latest_msg = "Message pull failed."
-        print("Message pull failed.")
-
-    latest_msg = messages[0][0] if messages else "No latest message found."
-    entity_msg = pae_e[0][0] if pae_e else "No message found for description"
-    action1_msg = pae_1[0][0] if pae_1 else "No message found for action 1"
-    action2_msg = pae_2[0][0] if pae_2 else "No message found for action 2"
-    action3_msg = pae_3[0][0] if pae_3 else "No message found for action 3"
-    # Create bar chart
-    df = pd.DataFrame({
-        "User": list(users_count.keys()),
-        "Messages": list(users_count.values())
-    })
-    fig = px.bar(df, x="User", y="Messages", title="User Message Activity in #tm_c2_coord")
-
-    return f"{entity_msg}", f"{action1_msg}", f"{action2_msg}", f"{action3_msg}", f"Latest Message: {latest_msg}"
+# Add CSS for hover effects globally via external stylesheet
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>Live IRC Chat Activity</title>
+        {%favicon%}
+        {%css%}
+        <style>
+            button:hover {
+                background-color: #d5d5d5 !important;
+                border-color: #999 !important;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+            }
+            button:focus {
+                outline: none;
+                border-color: #4CAF50 !important;
+                box-shadow: 0 0 10px #4CAF50 !important;
+            }
+        </style>
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
+'''
 
 if __name__ == '__main__':
-    print("Starting Dash App...")
     app.run(debug=True, host='0.0.0.0', port=8050)
