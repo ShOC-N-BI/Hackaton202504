@@ -127,7 +127,7 @@
             "ATTACK", "INTERCEPT", "AMBUSH", "ASSAIL", "ASSAULT", "STRIKE", "HIT", "RAID", "INVADE",
             "ADVANCE", "SHOOT", "SUPPRESS", "DISABLE", "SMACK", "DESTROY", "KILL", "NULLIFY", "TERMINATE", "VANISH", 
             "RETALIATE", "BRACE FOR IMPACT", "PREPARE", "FORTIFY", "ENGAGE", "COVER", "DOUBLE TAP", "CUT OFF", "SHOOT",
-            "BANZAI", "TARGET"
+            "BANZAI", "TARGET", "HOSTILE", "ENEMY"
         ],
 
         "INVESTIGATE": [

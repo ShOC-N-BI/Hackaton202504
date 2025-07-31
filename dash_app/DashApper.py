@@ -148,7 +148,7 @@ def get_latest_messages():
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("""
-        SELECT timestamp, entity, action1, action2, action3, message
+        SELECT distinct on (timestamp) timestamp, entity, action1, action2, action3, message
         FROM mef_data
         ORDER BY timestamp DESC
         LIMIT 5
