@@ -1,0 +1,1172 @@
+07/28/2025
+22:22:45 reaper-mef-bot has quit
+07/29/2025
+06:47:14 — 07:51:06 JordanNP, dyee, WF_Beep, hydro_sl, hydro_surv, HYDRO_Strike, Hydro_Tank, hydro_defense, WF_Sim1, hance_leidos and WF_Chairman have joined, JordanNP has quit
+07:51:53 <WF_Beep> test
+07:55:28 — 08:17:32 WF_Chairman1, WF_Clark, wf_clark1, JordanNP, amolnar_leidos, molnar_leidos, cc and Myabut have joined, amolnar_leidos has quit
+08:24:35 <HYDRO_Strike> .
+08:25:10 <hydro_defense> .
+08:26:03 <Hydro_Tank> .
+08:27:18 <wf_clark1> ..
+08:27:55 — 08:28:11 WF_Shoresy has joined, molnar_leidos has quit
+08:28:35 <WF_Shoresy> .
+08:29:34 WF_Clark has quit
+08:29:52 <hydro_sl> white cell anyone know where the USMC Unit "RAINMAKER" is located in the system? the PrSM shooters
+08:30:19 WF_Pilot2 has joined
+08:30:30 <WF_Pilot2> .
+08:31:13 molnar_leidos has joined
+08:31:35 <hydro_sl>  white cell anyone know where the USMC Unit "RAINMAKER" is located in the system? the PrSM shooters
+08:32:54 <WF_Pilot2> It is not located in the system, we are unable to create PrSM
+08:33:36 — 08:35:16 jarvis_monitor_molnar, jarvis_monitor_oxford, hydro_jarvis_strike and hydro_jarvis_surv have joined
+08:35:49 <hydro_sl> are we able to create a normal HIMARS or ATACMS unit and just pretend that it has PrSM for the purposes of us looking at a BC3 scope, i know if MACE it wont necessarily translate to legitimate shots etc., does that make sense?
+08:35:55 jadpact-bot2 has joined, jadpact-bot2 has quit
+08:37:16 <hydro_sl> if we can do that, can we put the RAINMAKER unit located at MUVT airfield in Cuba, at CIGAR 153/73 grid N2059.2585 W07656.1480 plz
+08:37:19 <hydro_jarvis_strike> copy 99999 working INVESTIGATE
+08:39:09 SIM has joined
+08:39:14 <hydro_jarvis_surv> copy 99090 working INVESTIGATE
+08:40:43 <WF_Sim1> SL we are looking to building a ATACMS we moved crossbow? 
+08:40:52 <WF_Sim1> ignore the question mark
+08:40:55 jadpact-bot2 has joined
+08:41:27 <hydro_sl> ..
+08:41:27 <hydro_sl> .
+08:41:28 <hydro_sl> .
+08:41:28 <hydro_sl> .
+08:41:29 <hydro_sl> .
+08:41:29 <hydro_sl> .
+08:41:34 <hydro_sl> crew let me know when you're g2g 
+08:41:37 <hydro_surv> ready
+08:41:43 <HYDRO_Strike> Surv g2g
+08:41:44 <hydro_defense> defense g2g
+08:41:55 <hydro_sl> hydro o/s
+08:42:06 — 08:42:56 hydro_stk has joined, hydro_surv and HYDRO_Strike have quit
+08:43:00 <hydro_sl> @Strike looks like change to Frag Bravo has CROSSBOW JSDF unit w/ ATACMs and also now has PrSM, located on CUBA @ Cigar 138/88, should be up w/ PPLI
+08:43:08 HYDRO_Surv has joined
+08:43:16 <hydro_sl> what does that mean to you?
+08:43:33 <hydro_sl> CROSSBOW can range surface to surface fires with CAT 2 coordinates or better at or inside of 200NM
+08:44:21 <WF_Chairman> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1228Z C2 Radio emissions were detected IVO 22:28:47 N 080:17:16 W operating on UHF. in Mandalay BMA. UID DA060
+08:44:51 <HYDRO_Surv> C Surv working DA060
+08:45:21 <WF_Chairman> Intel_Ops (Intelligence Operations Center): @Hydro_Surv (CRE) Who can we task to find where those comms are coming from IVO 22:28:47 N 080:17:16 W. UID DA060
+08:45:25 afrl-logger has joined
+08:45:49 <WF_Chairman> "Space_Ops (Space Operations Center): @AOC_Ops (Air Operations Center) OPIR is giving indications that 4x bombertype Aircraft are preparing to launch from 17:46:09 N	091:14:54 W . UID DA069"
+08:45:52 <hydro_jarvis_surv> copy DA060 working INVESTIGATE
+08:45:56 <hydro_sl> @AOC_COD: req words track TM104 CIGAR 281/157
+08:46:13 <WF_Chairman> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) Who do we have that can intercept those launching aircraft, ref launch at 17:46:09 N 091:14:54 W. UID DA069
+08:46:40 — 08:46:47 reaper and afrl-test-logger have joined, afrl-logger has quit
+08:46:52 <WF_Chairman> TAIPAN (RAAF CRC): @AOC_Ops (Air Operations Center) We are executing a movement for survival and will be offsta, ETNA approx 1.5 hours in Mandalay BMA. UID DA065
+08:47:14 <WF_Beep> aoc_bcd: TM104, possible enemy ground force mobile hq, working
+08:47:14 <WF_Chairman> AOC_Ops (Air Operations Center): @hydro_SL (CRE) Can you guys cover for TAIPAN?  If not, let me know who should be taking over their assets in Mandalay BMA. UID DA065
+08:47:15 SKuennekeAFRL has joined
+08:47:16 <hydro_jarvis_strike> copy DA065 working STRIKE
+08:47:16 <hydro_jarvis_surv> copy DA065 working STRIKE
+08:47:26 <hydro_sl> @Vegas_SL / @TAIPAN CRC SL: c 1.5 hours off station, sb1
+08:47:42 <WF_Chairman> Vapor_Ops (THAAD): @AOC_Ops (Air Operations Center) AR Track Knights needs to be vacated for THAAD operations NLT 10 mikes UFN in Wynn BMA. UID DA029
+08:47:43 <hydro_jarvis_surv> copy DA029 working REFUEL
+08:47:46 <hydro_jarvis_strike> copy DA029 working REFUEL
+08:48:02 <WF_Chairman> AOC_Ops (Air Operations Center): @Hydro_Tank (CRE) Rework the AR plan for the impacted tanker and receivers in Wynn BMA. UID DA029
+08:48:33 <WF_Beep> space_ops: ALL PLAYERS, down echelon comms ordering tbm units prepare to fire, at least one ack from a fire unit ivo miami
+08:48:35 <hydro_jarvis_strike> copy UID_b1914005 working REFUEL
+08:48:36 <hydro_jarvis_surv> copy UID_b1914005 working REFUEL
+08:49:04 <hydro_jarvis_strike> copy DA726 working BATTLE_MANAGEMENT
+08:49:04 <hydro_defense> DA069 players available for intercept when in factor range
+08:49:14 reaper has quit
+08:50:01 <HYDRO_Surv> @ Space_Ops can you put sensors on comms node approximately 22:28:47 N 080:17:16 W we would like to know who the comms are coming from
+08:50:15 <HYDRO_Surv> Correction where the comms are coming from
+08:50:16 <hydro_sl> @Vegas, recommend WOMBAT retask new orbit CIGAR 105/280 to provide BMC2 for TAIPAN BMA
+08:51:14 reaper has joined
+08:51:27 <hydro_sl> @AOC_OPS: copy moving a tanker track... what is the actual impact for fires, is it the entire 60NM AR track? or is there an actual ROZ location we can deconflict? else, i expec tno impacts to ARCTs we will just laterally adjust the tanker positions to accomodate
+08:52:26 <WF_Chairman> AOC_Ops: @Hydro_SL, from what Vapor indicated, it will be the southern 25 nm of Knights
+08:52:34 <hydro_sl> @Vegas, i am moving WOMBAT to cover sensors and radio coverage for TAIPAN bma
+08:52:48 <hydro_sl> @AOC OPS: c southern 25NM of KNIGHTs, no factor
+08:53:16 <WF_Chairman> Vegas_SL: @Hydro_SL, copy moving WOMBAT
+08:53:29 <hydro_sl> Knights AR track and the THAAD situation deconflicted 
+08:53:58 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) TBM Type 1 unit last known position 26:46:02 N 080:03:19 W notified C2 facility that they are operational and about to launch. UID DA002
+08:54:10 <hydro_sl> @Vegas / @TAIPAN: have all TAIPAN BMA assets contact WOMBAT for BMC2, they are ENR 
+08:54:11 <WF_Beep> space_ops: @vegas HEADS UP down ech comms indicate missile launch orders for c2 units in your BMA, stby impact area assessments
+08:54:14 <hydro_jarvis_strike> copy UID_f94aeb52 working REFUEL
+08:54:15 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) Red North Gate Guard at 30:27:42 N 081:28:48 W checked in to the net over a VHF freq. UID DA026
+08:54:15 <HYDRO_Surv> Balor 01, hydro had C2 radio emissions IVO 22:28:47 N 080:17:16 W are you able to fly over ther and put sensors on it? currently have space ops and Bourne 01 working to get more information.
+08:54:19 <hydro_jarvis_surv> copy UID_f94aeb52 working REFUEL
+08:54:29 <WF_Beep> vegas_sl: @hydro c work with taipan
+08:54:31 <hydro_stk> c da002
+08:54:40 <WF_Beep> vegas_surv: @space_ops c
+08:56:45 <hydro_stk> DA002 = TM251
+08:56:54 <hydro_sl> @Vegas wombat ETA from perfect on-station location approx 20min, assets will still try and reach them via UHF
+08:57:21 <WF_Beep> space_intel_tech: @vegas track TM234 cttn 43825 is a tbm launcher verified with imagery
+08:57:51 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1225Z Radio emissions were detected at location 28:08:42 N 081:04:31 W operating on high frequencies associated with CDCM ops in Wynn BMA. UID DA047
+08:57:54 <hydro_sl> DA002 TM251 confirm category coordinates, is that a mobile or fixed TBM launch location / ie what is the assessed eqiupment from the image for those coordinates
+08:58:02 <hydro_jarvis_strike> copy DA002 working STRIKE
+08:58:25 <WF_Beep> cyber_ops:  @space_ops ^^^ ref cttn43825, targeting data indicates a location N25 15  W073 51
+08:58:32 <WF_Shoresy> "Cyber_OPS (Cyber Command Unit): @Cyber_Defense01 (Cyber Defense Unit) Discovered network traffic with radar tracks IVO 29:46:09 N	081:28:41 W . UID DA093"
+08:58:50 <hydro_stk> @intel_ops confirm DA002 coordinates category
+08:59:12 <WF_Shoresy> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) What can we use to destroy the TBM Type 1 launched IVO 26:46:02 N	080:03:19 W. UID DA002
+08:59:34 <WF_Shoresy> Intel_Ops (Intelligence Operations Center): @Hydro_Surv (CRE) What do you have available to locate where the Red North Gate Guard at 30:27:42 N 081:28:48 W?  They should be in contact with their HQ comm server too. UID DA026
+09:00:07 <WF_Shoresy> Cyber_OPS (Cyber Operations Center): @hydro_tank (CRE) Disable adversary radar site power IVO 29:46:09 N 081:28:41 W. UID DA093
+09:00:18 <WF_Chairman> Intel_Ops: @Hydro_Strike, DA002 will be a CAT 3
+09:00:23 <hydro_stk> c
+09:00:25 <WF_Shoresy> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) What do you have that can affect that CDCM launcher?. UID DA047
+09:00:56 <hydro_jarvis_surv> copy DA047 working ELECTRONIC
+09:01:18 <WF_Beep> space_missile_watch:  MISSILE LAUNCH *** MISSILE LAUNCH *** MISSILE LAUNCH launch point ivo  cttn 43825 stby impact estimate
+09:01:21 <hydro_jarvis_strike> copy DA047 working ELECTRONIC
+09:01:37 my_bot has joined
+09:01:37 <my_bot> .
+09:02:06 <hydro_sl> c DO093 working adversary radar site POWER... on land... potential cyber effector
+09:02:41 <WF_Beep> space_missile_watch:  @moc HEADS UP impact area ivo ford ack please
+09:03:27 <HYDRO_Surv> @ Cyber_ops for Cereal can you geo locate C2 radio emmisions comm IVO 22:28:47 N 080:17:16 W TM252
+09:04:00 <hydro_sl> @KRAIT_ADAFCO & @VEGAS_SL, TBM launch 343/242 request cover, 2-4 BIRDS inbounds
+09:04:09 <WF_Shoresy> Cyber_ops: @Hydro_Surv, C building msn
+09:04:11 <WF_Beep> moc_ops_desk: c, ford going into emcon, @vegas @hydro, deck cycle suspended, can we keep usn assets airborne with gas through with ~45 min of fuel?
+09:04:26 <HYDRO_Surv> Ref DA060 Rank 1. space_ops Sigint Sat 1 2. Cyber_Ops Cereal 3. Bourne 4. Balor
+09:04:33 <hydro_sl> @ADAFCO: ref first track 43836
+09:05:21 <hydro_sl> @MCCAIN req COVER same TBMs
+09:05:24 <hydro_sl> assessed inbound FORD location
+09:05:55 <Hydro_Tank> Ref UID047 1. Cereal 2. Light 3. Harpy 4. Marley
+09:06:08 <WF_Shoresy> Cyber_ops: @hydro_surv firing
+09:06:25 <hydro_sl> @KRAIT / @MCCAIN please call shots
+09:06:29 <hydro_stk> @space ops req imit sat 2 f/refine coords DA002
+09:07:14 <WF_Shoresy> Cyber_Ops: @hydro_Surv   MC  18S UJ 00530 69673
+09:07:16 <WF_Chairman> KRAIT_ADAFCO engaged
+09:07:31 <hydro_sl> cccvc!
+09:07:39 — 09:08:34 shinn has joined, jadpact-bot2 has quit
+09:08:34 <my_bot> .
+09:08:46 my_bot has quit
+09:09:25 <WF_Shoresy> Cyber_Ops: @Hydro_surv, Correction 17RMK5247260742    we have new people on station sorry
+09:09:43 — 09:11:57 my_bot has joined, hydro_jarvis_surv and jarvis_monitor_oxford have quit
+09:11:57 <my_bot> .
+09:13:30 my_bot has quit
+09:14:36 <WF_Beep> vegas_sl: @hydro need options to damage/destroy the bomber cttn: 43842  jtn: tm270 asap, it's targeting the ford
+09:14:47 <hydro_defense> DA093 1.Cereal 2. Marley 01 
+09:14:57 <WF_Beep> vegas_sl: @hydro we found the adversary's carrier need options to damage/destroy their aircraft carrier cttn: 43843  jtn: tm272  asap
+09:15:30 reaper-mef-bot and jadpact-bot2 have joined, jadpact-bot2 has quit
+09:16:31 <hydro_stk> rank TM270 1. ORCA01/SUNNY71 2. WOMBAT/SUNNY71
+09:16:50 <HYDRO_Surv> Effector Pack DA093: Orca01, Sunny71
+09:17:34 — 09:19:34 hydro_jarvis_strike, jarvis_monitor_molnar and RacknerPAEBot have quit
+09:19:55 <hydro_defense> Effector Pack cttn:43843 Hades 01 Orca01 Space GMTI
+09:20:04 <Hydro_Tank> Rank TM270: effector pack 1. Orca01 2. Zeus11 3. GMTI SAT
+09:20:19 RacknerPAEBot has joined
+09:22:00 <Hydro_Tank> Rank TM272: 1. ZUMWALT 2. LIBERTY
+09:22:44 <HYDRO_Surv> Effector Pack cttn 43843: Balor, IMINT Sat 1, and Ohio
+09:23:50 <Hydro_Tank> Rank TM270: effector pack 1. Orca01 2. Zeus11 3. AMTI SAT*
+09:24:50 <hydro_stk> rank TM272: 1. ORCA/YAMA31 2. Space GMTI/HYDRO/YAMA31
+09:24:55 molnar_leidos has quit
+09:25:23 <HYDRO_Surv> correction to cttn:43843 Effector pack: IMINt sat 2
+09:29:01 — 11:51:09 jadpact-bot2, WF_Clark, omni, RTL, Frank and reaper-isu-bot have joined, JordanNP, SIM, shinn, cc, Hydro_Tank, WF_Clark, afrl-test-logger, RTL, hance_leidos, reaper-isu-bot and reaper-mef-bot have quit
+11:53:46 <hydro_sl> .
+11:53:46 <hydro_sl> .
+11:53:46 <hydro_sl> .
+11:53:47 <hydro_sl> .
+11:53:47 <hydro_sl> .
+11:53:47 <hydro_sl> .
+11:53:48 <hydro_sl> .
+11:53:48 <hydro_sl> .
+11:53:48 <hydro_sl> .
+11:53:49 <hydro_sl> .
+11:53:49 <hydro_sl> .
+11:55:14 omnibot-pae has joined
+11:55:15 <WF_Beep> vegas_sl: @hydro we found the adversary's carrier need options to damage/destroy their aircraft carrier cttn: 43843 jtn: tm272 asap
+11:55:19 — 11:56:12 reaper-isu-bot and reaper-mef-bot have joined, reaper-isu-bot has quit
+11:56:14 <WF_Beep> @hydro crew:  bring up a webpage at this url:  http://10.5.184.23:5173/
+11:58:25 — 11:59:51 reaper-mef-bot2, reaper-isu-bot and my_bot have joined, reaper-isu-bot and reaper-mef-bot have quit
+11:59:51 <my_bot> .
+11:59:57 dy has joined
+11:59:57 <my_bot> .
+11:59:57 <hydro_defense> .
+12:00:39 reaper-isu-bot has joined
+12:00:39 <my_bot> .
+12:00:39 reaper-mef-bot has joined, reaper-mef-bot2 has quit
+12:00:43 <my_bot> .
+12:00:44 CD_Bot has joined
+12:00:44 <my_bot> .
+12:00:47 <Myabut> ..
+12:01:39 reaper-mef-bot2 has joined
+12:01:39 <my_bot> .
+12:02:29 hydro_defense, WF_Beep, hydro_sl and hydro_stk have quit
+12:02:43 <my_bot> .
+12:02:43 hydro_sl and hydro_stk have joined
+12:02:43 <my_bot> .
+12:02:43 <my_bot> .
+12:02:43 hydro_defense has joined
+12:02:43 <my_bot> .
+12:02:44 WF_Beep has joined
+12:02:44 <my_bot> .
+12:03:09 <hydro_defense> .
+12:03:15 <hydro_stk> ................
+12:04:21 <WF_Shoresy> .
+12:04:38 <Frank> .
+12:05:31 <my_bot> .
+12:06:51 afrl-test-logger has joined
+12:06:51 <my_bot> .
+12:09:38 Hydro_Tank has joined
+12:09:38 <my_bot> .
+12:09:48 <Hydro_Tank> .
+12:10:00 <my_bot> .
+12:10:09 WF_Shoresy has quit
+12:10:10 <HYDRO_Surv> .
+12:10:14 WF_Shoresy has joined
+12:10:14 <my_bot> .
+12:10:59 <hydro_sl> ficeON
+12:11:45 <hydro_sl> rr15 fc, rtb // bg01 fc, rtb
+12:11:48 <WF_Chairman> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1228Z C2 Radio emissions were detected IVO 21:29:26 N077:17:34 W operating on UHF. in Mandalay BMA. UID DA060
+12:12:02 <WF_Chairman> Intel_Ops (Intelligence Operations Center): @Hydro_Surv (CRE) Who can we task to find where those comms are coming from IVO 21:29:26 N 077:17:34 W. UID DA060
+12:12:04 <HYDRO_Surv> C working DA060
+12:12:23 <WF_Chairman> Space_Ops (Space Operations Center): @AOC_Ops (Air Operations Center) OPIR is giving indications that 2x KJ-500 have been forward deployed to and parked in a hangar at 29:34:28 N 082:44:05 W. UID DA085
+12:12:38 <WF_Chairman> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) Who do we have that can destroy that hangar at 29:34:28 N 082:44:05 W. UID DA085
+12:12:53 <HYDRO_Surv> @Intel Ops, do we know if the radio emissions were coming from a moving entity?
+12:12:55 <hydro_stk> Strike, working 085
+12:13:12 <WF_Chairman> TAIPAN (RAAF CRC): @AOC_Ops (Air Operations Center) We are having sensors issues from our TPS-77 in Mandalay BMA. UID DA088
+12:13:26 <WF_Chairman> ORCA01: @AOC_Ops (Air Operations Center) BANG02 has a broken basket and needs to RTB. UID DA029
+12:13:36 <WF_Chairman> AOC_Ops (Air Operations Center): @hydro_SL (CRE) do you have any assets that can provide additional radar coverage for TAIPAN? UID DA088
+12:13:59 <WF_Chairman> AOC_Ops (Air Operations Center): @Hydro_Tank (CRE) Rework the AR plan for the impacted tanker and receivers in Wynn BMA. UID DA029
+12:14:13 <HYDRO_Surv> SL Land track for DA060 is TM514 B/E152/38
+12:14:15 <hydro_sl> c DA088, affirm wkg sb for TAIPAN
+12:14:35 <WF_Beep> moc_watch: @cjsotf, our team on the Bahamas is reporting enemy forces are pursuing local populations, we've got folks piling on to boats trying to flee, bad situation, no way those boats can handle the #s they're taking
+12:15:22 — 12:15:36 reaper-mef-bot2, reaper-isu-bot and reaper-mef-bot have quit
+12:16:16 <HYDRO_Surv> @Wolf - Hydro_Surv cyber intrusion for intelligence gathering in response to MANDALAY UHF COMMS DA060 TM514
+12:16:24 reaper-mef-bot2 has joined
+12:16:24 <my_bot> .
+12:16:29 <WF_Beep> cjsotf: @moc we're aware, our teams are tracking the same thing
+12:16:31 <WF_Chairman> Intel_Ops: @Hydro_Surv, the radio emissions during that time in that vicinity were static before we lost it
+12:17:01 <Hydro_Tank> @AOC_Ops, which tanker/receivers are you referring to? RR15 and BG01 are RTB d2 frag complete
+12:17:10 <my_bot> .
+12:17:20 <Hydro_Tank> disr last
+12:17:28 <hydro_sl> moving orca to support sensors to south BMA
+12:17:40 <WF_Shoresy> Cyber_Ops @hydro_surv I dont know what youre asking of Wolf, say again?
+12:17:54 <reaper-mef-bot2> test!
+12:17:56 <hydro_sl> taipan_SL, orca is moving to the south to produce an air picture for your BMA as req'd
+12:18:13 <reaper-mef-bot2> Track UNKNOWN SENSE (Within the next hour) E→D: PHANTOM → IMINT
+12:18:17 <hydro_stk> DA026 MATCH HARPY01/PHOTON or ASTRO
+12:18:19 <WF_Beep> moc_watch: ref the civ's fleeing Bahamas, we're tracking 2 medium vessels, looks like fishing vessels ivo cigar 009/147, both vessels listing badly, and opfor is launching drones toward them from the beach.  We're not in a position to intervene right now without exposing the teams.
+12:18:20 <hydro_defense> @cjsotf, do we know what enemy forces are pursuing local populations requiring them to flee on boats?
+12:18:50 <HYDRO_Surv> @Cyber_ops, for Cereal can you geolocate UHF communications source IVO 21:29:26 N077:17:34 W TM514?
+12:18:53 <Hydro_Tank> ref DA029, unable AR plan chg for BG02 d2 location and distance
+12:19:28 <WF_Shoresy> Cyber_Ops: @Hydro_surv C, wkg 21:29:26 N077:17:34 W TM514
+12:19:33 <WF_Beep> cjsotf: @hydro, light trucks with small arms and rpgs, some enemy forces on foot dismounted on the beach, drones coming from trucks.
+12:19:48 <hydro_stk> DA026 MATCH OHIO / CROC01 or IMINT SAT1-2
+12:20:25 <HYDRO_Surv> @Cyber_Ops could you have Wolf use cyber intrusion for intel gathering for the same UHF communications source I requested of Cereal
+12:20:26 <hydro_stk> @SPACE, Hydro_strike, do we have Photon, Astro, or IMINT Sat 1-2 availible to support for DA026?
+12:20:29 <WF_Beep> space_ops:  ALL PLAYERS HEADS UP multiple mobile cruise missile launchers on the move ivo Fort Lauderdale
+12:20:43 reaper-mef-bot2 has quit
+12:20:56 <Hydro_Tank> ref DA029 also unable d2 not enough fuel available
+12:21:09 <HYDRO_Surv> @Space_ops could you use sensors to Geolocate UHF communications IVO 21:29:26 N077:17:34 W TM514?
+12:21:27 dyee has quit
+12:22:07 <HYDRO_Surv> Ref DA060 Rank1. Cyber_ops Wolf 2. Cereal 3. Space_ops Sigint Sat 1
+12:22:15 <Hydro_Tank> MR02 RTB d2 oil press leak
+12:22:17 <WF_Beep> aoc_intel: @space_ops ref mobile cruise missile launchers, we have down echelon comss directing units to prepare to launch
+12:22:41 <WF_Beep> space_ops: @aoc_intel, that checks, let us know when you have internals for targets if able pls
+12:22:43 <hydro_stk> DA026 Rank 1, ftr/bomber (zeuz-helena-harpy) Space IMINT, Rank 2: Ohio, CROC or IMINT
+12:23:08 <hydro_stk> @Space, req update status IMINT or Photon for DA026
+12:23:31 <hydro_stk> ^^ correction ASTRO
+12:24:38 <HYDRO_Surv> SL TM350 is 2x pos fishing vessels ref 12:18 time stamp
+12:24:53 <WF_Shoresy> Cyber_Ops: @Hydro_surv 18QTJ6245478182 for TM514
+12:25:37 <WF_Shoresy> Space_OPS: @Hydro_stk  photon, Astro on station
+12:25:42 <WF_Beep> cyber_desk: @space_ops @aoc_intel traffic on adversary c2 network just went crazy, lots of chatter, IPs match to their maritime c2 units and at least one of the addresses is at the navy hq
+12:26:00 <hydro_stk> @SPACE, req ASTRO for DA026 for updates KJ500 movement
+12:26:09 <Hydro_Tank> ref DA029 match, req GAR BG71 in Crusher d2 Tanker fallout, need gas to keep assets o/s
+12:26:43 RTL has joined
+12:26:43 <my_bot> .
+12:27:24 <WF_Beep> space_sigint: ALL PLAYERS heads up, enemy national command just ordered a flush of air assets to support the navy, but we don't know what navy op they're talking about, mtf
+12:27:27 <WF_Shoresy> Space_Ops: Hydro_stk C, updates ref DA026 for KJ500 movement, next update 30min
+12:27:28 <Hydro_Tank> @Vegas_Ops, req BG71 GAR in Wynn BMA d2 Tanker fallout
+12:27:46 <hydro_stk> @SPACE, can we also get SPACE GMTI f/HADES weapons employment
+12:28:12 <WF_Pilot2> @hydro, @Vegas, AOC_COD, approved BG71 GAR launch.
+12:28:34 <WF_Pilot2> @hydro, @Vegas, AOC_COD, expect BG71 airborne in 30 min
+12:29:00 <WF_Shoresy> Space_Ops, C, SPACE GMTI f/HADES weapons employment standing by for employment call
+12:29:14 <my_bot> .
+12:29:20 <HYDRO_Surv> For OMNIbot need counter drone support for TM530
+12:29:25 <Hydro_Tank> @Vegas_Ops, confirm BG71 MPRS config, req time till t/o
+12:29:39 reaper-isu-bot-370 has joined
+12:29:39 <my_bot> .
+12:29:45 reaper-mef-bot-370 has joined
+12:29:45 <my_bot> .
+12:29:49 <WF_Shoresy> Space_Ops: @hydro_stk C, SPACE GMTI f/HADES weapons employment standing by for employment call
+12:30:02 — 12:30:23 reaper-isu-bot-370 and reaper-mef-bot-370 have quit
+12:30:37 <hydro_defense> @LIFEGUARD61 - Hydro_Defense deploy medical evacuation helicopters in response to RESCUE ESCAPE BOATS // @PELICAN61 - Hydro_Defense deploy medical evacuation helicopters in response to RESCUE ESCAPE BOATS // @CYCLOPS11 - Hydro_Defense deploy medical evacuation helicopters in response to RESCUE ESCAPE BOATS
+12:31:19 reaper-isu-bot-471 has joined
+12:31:19 <my_bot> .
+12:31:23 reaper-mef-bot-471 has joined
+12:31:23 <my_bot> .
+12:31:54 <WF_Beep> afc_battlecab_tech: @vegas @hydro intel developing, but we're getting indications that an enemy sub ivo the Bahamas suffered some kind of system problem and has surfaced to vent.  this is a PRIORITY mission, if you can find the surfaced sub and PRIORITY KILL it.  HEADS UP, expect advesary air to support the crippled sub
+12:32:14 <hydro_sl> c priority kill
+12:32:18 reaper-mef-bot2 has joined
+12:32:18 <my_bot> .
+12:32:45 <my_bot> .
+12:33:34 <HYDRO_Surv> Ref TM530 rank 1. HAMMEr 31
+12:34:56 — 12:36:35 reaper-mef-bot3 has joined, omnibot-pae, omni, my_bot and reaper-mef-bot2 have quit
+12:36:50 <WF_Beep> vegas_sl: @hydro_surv, we need assets to investigate the surfaced sub
+12:40:41 — 12:42:21 reaper-mef-bot and omni have joined
+12:43:51 <hydro_sl> .
+12:43:52 <hydro_sl> .
+12:43:52 <hydro_sl> .
+12:43:52 <hydro_sl> .
+12:45:13 — 13:15:13 molnar_leidos, reaper-isu-bot-159, reaper-mef-bot-159, reaper-mef-bot2 and dev have joined, omni, reaper-isu-bot-471, reaper-mef-bot-471, molnar_leidos, reaper, reaper-mef-bot-159, reaper-isu-bot-159, RTL, jadpact-bot2 and reaper-mef-bot have quit
+13:18:19 <reaper-mef-bot3> Test message from reaper-mef-bot3
+13:18:42 <reaper-mef-bot3> Debug test message from MEF API
+13:18:45 <reaper-mef-bot3> Async debug test message from MEF API
+13:18:45 — 13:20:50 reaper-mef-bot and reaper-mef-bot-1753820447-114 have joined, reaper-mef-bot3 has quit
+13:20:51 <reaper-mef-bot-1753820447-114> Debug test message from MEF API
+13:20:51 reaper-mef-bot-1753820447-114 has quit
+13:20:53 <reaper-mef-bot-1753820447-277> Async debug test message from MEF API
+13:21:09 — 13:21:19 reaper-mef-bot-1753820475-897 and reaper-mef-bot-smoke-test have joined, reaper-mef-bot has quit, reaper-mef-bot-1753820475-897 is now known as reaper-mef-bot-1753820478-2142
+13:21:21 <reaper-mef-bot-1753820478-2142> Test message from connection 1
+13:21:22 — 13:21:29 reaper-mef-bot-1753820475-897 has joined, reaper-mef-bot-58123-216 has quit, reaper-mef-bot-1753820478-2142 is now known as reaper-mef-bot-56836, reaper-mef-bot-56836 is now known as reaper-mef-bot-58123-216
+13:21:30 <reaper-mef-bot-1753820475-897> Rapid test message 1
+13:21:31 <reaper-mef-bot-1753820475-897> Rapid test message 2
+13:21:31 <reaper-mef-bot-1753820475-897> Rapid test message 3
+13:21:32 <reaper-mef-bot-1753820475-897> Rapid test message 4
+13:21:32 <reaper-mef-bot-1753820475-897> Rapid test message 5
+13:21:33 <reaper-mef-bot-1753820475-897> Rapid test message 6
+13:21:33 <reaper-mef-bot-1753820475-897> Rapid test message 7
+13:21:34 <reaper-mef-bot-1753820475-897> Rapid test message 8
+13:21:35 <reaper-mef-bot-1753820475-897> Rapid test message 9
+13:21:35 <reaper-mef-bot-1753820475-897> Rapid test message 10
+13:21:36 — 13:21:59 reaper-mef-bot-1753820516-587 has joined, reaper-mef-bot-1753820475-897 has quit, reaper-mef-bot-1753820516-587 is now known as reaper-mef-bot-1753820519-6852
+13:22:00 <reaper-mef-bot-1753820519-6852> Test message from connection 1
+13:22:00 <reaper-mef-bot-1753820519-6852> Test message from connection 3
+13:22:02 reaper-mef-bot-1753820519-6852 is now known as reaper-mef-bot-1753820522-6905
+13:22:06 <reaper-mef-bot-1753820522-6905> Test message from connection 5
+13:22:07 reaper-mef-bot-1753820522-6905 is now known as reaper-mef-bot-58278-826
+13:22:11 <reaper-mef-bot-58278-826> Test message from connection 4
+13:22:12 jadpact-bot2 has joined, jadpact-bot2 and reaper-mef-bot-smoke-test have quit, reaper-mef-bot-58278-826 is now known as mef-bot-1753820519-375
+13:22:15 <mef-bot-1753820519-375> Test message from connection 2
+13:22:15 <mef-bot-1753820519-375> Rapid test message 1
+13:22:16 <mef-bot-1753820519-375> Rapid test message 2
+13:22:16 <mef-bot-1753820519-375> Rapid test message 3
+13:22:17 <mef-bot-1753820519-375> Rapid test message 4
+13:22:17 <mef-bot-1753820519-375> Rapid test message 5
+13:22:18 <mef-bot-1753820519-375> Rapid test message 6
+13:22:18 reaper-mef-bot-1753820516-587 has joined, mef-bot-1753820519-375 has quit
+13:22:21 <reaper-mef-bot-1753820516-587> Rapid test message 7
+13:22:22 <reaper-mef-bot-1753820516-587> Rapid test message 8
+13:22:22 <reaper-mef-bot-1753820516-587> Rapid test message 9
+13:22:23 <reaper-mef-bot-1753820516-587> Rapid test message 10
+13:22:23 — 13:26:17 reaper-mef-bot-smoke-test, reaper-mef-bot, reaper-mef-bot-1753820635-410, reaper-mef-bot-1753820727-146 and reaper-mef-bot-1753820775-420 have joined, reaper-mef-bot-1753820516-587, reaper-mef-bot2, reaper-mef-bot-1753820635-410, reaper-mef-bot-1753820727-146 and reaper-mef-bot have quit
+13:27:01 <reaper-mef-bot-1753820775-420> test!
+13:27:32 <reaper-mef-bot-1753820775-420> Track UNKNOWN COMMUNICATE (Within 1 hour) E→D: HYDRO → Fiber
+13:30:02 — 13:34:33 reaper-mef-bot-1753821056-500 and jadpact-bot2 have joined, reaper-mef-bot-1753820775-420 and reaper-mef-bot-smoke-test have quit
+13:35:40 <reaper-mef-bot-1753821056-500> Test message after auto-population fix
+13:35:56 — 13:39:48 reaper-mef-bot-smoke-test, RTL, RacknerPAEBot-smoke, reaper-mef-bot-1753821518-337 and bostwalt have joined, jadpact-bot2, reaper-mef-bot-1753821056-500 and RacknerPAEBot have quit
+13:39:56 <reaper-mef-bot-1753821518-337> Track UNKNOWN DESTROY (Within the next hour) E→D: FIRECRAC → CRAM LPWS
+13:40:08 — 13:48:46 reaper-mef-bot-1753821905-551 and reaper-mef-bot-1753822123-137 have joined, WF_Chairman, reaper-mef-bot-1753821518-337, reaper-mef-bot-1753821905-551 and reaper-mef-bot-smoke-test have quit
+13:50:20 <reaper-mef-bot-1753822123-137> test Track 59990 COMMUNICATE (Within the next hour) E→D: HYDRO → Fiber
+13:51:28 <reaper-mef-bot-1753822123-137> @vegas Track 59990 ELECTRONIC_ATTACK (Within the next hour) E→D: YAMA 31 → Barrage Noise
+13:51:53 — 13:52:10 reaper-mef-bot-smoke-test has joined, reaper-mef-bot-1753822123-137 has quit
+13:53:58 <hydro_stk> http://10.5.184.75:8050/
+13:55:54 Shoresy has joined
+13:57:06 <WF_Sim1> .
+13:57:06 <WF_Sim1> .
+13:57:07 <WF_Sim1> .
+13:57:07 <WF_Sim1> .
+13:57:08 <WF_Sim1> .
+13:57:08 <WF_Sim1> ..
+13:57:09 <WF_Sim1> .
+13:57:09 <WF_Sim1> .
+13:57:10 <WF_Sim1> .
+13:57:11 <WF_Sim1> .
+13:57:18 hance_leidos has joined
+13:58:24 <WF_Beep> rackner's mef tool:  http://10.5.184.82:3100/
+13:59:24 <hydro_sl> hydro os
+13:59:54 reaper-mef-bot-smoke-test has quit
+14:00:14 <WF_Shoresy> .
+14:00:19 — 14:00:42 reaper-mef-bot-smoke-test-21854 and reaper-mef-bot-H-802 have joined
+14:01:31 <HYDRO_Surv> .
+14:01:33 <Hydro_Tank> .
+14:01:36 <WF_Beep> ..
+14:01:43 <reaper-mef-bot-H-802> t Track 157 DESTROY (Within the next hour) E→D: FLYSWATT → CRAM LPWS
+14:02:49 reaper-mef-bot-smoke-test-21854 has quit
+14:04:02 <hydro_sl> ficeON
+14:04:13 reaper-mef-bot-H-802 has quit
+14:04:18 <WF_Beep> moc_watch_tech: sitrep 20250129 - enemy sub surfacing somewhere ivo bahamas, sinatra directs priority: find and kill.  enemy maritime c2 is very active, likely wrt the sub.  working sub location, but adv c2 coordinating air support.  this is rapidly becoming a major enemy effort and afc/hq direction is to find/kill the sub and disrupt c2 efforts to support the sub recovery. @cjsotf @space @cyber @aoc pls ack
+14:04:30 <WF_Beep> space_ops: c sitrep wrking
+14:04:38 <WF_Beep> Redbull 3 6 requesting Thor and Mako get the updated location for my new orbit Mako is farther away.
+14:04:55 <hydro_sl> c priority weight of effort F2T2EA enemy SUB
+14:05:14 <WF_Beep> cjsotf: c sitrep, working comms issues with the teams on the bahamas, but ready to support as able
+14:05:22 <WF_Beep> aoc_cod: @moc c, will get vegas to work options
+14:05:35 <WF_Beep> cyber_ops: @moc c sitrep, update: we're seeing network traffic spreading from the spike with navy c2 to their air and missile forces
+14:05:55 <WF_Beep> vegas_sl: @aoc c working, BREAK @hydro, you know the drill, give me options to find and kill the sub, and disrupt the adv c2 effort to protect it
+14:06:06 <hydro_sl> c working MEF for sub 
+14:06:46 <WF_Beep> vegas_sl: thx hydro
+14:07:59 <hydro_sl> wkg TM602 mult air tracks enemy coastline from miami to palm beach
+14:08:23 <wf_clark1> Floater011_OPS (USS Freedom LCS): @Maritime_OPS (Maritime Operations Center) Uncontrolled flooding in engineering spaces due to missile strike at the waterline, may have to abandon ship. UID DA048
+14:08:32 <WF_Beep> vegas_surv: @hydro_sl, c thx, we've got a surface track just south as well if you have any options to investigate that
+14:08:38 — 14:08:56 dyeee has joined, hance_leidos and dy have quit
+14:09:20 <WF_Beep> cyber_ops: @cjsotf HEADS UP enemy cyber intrusion confirmed, they're on the b/u network y'all are using, your teams need to shut down applications "map.point.turbo2" and "grgauto.network.cloudfix" asap, @cjsotf please ack
+14:09:23 WF_Chairman has joined
+14:09:38 <hydro_sl> c DA048 wkg
+14:09:43 <wf_clark1> Maritime_OPS (Maritime Operations Center): @hydro_Surv (CRE) Figure out how to get rescue assets directly in contact with Floater 011  (Zumwalt). UID DA048
+14:09:47 <WF_Beep> cjsotf: c cyber, this is not going to be awesome...  @hydro, we're going to have to go old school, who do you have that can relay hf and uhf comms ivo bahamas?
+14:09:59 dev has quit
+14:10:02 <hydro_sl> @vegas_surv: referencing a surface track "just south" can i get track number and bullseye location when able please
+14:10:11 <hydro_sl> @vegas_sl: confirm TM616
+14:10:16 <wf_clark1> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 1x TAR (unknown type) was observed on EO/IR Image at location 26:55:23 N 081:59:01 W. UID DA056
+14:10:16 <hydro_sl> d/r
+14:10:32 <wf_clark1> AOC_Ops (Air Operations Center): @Hydro_strike (CRE) Get an ID on that launcher and figure out what can take it out. UID DA056
+14:10:44 <WF_Beep> vegas_surv: @hydro_sl, unknown surf contact cttn 44924, jtn tm616
+14:11:10 <wf_clark1> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) Multiple modular vehicles, Antenna towers and hasty structure were co-located at location BE 217/49. Location is a hardened structure area with non-paved roadway access and unimproved runway. EO/IR FMV observed setup activity. in Wynn BMA. UID DA073
+14:11:15 <HYDRO_Surv> effectors for tracks out of miami. Rank 1) AMTI SAT 2) Photon 
+14:11:30 <wf_clark1> AOC_Ops (Air Operations Center): @Hydro_def (CRE) Make sure that airfield at BE 217/49 never gets up and running. UID DA073
+14:11:53 <wf_clark1> Cyber_OPS (Cyber Command Unit): @Cyber_Defense01 (Cyber Defense Unit) Discovered tracks data associated with SAM launchers IVO 23:00:10 N 082:15:19 W. UID DA092
+14:12:04 <wf_clark1> Cyber_OPS (Cyber Operations Center): @hydro_tank (CRE) What can we use to find SAM launchers IVO 23:00:10 N 082:15:19 W. UID DA092
+14:12:24 <Hydro_Tank> wrkng da056
+14:12:36 <HYDRO_Surv> @SPACE_OPS, hydro can you identify the air tracks that are at 24k out of miami
+14:12:36 <hydro_stk> SUB, MATCH sub/ddg (any) SONAR
+14:12:50 <hydro_stk> SUB, MATCH CROC 
+14:13:01 <WF_Beep> vegas_surv:  @hydro_sl correction, tm616 is a helo, there's a surface contact under it tm627 also unknown
+14:13:49 <hydro_sl> c DA073 & DA092 working sb MEF
+14:14:18 <WF_Beep> aoc_intel: ALL PLAYERS ref enemy sub, adv air is launching an aew to support the sub rescue, t/o from ft lauderdale probable in next 10 minutes
+14:14:39 <hydro_sl> TM627 showing surface contact @Vegas_SL, will correlate to previous track and use TM627 as referenced track to get ID and generate potential kinetic/non-kinetic options if ID'd as enemy
+14:14:47 dev has joined
+14:14:56 <hydro_stk> Strike, working sub
+14:15:12 <hydro_defense> DA048 1. Lifeguard 61 2. Pelican 61 both assets not in range but only available
+14:15:13 <HYDRO_Surv> DA073 c wkng
+14:15:55 <WF_Beep> vegas_sl:  @aoc_intel, copy aew launch, BREAK @hydro, do we have any lrkc options if/when that aew launches?
+14:16:11 <hydro_sl> @Space_DO: ref TM627, single surface track CIGAR 328/220 TN 44929 reported. request any ELINT, COMINT, SIGINT and IMAGERY to TYPE ID surface vessel type 
+14:16:39 <WF_Beep> space_ops: @hydro_sl c working, next pass for imint is in 25 minutes
+14:16:46 <hydro_sl> c 25 minutes
+14:17:17 <WF_Shoresy> space_ops: @hydro_Surv C, wkg air tracks
+14:17:53 <hydro_sl> Zeus11 supporting Orca new orbit for 10min to support theater sensor coverage on TM616
+14:19:16 <WF_Beep> vegas_sl: @hydro_sl need lrkc options for enemy aew asap, ref 14:15:55
+14:19:23 <WF_Shoresy> Space_Do: @hydro_sl, c wkg  single surface track CIGAR 328/220 TN 44929
+14:19:43 <HYDRO_Surv> DA073 match effectors: rank 1) Cyclops 2) Shark 3) Pikachu
+14:19:44 <hydro_sl> Zues11 also supprtoing bourne01 
+14:20:48 <hydro_sl> @Hydro_Tank: move Zuess11's Vul+55 ARCT to HVAA Hold North (Blue AR Track on your BC3 display), low priority do this later
+14:20:49 <Hydro_Tank> rank DA056 1. BOURNE+ORCA+WOMBAT / 2. SIGINT SAT 2 / 3. IMINT SAT 2 /
+14:21:07 <WF_Shoresy> space_ops: @hydro_Surv miami tracks appear to be fighters possibly j-15s
+14:21:42 <HYDRO_Surv> @Crusher_Ops, Hydro can Cyclops71 support a tasking B/E 217/49
+14:22:00 <hydro_sl> @Space_Ops: copy poss J-15
+14:22:06 <hydro_stk> TM627, FLOATER11 able to support strike when ready
+14:22:09 <Hydro_Tank> @space_ops, req SIGINT SAT 2 f/type ID f/TM622
+14:22:24 dev has quit
+14:22:52 <WF_Shoresy> space_do: @hydro_sl surface track CIGAR 328/220 TN 44929 appears to be a LCS
+14:22:52 <WF_Beep> afc_cc:  SINATRA DIRECTS PRIORITY KILL cttn 44930 jtn tm634 enemy aew supporting sub recovery
+14:23:03 <Hydro_Tank> HR31 to BANG02, HR32 to MONSTAR01
+14:23:07 <Hydro_Tank> 10k each
+14:23:10 omni has joined
+14:23:51 <hydro_sl> Zues11 commit 44930/TM634
+14:23:52 <WF_Chairman> Crusher_Ops: Hydro_Surv, how long do you need them for? I can push them to your chatroom.
+14:24:13 <WF_Beep> vegas_sl: @hydro ^^^ do we have an lrkc option for the aew cttn 44930?
+14:24:48 dev has joined
+14:25:14 <hydro_sl> working 44930
+14:25:22 Frank has quit
+14:25:58 <HYDRO_Surv> @Crusher_Ops, Hydro need them for approx for 2 hours, go ahead and push them to me. 
+14:27:01 <WF_Chairman> Cyclops71: Hydro_Surv, with you now TACON. Go with tasking.
+14:27:18 dev has quit
+14:28:02 <Hydro_Tank> SL, PM41 enoute to support ORCA - has jassm
+14:28:16 RTL has quit
+14:28:38 <HYDRO_Surv> Cyclops71, Hydro start heading bearing 330 for 150nm, will give you tasking enroute
+14:30:25 Frank has joined
+14:31:07 <WF_Chairman> Cyclops71: Hydro_Surv, c. Wilco
+14:31:10 <hydro_stk> @SPACE, is vader availbale to get more data on TM627, k
+14:32:13 <hydro_sl> Zues11/Orca/Bourne orbit/cap no further east than 010/220 due to KJ and J-15 threat, working LRKC w/ Sunny11 scramble, sb words. @Vegas, this also impacts our ability to TYPE ID track TM627 with theater assets. next time of space intercept is approximately 10minutes
+14:32:15 <WF_Beep> vegas_sl: update tracks 44920, 44917, 44914, multiple contacts HOSTILE mix 4th and 5th gen
+14:32:46 <WF_Beep> vegas_sl: ^^^ fighters
+14:32:58 <WF_Shoresy> Space_Ops: Hydro_stk what more data would you like, looks like a LCS from past overflight
+14:33:44 <WF_Shoresy> Space_Ops: Hydro_stk vader is on station
+14:33:50 <WF_Beep> space_sigint: @vegas @hydro HEADS UP multiple up echelon comms from adv air c2 directing targeting forces ivo 006/265
+14:34:35 <hydro_stk> @SPACE, can we get better ID from vader. looking for confirmation of enemy sub
+14:34:45 <HYDRO_Surv> @SPACE_OPS, Hydro can we get imagery B/E 217/49 JTN632
+14:35:42 <hydro_sl> space_sigint: c C2 directing vadar
+14:36:11 <hydro_sl> marley jam on KJ-500
+14:36:25 <WF_Shoresy> space_ops: C, looking confirm of enemy sub & JTN632
+14:37:23 <HYDRO_Surv> @SPACE_OPS, Hydro can we get imagery and possible surface tracks in the water about 50nm south of miami.
+14:37:31 <WF_Beep> aoc_emso: c marley
+14:38:14 reaper-mef-bot-N-506 has joined
+14:38:27 <HYDRO_Surv> Cyclops71, Hydro state eta when able
+14:38:42 <WF_Shoresy> space_ops: @hydro_Surv  JTN632 appears to be an airfield being set up for operations, nothing seen on ramps
+14:38:59 <WF_Beep> vegas_surv: @hydro_surv HEADS UP  cttn: 44943 two contacts hostile in a rapid climb
+14:39:08 <WF_Shoresy> space_ops: @hydro_Surv C, surface tracks in the water about 50nm south of miami
+14:39:19 dev has joined
+14:39:31 <WF_Chairman> Cyclops71: @Hydro_Surv, enroute for tasking 
+14:39:34 <hydro_sl> kio
+14:40:44 — 17:05:03 hance_leidos, reaper-mef-bot-smoke-test-49595, JordanNP, reaper-mef-bot-X-142, reaper-mef-bot-C-263, reaper-mef-bot-X-367, reaper-mef-bot-U-112, RTL, reaper-mef-bot-A-503, reaper-mef-bot-smoke-test-49353, reaper-isu-bot, reaper-mef-bot-1753829691-189, RacknerPAEBot, Jordan, reaper-mef-bot-smoke-test-77400, cc, reaper-mef-bot-1753830777-114, reaper-mef-bot-1753830900-419, reaper-mef-bot-1753831071-855, reaper-mef-bot-1753833832-344 and reaper-mef-bot-1753833901-184 have joined, Myabut has left, reaper-mef-bot-N-506, reaper-mef-bot-smoke-test-49595, reaper-mef-bot-X-142, bostwalt, reaper-mef-bot-C-263, reaper-mef-bot-X-367, reaper-mef-bot-U-112, CD_Bot, reaper-mef-bot-A-503, hance_leidos, WF_Chairman, reaper-mef-bot-smoke-test-49353, reaper-mef-bot-1753829691-189, WF-SIM, WF_SIM, reaper-mef-bot-smoke-test-77400, Frank, reaper-mef-bot-1753830777-114, SKuennekeAFRL, reaper-mef-bot-1753830900-419, reaper-mef-bot-1753831071-855, Jordan, JordanNP and reaper-mef-bot-1753833832-344 have quit
+17:05:28 <RTL> http://10.5.184.82:3100/
+17:06:28 — 17:23:17 reaper-mef-bot-1753834028-536, jadpact-bot2, reaper-mef-bot-E-502, Frank, reaper-mef-bot-I-456, reaper-mef-bot-P-384 and chat-feeder have joined, reaper-mef-bot-1753833901-184, omni, reaper-mef-bot-1753834028-536, jadpact-bot2, reaper-mef-bot-E-502, reaper-mef-bot-I-456 and reaper-mef-bot-P-384 have quit
+17:23:17 <chat-feeder> 14:36:35 <hydro_sl> fights on/ hydro on station
+17:23:20 <chat-feeder> 14:36:38 reaper-mef-bot has joined
+17:23:21 <chat-feeder> 14:36:39 <reaper-mef-bot> Test message from MEF API
+17:23:21 <chat-feeder> 14:36:39 reaper-mef-bot has quit
+17:23:30 <chat-feeder> 14:36:49 <hydro_sl> gt API
+17:23:35 <chat-feeder> 14:36:53 RTL has joined
+17:24:19 <chat-feeder> 14:36:35 <hydro_sl> fights on/ hydro on station
+17:24:23 <chat-feeder> 14:36:38 reaper-mef-bot has joined
+17:24:24 <chat-feeder> 14:36:39 <reaper-mef-bot> Test message from MEF API
+17:24:24 <chat-feeder> 14:36:39 reaper-mef-bot has quit
+17:24:29 reaper-isu-bot has quit
+17:24:33 <chat-feeder> 14:36:49 <hydro_sl> gt API
+17:24:37 <chat-feeder> 14:36:53 RTL has joined
+17:24:38 reaper-isu-bot and reaper-mef-bot-X-146 have joined
+17:25:07 <chat-feeder> 14:37:26 <hydro_strike> working cttn 43619
+17:25:09 <chat-feeder> 14:37:28 <WF_Beep> afc_watch: @hydro, SINATRA approves your plan to move air forces IVO bahamas to support puma11 TIC, proceed
+17:25:17 WF_Pilot2 has left
+17:25:39 <chat-feeder> 14:38:22 <hydro_surv> ref 43620 working
+17:26:09 <chat-feeder> 14:38:56 jadpact-bot2 has quit
+17:26:13 <chat-feeder> 14:39:00 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emissions were detected IVO 20:14:23N 076:49:53 W operating on VHF associated with enemy armor in Paris BMA. UID DA016
+17:26:28 <chat-feeder> 14:39:16 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) Red West Gate Guard at 27:19:50N 082:18:05W checked in to the net over a VHF freq. UID DA026
+17:26:30 wf_clark1 has quit
+17:26:38 <chat-feeder> 14:39:25 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1225Z Radio emissions were detected at location 22:09:16 N 079:21:45 W operating on high frequencies associated with CDCM ops in Wynn BMA. UID DA047
+17:26:47 <chat-feeder> 14:39:34 <WF_Shoresy> AGANO_OPS (AGANO FFG): @Maritime_OPS (Maritime Operations Center) Possible drone swarm approaching from south B/E 035/315, type unk.  Main generator still inop, drifting WNW at 5 knots, req support in Wynn BMA. UID DA003
+17:27:01 <chat-feeder> 14:39:49 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_tank (CRE) What can we use to listen to the VHF comms IVO 20:14:23N 076:49:53W. UID DA016
+17:27:01 <chat-feeder> 14:39:49 jadpact-bot2 has joined, jadpact-bot2 has quit
+17:27:09 <chat-feeder> 14:39:56 <hydro_surv> @space_ops can you id jtn TM702
+17:27:12 reaper-mef-bot-X-146 has quit
+17:27:15 <chat-feeder> 14:40:02 <WF_Shoresy> Intel_Ops (Intelligence Operations Center): @Hydro_Surv (CRE) What do you have available to locate where the Red West Gate Guard at 27:19:50 N082:18:05 W is?  They should be in contact with their HQ comm server too. UID DA026
+17:27:27 <chat-feeder> 14:40:15 <WF_Beep> cjsotf:  update TIC b02 puma 11, they're pinned down cigar 004/126, taking heavy fires, small arms, rpg, arty
+17:27:27 <chat-feeder> 14:40:15 <WF_Shoresy> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) What do you have that can affect that CDCM launcher?. UID DA047
+17:27:37 Shoresy and WF_Shoresy have quit
+17:27:44 <chat-feeder> 14:40:31 <WF_Shoresy> Maritime_OPS (Maritime Operations Center): @hydro_def (CRE) Do you have anything that can help defend AGANO ref the possible swarm??? in Wynn BMA. UID DA003
+17:27:49 <chat-feeder> 14:40:36 <WF_Chairman> Space_Ops: hydro_surv, copy JTN TM702, working
+17:27:53 WF_Chairman1 has left, reaper-isu-bot has quit
+17:27:57 <chat-feeder> 14:40:43 SKuennekeAFRL has joined
+17:27:59 reaper-isu-bot and reaper-mef-bot-I-667 have joined
+17:28:07 <chat-feeder> 14:40:53 <hydro_surv> ref UID DA026 standby working
+17:28:11 — 17:35:37 bostwalt, reaper-mef-bot-1753835680-800 and reaper-mef-bot-G-440 have joined, chat-feeder, afrl-test-logger, reaper-mef-bot-I-667, HYDRO_Surv, hydro_defense, hydro_stk, Hydro_Tank, WF_Beep, cc and hydro_sl have quit
+17:35:54 <reaper-mef-bot-G-440> testing from mef local brett Track 44943 SENSE (Within the next hour) E→D: PELICAN → Surface Radar
+17:36:13 — 17:36:39 reaper-mef-bot-1753835680-800 and WF_Sim1 have quit
+17:36:42 <reaper-mef-bot-G-440> @vegas Track 44943 COMMUNICATE (Within the next hour) E→D: SHARK 24 → LEO Datalink
+17:36:55 — 17:37:28 reaper-mef-bot-I-939, reaper-mef-bot-1753835815-172 and Frank2 have joined
+17:37:33 <reaper-mef-bot-I-939> @ryan Track 59990 ELECTRONIC_ATTACK (Within the next hour) E→D: KRAIT → Barrage Noise
+17:39:13 — 22:38:03 reaper-mef-bot-N-237, reaper-mef-bot-U-633, reaper-mef-bot-N-308, reaper-mef-bot-X-652, reaper-mef-bot-X-490, reaper-mef-bot-U-125 and reaper-mef-bot-W-857 have joined, reaper-mef-bot-G-440, reaper-mef-bot-1753835815-172, reaper-mef-bot-I-939, reaper-mef-bot-N-237, Frank2, Frank, RacknerPAEBot, RTL, dev, dyeee, reaper-mef-bot-U-633, reaper-mef-bot-N-308, reaper-mef-bot-X-652, reaper-mef-bot-X-490, reaper-mef-bot-U-125, reaper-isu-bot, reaper-mef-bot-W-857 and bostwalt have quit
+07/30/2025
+00:37:03 — 07:20:14 bostwalt and WF_Pilot2 have joined, bostwalt has quit
+07:20:26 <WF_Pilot2> .
+07:28:26 — 07:30:09 hydro_surv, hydro_stk, hydro_defense and Hydro_Tank have joined
+07:30:45 <hydro_defense> .
+07:31:45 — 08:07:31 hydro_sl, WF_Beep, afrl-test-logger, cc, omni, bostwalt, Omni, RacknerPAEBot, WF_Shoresy, reaper-isu-bot and reaper-mef-bot-G-919 have joined, omni, RacknerPAEBot-smoke and bostwalt have quit
+08:07:44 <hydro_defense> .
+08:08:56 — 08:09:03 my_bot has joined, reaper-mef-bot-G-919 has quit
+08:09:03 <my_bot> .
+08:09:07 WF_Chairman1 has joined, reaper-isu-bot has quit
+08:09:09 <my_bot> .
+08:09:14 <my_bot> .
+08:09:16 White has joined
+08:09:38 <Hydro_Tank> test
+08:09:42 bostwalt has joined
+08:09:42 <my_bot> .
+08:09:42 reaper-isu-bot has joined
+08:09:42 <my_bot> .
+08:09:44 reaper-mef-bot-T-888 has joined
+08:09:45 <my_bot> .
+08:09:59 <my_bot> .
+08:10:54 — 08:11:18 WF_Chairman has joined, bostwalt has quit
+08:11:18 <my_bot> .
+08:12:14 <Hydro_Tank> anote test 1
+08:12:15 reaper-mef-bot-T-888 has quit
+08:12:17 <Hydro_Tank> anote test 2
+08:12:29 <Hydro_Tank> .
+08:12:29 Omni has quit
+08:12:29 <Hydro_Tank> .
+08:12:30 <Hydro_Tank> .
+08:12:31 <Hydro_Tank> .
+08:12:31 <Hydro_Tank> .
+08:12:36 aptima has joined
+08:12:36 <my_bot> .
+08:14:25 <my_bot> .
+08:14:29 reaper-mef-bot-L-411 has joined
+08:14:29 <my_bot> .
+08:15:27 WF_Sim1 has joined
+08:15:27 <my_bot> .
+08:16:59 — 08:24:23 dev has joined, reaper-mef-bot-L-411 and reaper-isu-bot have quit
+08:24:23 <my_bot> .
+08:24:26 JordanNP has joined
+08:24:26 <my_bot> .
+08:24:27 Jordan has joined
+08:24:27 <my_bot> .
+08:26:06 Omni has joined
+08:26:06 <my_bot> .
+08:26:53 dev has quit
+08:34:40 <my_bot> .
+08:36:24 <WF_Beep> ..
+08:37:23 <WF_Sim1> ...
+08:38:21 <hydro_sl> looks like crossbow is forward deployed to cuba
+08:38:27 hance_leidos has joined
+08:38:27 <my_bot> .
+08:38:30 <hydro_sl> zumwalt is more forward to the west
+08:38:34 dev has joined
+08:38:35 <my_bot> .
+08:39:02 Myabut has joined
+08:39:02 <my_bot> .
+08:39:20 <hydro_stk> ..
+08:39:38 <WF_Shoresy> .
+08:39:47 <hydro_sl> strike find the locations and callsigns for your naval assets that have tomahawks/LACMs
+08:39:57 <hydro_stk> Strike copies
+08:40:12 dyeee has joined
+08:40:12 <my_bot> .
+08:40:37 <WF_Beep> @hydro looks like STR will be demo only, so please take this time to get your scopes set up for the rest of the day.
+08:40:37 jarvis_monitor_hance has joined
+08:40:37 <my_bot> .
+08:40:54 reaper-mef-bot-dj-K-448 has joined
+08:40:54 <my_bot> .
+08:42:06 — 08:42:18 reaper-mef-bot-frank-Z-749 has joined, aptima has quit
+08:42:18 <my_bot> .
+08:42:37 <my_bot> .
+08:43:24 — 08:46:44 reaper-mef-bot-dj-J-753 has joined, reaper-mef-bot-dj-K-448, reaper-mef-bot-frank-Z-749 and dev have quit
+08:46:44 <my_bot> .
+08:46:44 dev has joined
+08:46:44 <my_bot> .
+08:47:51 <Hydro_Tank> showing two Knights AR tracks, confirm Knights location has not changed?
+08:48:05 <Hydro_Tank> B/E 075/127
+08:48:06 <hydro_sl> im working something unrelated to the current demonstration
+08:48:41 <Hydro_Tank> c
+08:49:14 — 09:05:32 reaper-mef-bot-J-849 has joined, reaper-mef-bot-dj-J-753, jarvis_monitor_hance and hance_leidos have quit
+09:05:32 <my_bot> .
+09:06:09 — 09:07:08 reaper-mef-bot-Y-115 has joined, reaper-mef-bot-J-849 and dyeee have quit
+09:07:08 <my_bot> .
+09:07:09 dyeee has joined
+09:07:09 <my_bot> .
+09:07:48 <WF_Beep> @hydro crew, we will stay on frag india-str for this mini-run
+09:08:17 <hydro_sl> c INDIA!
+09:08:18 <WF_Beep> @hydro crew, they're resetting the sim
+09:08:34 <my_bot> .
+09:09:38 reaper-mef-bot-Y-115 has quit
+09:10:29 <hydro_sl> radio checks and scopes g2g for everyone
+09:10:31 <hydro_sl> ?
+09:10:34 <Hydro_Tank> aff
+09:10:41 <hydro_defense> def ready
+09:11:30 <hydro_stk> Strike ready
+09:11:40 <hydro_surv> surv ready
+09:11:53 <hydro_sl> o/s fights on
+09:11:58 Administrator has joined
+09:11:58 <my_bot> .
+09:12:05 Administrator has quit
+09:13:07 <White> Analysis_Center01 (Analysis Center): @AOC_Ops (Air Operations Center) SIGINT hit detected associated with a Y-8 IVO 18RUP3079118586. UID DA045
+09:13:28 wf_shields has joined
+09:13:28 <my_bot> .
+09:13:45 <White> AOC_Ops (Air Operations Center): @hydro_surv (CRE) Are you able to get FMV onto that airfield and find that Y-8? UID DA045
+09:14:07 <White> Analysis_Center01 (Analysis Center): @AOC_Ops (Air Operations Center) COMMINT detected from 40th Red LRA Brigade IVO 24:36:96 N 077:46:86 W , probable target is HYDRO. UID DA070
+09:14:33 <White> Space_Ops (Space Operations Center): @AOC_Ops (Air Operations Center) At 1230Z 4x TBM type 1's were detected parked on road via IMINT 21:49:65?N 078:23:76?W  in Wynn BMA. UID DA043
+09:14:38 <hydro_surv> c working DA045
+09:14:47 <White> RIPIT55 (KC135): @AOC_Ops (Air Operations Center) We have 40k above fragged on fuel. UID DA060
+09:15:12 <White> AOC_Ops (Air Operations Center): @hydro_Def (CRE) Get an asset to destroy those LRA'S. UID DA070
+09:15:27 <White> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) Who can we task to strike those TBMs within Wynn BMA? UID DA043
+09:15:33 <hydro_defense> c, UID DA070
+09:15:43 <White> AOC_Ops (Air Operations Center): @hydro_tank (CRE) Figure out a way to utilize that extra fuel from RIPIT55. UID DA060
+09:15:57 <Hydro_Tank> c wkg DA060
+09:16:05 <WF_Beep> vegas_surv: @hydro_surv y'all got anything that can investigate cttn 44107 jtn tm711, cigar 323/175
+09:16:24 <hydro_sl> wrkg 44107 TM711
+09:16:32 Administrator_ has joined
+09:16:32 <my_bot> .
+09:17:05 <Hydro_Tank> ref DA060, from RT55, they are F+20, not F+40
+09:17:07 <hydro_stk> DA043 JTN TM716
+09:17:32 <WF_Beep> vegas_surv: c da043 = tm716 thx!
+09:18:17 <hydro_surv> ref DA045 match rank: Photon, Jarjar
+09:18:24 <hydro_sl> @Space_DO: req GMTI and correlated SIGINT for type ID surface track TM711/44107, b/e 323/175
+09:18:28 wf_shields has quit
+09:19:03 <WF_Beep> vegas_surv: @crusher HEADS UP  pop up group cigar 174/175 unknown
+09:19:38 <WF_Beep> crusher_sad: c popup, @hydro our comms are down, can you investigate?
+09:19:41 <hydro_stk> DA043 RANK 1 MYSTIC, RANK 2 YAMA, RANK3 FLOATER11
+09:19:59 <hydro_sl> @vegas/@crusher: copy 174/175, working
+09:20:16 reaper-mef-bot-dj-J-547 has joined
+09:20:16 <my_bot> .
+09:20:26 <hydro_surv> AOC_Ops, Hrydro are you able to give us approx coordinates for the airfield to find the Y-8? 
+09:20:27 <hydro_sl> @crusher relay via J28.2 if you still have that up to shark to commit
+09:20:31 <WF_Shoresy> Space_DO: @Hydro_sl, c wkg GMTI and correlated SIGINT for type ID surface track TM711/44107, b/e 323/175
+09:21:00 <hydro_sl> @space_DO, thanks, moving Sahara (1xE-3G) into range to also get sensors on in the mean time
+09:21:04 jarvis_monitor_hance has joined
+09:21:04 <my_bot> .
+09:21:05 <hydro_defense> ref UID DA070, match Hammer31
+09:21:07 hance_leidos has joined
+09:21:07 <my_bot> .
+09:22:03 <hydro_sl> @Vegas @Crusher: will be moving either Wombat or Sahara into the southern portion of hydro BMA to provide comms to CRUSHER players via LOS UHF
+09:22:23 <hydro_stk> DA070 JTN TM717
+09:22:39 <WF_Beep> vegas_sl: c wombat/sahara thx
+09:22:46 reaper-mef-bot-dj-J-547 has quit
+09:23:07 <hydro_sl> DA070 copy Hammer... confirm that's a CAT1 grid?
+09:23:14 reaper-mef-bot-F-845 has joined
+09:23:14 <my_bot> .
+09:23:22 <WF_Shoresy> Space_DO: @Hydro_Sl TM711/44107, b/e 323/175 looks like a carnival cruise ship with big mickey ears
+09:23:41 <hydro_defense> @Krait, can you be prepared to defend against 4x TBM launches
+09:23:45 <hydro_sl> @Space_DO: copy carnival cruise liners
+09:24:24 <my_bot> .
+09:24:48 <hydro_sl> KIO
+09:24:49 <WF_Chairman> Krait_Ops: @Hydro_def, watching
+09:25:36 <my_bot> .
+09:25:36 <my_bot> .
+09:25:44 — 09:26:27 AJ has joined, reaper-mef-bot-F-845 has quit
+09:26:27 <my_bot> .
+09:26:54 — 09:27:08 reaper-isu-bot has joined, Omni has quit
+09:27:08 <my_bot> .
+09:27:11 reaper-mef-bot-J-386 has joined
+09:27:11 <my_bot> .
+09:28:06 dev has quit
+09:28:29 <my_bot> .
+09:28:53 dev has joined
+09:28:53 <my_bot> .
+09:29:41 — 09:31:06 bostwalt has joined, reaper-mef-bot-J-386 has quit
+09:31:06 <my_bot> .
+09:34:24 <WF_Beep> ----------------TM-DASH 2 MEF run for Anote microservice----------------
+09:35:02 reaper-mef-bot-dj-Z-589 has joined
+09:35:02 <my_bot> .
+09:37:01 Administrator__ has joined
+09:37:02 <my_bot> .
+09:37:32 — 09:38:05 WF_Pilot2 has left, reaper-mef-bot-dj-Z-589 has quit
+09:38:05 <WF_Beep> ALL - make sure you are on frag charlie - Anote
+09:38:57 — 09:41:45 Omni has joined, Administrator_ and RacknerPAEBot have quit
+09:41:46 <my_bot> .
+09:42:44 WF_Pilot2 has joined
+09:42:45 <my_bot> .
+09:42:50 <WF_Pilot2> .
+09:43:23 — 09:43:55 wf_shields has joined, Administrator__ has quit
+09:43:56 <my_bot> .
+09:44:11 <WF_Beep> for Anote run:
+09:44:11 <WF_Beep> first 5 minutes: anote tool fam for hydro_strike, and force accountability for the rest of the crew on frag charlie - anote
+09:44:12 <WF_Beep> I'll verify strike is gtg with the tool and aptima is good for data collect and call the f/o, and go for about 40 minutes from there
+09:44:30 WF_Director has joined
+09:44:30 <my_bot> .
+09:44:37 <WF_Director> .
+09:45:50 RacknerPAEBot has joined
+09:45:50 <my_bot> .
+09:46:15 <my_bot> .
+09:46:18 reaper-mef-bot-Q-214 has joined
+09:46:18 <my_bot> .
+09:48:48 — 09:50:31 reaper-mef-bot-dj-F-920 has joined, reaper-mef-bot-Q-214 has quit
+09:50:31 <my_bot> .
+09:50:31 — 09:51:08 reaper-mef-bot-dj-W-528 has joined, reaper-mef-bot-dj-F-920 has quit
+09:51:08 <my_bot> .
+09:53:38 reaper-mef-bot-dj-W-528 has quit
+09:54:41 <WF_Beep> vegas_sl: @hydro_sl, let me know when y'all have fa on your frag charlie assets pls
+09:55:29 <hydro_sl> wilco wkg
+09:55:47 <hydro_stk> STRIKE gtg now
+09:55:57 <WF_Beep> c stk thx
+09:56:20 <hydro_defense> def af
+09:56:40 <hydro_sl> @Vegas_SL: good F/A on Frag Charlie
+09:57:19 <hydro_sl> ficeON
+09:57:46 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) Armored Cav 69 last known position 24:57:10 N 78:03:47 W notified C2 facility that they are operational and about to move. UID DA002
+09:58:01 <WF_Beep> space_intel: @aoc_intel we're getting indications of a 5th gen sam ivo miami acq radar in calibration mode, mtf
+09:58:02 <WF_Shoresy> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) What can we use to destroy the Armored Cav vehicles IVO 24:57:10 N 78:03:47 W? UID DA002
+09:58:14 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1205Z to 2111Z Radio emissions were detected IVO 21:44:09 N 78:02:41 W operating on VHF associated with a TBM Convoy in Paris BMA. UID DA016
+09:58:29 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_Surv (CRE) What can we use to listen to the VHF comms IVO 21:44:09 N 78:02:41 W? . UID DA016
+09:58:32 <hydro_stk> DA002 JTN TM307
+09:58:45 <hydro_sl> wkg DA002 DA016
+09:58:46 <WF_Shoresy> FORD_OPS (USS Gerald R. Ford (CVN-78)): @Maritime_OPS (Maritime Operations Center) COMINT associated with multiple enemy fast attack boats enroute to FORD B/E 056/280 in Wynn BMA. UID DA003
+09:58:46 <hydro_defense> c, working DA016
+09:58:56 <WF_Beep> aoc_intel: @space_intel c 5th gen BREAK @hydro y'all have anything that can collect on a 5th gen sam ivo miami b/e337/272 -ish
+09:59:01 molnar_leidos has joined
+09:59:01 <my_bot> .
+09:59:05 <WF_Shoresy> Maritime_OPS (Maritime Operations Center): @hydro_def (CRE) Do you have anything that can help defend FORD ref the fast attack boats within Wynn BMA? UID DA003
+09:59:18 <hydro_surv> C working Da003
+09:59:25 <WF_Shoresy> ORCA01 (E-2D HAWKEYE): @AOC_Ops (Air Operations Center) Via radio relay, MONSTER01 (KC46) has a broken drogue, boom only in Wynn BMA. UID DA081
+09:59:37 <Hydro_Tank> c wkg DA081
+09:59:40 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_tank (CRE) Can you rework the AR plan for the impacted receivers from MONSTER 01? in Wynn BMA. UID DA081
+09:59:54 <hydro_sl> @AOC_Intel: c potential 5G SAM ivo BE 337/272 wkg sb
+10:00:19 <WF_Beep> aoc_intel: thx hydro, working location
+10:00:29 <hydro_sl> @AOC_Intel: confirm collect? my assumption is imagery and CAT1 grid/CAT2 worst case on confirmed enemy 5G SAM around that B/E location
+10:00:45 <hydro_stk> @SPACE, Strike req GMTI/IMINT on TM307
+10:00:56 jarvis_monitor_molnar has joined
+10:00:56 <my_bot> .
+10:00:59 <hydro_surv> SL DA003 TM323 B/E 056/280
+10:01:29 <WF_Shoresy> Space_ops: @hydro_stk c, GMTI/IMINT on TM307
+10:02:22 <Hydro_Tank> ref DA081 match, Merlin01 (F-16) only affected receiver, will use MR01 Boom, not Drogue 
+10:02:34 <WF_Beep> vegas_surv: @hydro_surv: cttn 43403 jtn tm332 5th gen sam hostile cigar 340/285, can y'all hit that with anything?
+10:03:11 <hydro_sl> @Bourne_CROW: request ELLIPSE centerponit and dimensions for last reported enemy 5G SAM Site when able please
+10:03:34 <WF_Pilot2> @hydro, Bourne01 working
+10:03:38 <hydro_sl> tyvm
+10:03:40 <hydro_stk> DA002 destroy RANK 1, HADES, RANK2 OHIO, RANK3 HARPY-ZEUS, awaiting space
+10:04:50 <hydro_defense> @SPACE ops request GMTI SAT to on DA016 
+10:05:13 <WF_Beep> bourne_ewo2: @hydro, 5th gen sam is cttn: 43403 tn tm332, 3 x 1 bearing 250
+10:05:27 <hydro_surv> Ref DA003 Rank 1. Yama, Rank 2 Hammer, rank 3 mystic, rank4. Dipper 11
+10:06:53 <hydro_sl> c all break break @Space_DO: ref TRACK 43403 TM332 IVO Miami, assessed enemy 5G SAM system communications, likely operating within range of TAR. request correlated COMINT for same signal to DF ellipse tighter, ELINT associated w/ 5G SAM system EW radars, and IMAGE the location to find the TAR at CAT2 coordinates or better so i can strike it
+10:06:56 <WF_Shoresy> space_ops: @hydro_stk good visual on TM307, they dont appear to be moving ref DA002
+10:07:12 <WF_Beep> space_intel: @vegas @hydro, we've got indications of several active airfields on the west of cuba, mtf
+10:07:22 <hydro_defense> re DA016, BOURNE01 and space to find a more specific location and Thor01 to strike
+10:07:24 <WF_Shoresy> space_ops: @hydro_defense C, GMTI SAT on DA016 
+10:07:36 <hydro_sl> c, @CRUSHER skulls up enemy activity in your BMA, prob A/C launches
+10:07:43 <hydro_surv> SL ref DA003 B/E 56/280 TM323 Yama 31 and Hammer 31 are enroute to support.
+10:07:44 <hydro_sl> @Crusher how's your WRM looking
+10:09:19 <hydro_sl> @Crusher 3grp champagne weighted north your BMA, do you have air to air shooters available?
+10:09:34 <WF_Beep> cyber_ops: @aoc_intel, we located the adversary mobile c2 system ivo cigar 286/134, traffic indicates they've got surface to air assets somewhere near by
+10:10:16 <hydro_sl> @Cyber_Ops: copy all, can we get a lat/long or grid when able for that intercepted traffic
+10:11:40 <hydro_stk> @SPACE Req TOI from last visual TM307
+10:11:43 <hydro_surv> @Crusher for 3grp champagne recc Dolphin71 and Pikachu 81 to support
+10:12:09 reaper-isu-bot has quit
+10:13:29 <WF_Shoresy> space_ops: @hydro_defense no indications of movement, switched to OPIR tasking, location 17QRE0570706509, ref DA016
+10:13:33 reaper-mef-bot-D-937 has joined
+10:13:34 <my_bot> .
+10:13:37 <WF_Chairman> Crusher_SL: @Hydro_Surv, can you point out the 3 grp champagne? We're blind west of us right now.
+10:13:47 jadpact-bot2 has joined
+10:13:47 <my_bot> .
+10:13:59 <hydro_stk> @SPACE req GMTI for TM307
+10:14:03 <hydro_sl> @Crusher affirm copy blind
+10:14:14 WF_Sim has joined
+10:14:15 <my_bot> .
+10:14:28 AFRL_SKuenneke has joined
+10:14:29 <my_bot> .
+10:14:46 <hydro_sl> Sahara (1xE-3G) moving to southern lobe of HVAA Forward, will provide extended AMTI coverage into TAIPAN BMA
+10:14:50 <WF_Shoresy> @SPACE_ops: @hydro_stk TOI TM307, 5min
+10:15:58 <WF_Shoresy> Space_ops: @hydro_stk C GMTI ref TM307
+10:16:01 bostwalt and reaper-mef-bot-D-937 have quit
+10:16:17 <WF_Beep> afc_battlecab_watch: SINATRA DIRECTS SMACK cttn 43560  jtn tm542 mobile c2 unit currently preparing to move, need a strike in the next 20 minutes, HEADS UP possible 5th gen sam providing air cover
+10:16:18 <hydro_sl> @Space_DO: c all, thanks for the coord. can we reference previous request for 5G SAM TM332 TN43403 IVO Miami. looking for imagery to find the TAR or DMPIs for EW and Engagement radar systems and power facilities associated. looking to throw some TLAM at this problem
+10:16:48 <WF_Shoresy> Space_DO: @hydro_sl C all, wkg
+10:16:48 WF_Director has left
+10:17:12 <WF_Shoresy> Space_ops: @hydro_stk no change ref TM307
+10:17:20 <WF_Beep> vegas_sl: @hydro_sl, sinatra dir task 43560 priority pls
+10:17:38 <hydro_sl> c SINATRA directs SMACK TM542 b/e 287/196. please confirm that's CAT2 or better CDE assumed, looking to pair w/ standoff weapons based on the threat environment of mult unlocated sams in cuba and enemy air picture
+10:18:10 <WF_Beep> afc_battlecab: good copy, thx hydro
+10:18:55 <hydro_surv> @Maritime Ops, can Zumwalt taget 3grp champagne leading edge TM446 and TM447 
+10:19:24 <hydro_stk> @SPACE req GMTI or IMINT to confirm CAT2 on TM542
+10:19:35 <hydro_surv> Def sunny has back up for thor on 3grp champagne
+10:19:43 <my_bot> .
+New messages
+10:20:38 <WF_Chairman> AOC_Ops: @Hydro_SL TM542 CAT2, CDE 1 low
+10:21:10 <my_bot> .
+10:21:14 <hydro_sl> @Crossbow, reference track TM542, CAT1 grid. are any of your firing units within range to engage that C2 Facility, looking to see if any of your ATACM rounds available are available. approx range 200NM....
+10:21:28 <WF_Shoresy> Space_DO: @hydro_sl DMPI for TAR 17RNJ7347061624 cat2, ref TM332
+10:21:47 <hydro_surv> @Spacce_ops, hydro can you put sensors on and determine what kkind of SAM TM477 is?
+10:22:13 Omni has quit
+10:22:20 <WF_Shoresy> Space_ops: @hydro_surv C, wkg TM477
+10:34:11 <my_bot> .
+10:34:49 reaper-mef-bot-C-189 has joined
+10:34:50 <my_bot> .
+10:35:24 <WF_Beep> -----------------------END ANOTE RUN-----------------------
+10:35:39 <WF_Beep> -------------------------TM-DASH 2 MEF run for Rackner--------------------------------
+10:36:29 reaper-mef-bot-C-189 has quit
+10:37:00 <WF_Beep> ALL PLAYERS CHECK FRAG ECHO - Rackner
+10:41:35 — 10:41:43 reaper-mef-bot-T-177 has joined, AFRL_SKuenneke has quit
+10:41:43 <my_bot> .
+10:43:51 reaper-mef-bot-A-132 has joined
+10:43:51 <my_bot> .
+10:43:57 Bot has joined
+10:43:57 <my_bot> .
+10:44:13 — 10:44:43 reaper-mef-bot-T-177 and jarvis_monitor_molnar have quit
+10:44:50 <my_bot> .
+10:45:16 WF_Sim2 has joined
+10:45:16 <my_bot> .
+10:45:18 jadpact-bot2 has joined
+10:45:18 <my_bot> .
+10:46:21 — 10:56:27 reaper-mef-bot-A-418, reaper-mef-bot-C-337, reaper-isu-bot, reaper-mef-bot-C-532 and reaper-tanker-T-530 have joined, Hydro_Tank has left, reaper-mef-bot-A-132, jarvis_monitor_hance, my_bot, hance_leidos, reaper-mef-bot-A-418, Bot and reaper-mef-bot-C-337 have quit
+10:58:14 <hydro_stk> .
+10:58:17 <WF_Shoresy> .
+10:58:18 hance_leidos has joined
+10:58:28 <WF_Shoresy> ..
+10:58:44 Hydro_Tank has joined, reaper-mef-bot-C-532 has quit
+10:58:56 <hydro_sl> hydro on station
+10:58:57 — 10:59:59 reaper-mef-bot-dj-I-842 and jarvis_monitor_hance have joined, reaper-tanker-T-530 and molnar_leidos have quit
+11:00:00 <hydro_sl> Frag ECHO
+11:00:20 — 11:01:36 afrl-skuenneke has joined, reaper-mef-bot-dj-I-842 has quit
+11:02:35 <WF_Beep> http://10.5.184.82:3100/
+11:04:24 <Hydro_Tank> .
+11:06:57 jadpact-bot2 has quit
+11:08:06 <WF_Beep> vegas_sl: c hydro o/s, let me know when you have force acct and any alibis, thx
+11:08:16 <hydro_sl> c wilco
+11:09:12 <hydro_sl> @Vegas, F/A g2g
+11:12:57 Hydro_Tank has left
+11:14:59 <hydro_sl> ficeON
+11:15:06 <WF_Beep> space_intel: aoc_intel confirmed adv aircraft carrier departing mooring in port miami, no indication of destination yet
+11:15:17 <WF_Beep> aoc_intel: c cvn
+11:15:27 <hydro_sl> @Space_Intel: copy, confirm time of intercept? hour or greater ago?
+11:15:36 Hydro_Tank has joined
+11:16:16 <WF_Beep> space_sigint: two 5th gen sams active in search ivo miami
+11:16:27 <hydro_sl> @Space_GMTI: request publish any Surface tracks that have departed Miami port since last intercept of enemy aircraft carrier departure to try and narrow down search areas if able. thanks
+11:16:57 <hydro_sl> @Space_SIGINT: c 2x SAMs IVO Miami, request grid/lat long whenable 
+11:17:36 <WF_Beep> space_sigint: @aoc_intel: up echelon comms, enemy carrier is doing seaworthiness tests off coast near miami
+11:17:58 <hydro_sl> copy off coasts near miami
+11:19:01 <WF_Beep> afc_battlecab: CHARIOT DIRECTS INVESTIGATE adversary carrier, possible track 43541 jtn tm557
+11:19:29 <hydro_sl> orca moving RAIDERS fwd to maintain standoff but within sensor volume of MMTI IVO miami to help solve that problem of carrier, standby MEF for Enemy CArrier MEF
+11:20:00 jarvis_monitor_hance has quit
+11:20:05 <WF_Beep> crusher_sad: @vegas_surv heavy group ivo cigar 255/208
+11:20:16 <hydro_sl> AFC_Battlecab: copy CHARIOT directs INV poss carrier track 43541 TM557
+11:20:29 <WF_Beep> vegas_surv: copy heavy group
+11:20:40 <WF_Shoresy> Space_DO: @hydro_sl C lat/long 2x SAMS IVO Miami
+11:21:04 — 11:21:29 hance_leidos and dev have quit
+11:21:55 <WF_Shoresy> Space_DO: @hydro_sl 17RNK6742163654, 17RNJ3765626668 ref 2x SAMS IVO Miami
+11:22:10 <WF_Shoresy> ORCA01 (E-2D HAWKEYE): @AOC_Ops (Air Operations Center) Ripit55 (KC135) has a engine fire, IFE, RTB in Wynn BMA. UID DA042
+11:22:22 <hydro_stk> rank cttn 43539, 43540 1. SIGINT SAT 1 / 2. IMINT SAT 1. / 3. BOURNE01 / 4. ORCA01 / 5. WOMBAT
+11:22:27 <hydro_sl> @AFC_Battlecab: moving orca and bourne to raiders forward  
+11:22:28 leidos_molnar has joined
+11:22:28 <WF_Shoresy> ORCA01 (E-2D HAWKEYE): @hydro_tank (CRE) Can you rework the AR plan for the impacted receivers from Ripit55? in Wynn BMA. UID DA042
+11:23:02 jarvis_monitor_molnar has joined
+11:23:04 <hydro_sl> @Bourne: reference RAIDERS FORWARD for new orbit, work sensors towards CHARIOT priority of poss enemy carrier track TM557, orca supporting w/ MMTI
+11:23:41 dev has joined
+11:23:41 <hydro_stk> @space ops, req SIGINT SAT 1 +IMINT SAT 2 Pass over JTN: TM556 // 160 / 321 and JTN: TM555 // 149 / 267
+11:23:49 <hydro_sl> @Crusher: showing mult reported surface tracks your BMA TM560 4x SKUNKs
+11:24:10 <WF_Beep> crusher_sad: copy request refine when able thx
+11:24:11 <WF_Pilot2> @hydro, Bourne in the turn to 320 for RAIDERS FORWARD
+11:24:40 <WF_Shoresy> space_ops: @hydro_stk C wkg SIGINT SAT 1 +IMINT SAT 2 Pass over JTN: TM556 // 160 / 321 and JTN: TM555 // 149 / 267
+11:24:52 <hydro_stk> @space_do confirm cat of sam coords
+11:26:15 <WF_Shoresy> Space_DO: @hydro_stk 17RNK6742163654, 17RNJ3765626668 cat 2, ref sam coords
+11:26:24 <hydro_sl> sahara enr HVAA South closer to Crusher BMA
+11:26:25 <hydro_stk> c sams are cat 2
+11:26:48 <hydro_surv> ref track cttn 43541 match effectors: RANK 1) Phantom41 2) Orca1 3) Longshot
+11:27:12 <Hydro_Tank> GO01 > RR16 15k off load // GO03 > RL35 15k off load
+11:27:18 <WF_Chairman> Crusher_SL: @Hydro_SL, copy on Sahara01
+11:28:37 <WF_Beep> afc_battlewatch: SINATRA declare cttn 43541 jtn tm557 cigar 337/252 HOSTILE adv aircraft carrier, SMACK in next 20 minutes
+11:29:06 <hydro_sl> c TM557 SMACK, wkg
+11:29:17 <hydro_stk> rank dx cttn 43539, 43540 1. CEREAL / 2. MARLEY 11 / 3. MYSTIC21 / 4. YAMA31 / 5. ZEUS11
+11:30:04 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) Red Vehicle Maintenance Unit 23 last known position N26:43:14 W80:05:14 notified C2 facility that they are operational and about to move SCUDs. UID DA008
+11:30:31 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_surv (CRE) Find something to geolocate the exact position of the SCUD rearm, ref Red Vehicle Maintenance Unit N26:43:14 W80:05:14. UID DA008
+11:30:52 <WF_Shoresy> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) 1x elevated TEL observed on EO/IR image IVO 24:39:11 N 077:54:30 W in Wynn BMA. UID DA152
+11:31:09 <WF_Beep> aoc_bcd: @vegas @hdyro @crusher, one of our battalions on cuba is down comms, they should have hf back up but we don't have any comms here to verify, do you have anyone that can relay hf comms for us?
+11:31:20 <WF_Shoresy> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) What do you have to attack that TEL ASAP?  It is already erect. UID DA152
+11:31:44 <WF_Shoresy> Floater10_OPS (MICHAEL MURPHY DDG): @Maritime_OPS (Maritime Operations Center) Possible UAV swarm approaching from south B/E 100/234, type unk.  Engines inop,  req support in Wynn BMA. UID DA003
+11:32:16 <WF_Shoresy> Maritime_OPS (Maritime Operations Center): @hydro_def (CRE) Do you have anything that can help defend MICHAEL MURPHY ref the possible swarm? in Wynn BMA. UID DA003
+11:32:49 <Hydro_Tank> GO01 > RR16 15k off load // GO03 > RL35 15k off load // PE41 > RT56 10k off load
+11:32:56 <WF_Beep> vegas_sl: ref bcd req (11:31:19) do you have anyone that can relay comms on hf?
+11:33:07 <WF_Beep> ^^^hydro
+11:33:28 <hydro_defense> @space ops color request cttn 43533/ tm562
+11:33:49 <hydro_sl> c DA152, DA003, and DA008. wkg
+11:34:36 <WF_Shoresy> Space_ops: @hydro_defense I cant give you a color call, do you want a type ID?
+11:34:47 <WF_Shoresy> ^^ref TM562
+11:34:48 <WF_Beep> @vegas_surv: multiple low slow contacts on cuba tracking east, cigar 272/60 cttn: 43548 jtn tm567 unknown
+11:34:52 <hydro_stk> rerank dx 43539, 43540 1. CEREAL (DENY ASR)+ZEUS11 / 2. CEREAL (DEN ASR)+YAMA 31 / 3. CEREAL (DENY ASR+ TLE) + OHIO / 4. CEREAL + MYSTIC 2 / 5. YAMA31
+11:35:07 <hydro_sl> DA003 MICHAEL MURPHY working Marley EA-37B south to support via NKE, sb additional effects
+11:36:51 <WF_Beep> space_sigint: tacrep c21 cttn 43548 jtn tm567 down ech comms to attack helos targeting friendly position mid-island on cuba prob south of cigar
+11:36:54 <hydro_sl> @FREEDOM/@SYDNEY can you confirm if you have any available weapons that can support potential protection of MICHAEL MURPHY, reported UAS SWARM your vicinity. working other effects, just looking to see what's immediately available in their area
+11:37:10 <hydro_surv> Match effectors for CTTN 43541: RANK 1) Thor 2) Hades
+11:37:33 <hydro_defense> @space ops c, type id TM562
+11:37:44 <WF_Beep> aoc_bcd:  @hydro HEADS UP can someone relay on hf to warn our battalion 11-4 about those inbound choppers? pls ack
+11:37:44 <hydro_sl> DA003 MARLEY ETA 1854Z, working fellow USN Vessels kinetic support close to Michael Murphy
+11:37:45 <WF_Chairman> Crossbow_SL: Picture clean in Paris BMA
+11:38:21 <WF_Shoresy> Space_ops: @hydro_defense Type Id high confidence it is a Destroyer, ref TM562
+11:39:10 <hydro_sl> @SPACE_DO: do you have any effectors w/ JARJAR, PHOTON, or  to target poss uplink/downlink of UAS SWARM bothering MICHAEL MURPHY at B/E 066/45
+11:39:10 <WF_Beep> afc_battlewatch: @hydro, tot for carrier cttn 43541 tm557 when able pls
+11:40:42 Omni has quit
+11:40:42 <hydro_defense> ref TM567  tgt by TR01
+11:40:41 <hydro_sl> working TOTs for 5G SAMs and CARRIER
+11:41:24 <hydro_sl> AOC_BCD: copy words passed SAHARA comm relay
+11:41:32 <WF_Shoresy> Space_do: @hydro_sl C JARJAR on station, standing by to engage  ref UAS SWARM B/E 066/45
+11:41:35 <White> Analysis_Center01 (Analysis Center): @Intel_Ops (Intelligence Operations Center) From 1220Z to 1225Z Radio emissions were detected IVO N21:30:54 W77:04:46 operating on high frequencies associated with CDCM ops in Paris BMA. UID DA016
+11:41:52 <hydro_stk> @cyber_ops, req CEREAL support to deny ASR for TM555/TM556, ZS11 to support kinetics, stby TOT
+11:41:53 <White> AOC_Ops (Air Operations Center): @hydro_surv (CRE) Locate those VHF comms IVO N21:30:54 W77:04:46 so we can continue with follow on actions. UID DA016
+11:41:58 <hydro_sl> SPACE_DO: req jam on UAS SWARM via JAR JAR while we coordinate other assets in vicinity please and thank yhou
+11:42:21 <White> Space_Ops (Space Operations Center): @AOC_Ops (Air Operations Center) OPIR is giving indications that 2x H6 bombers are preparing to launch from 21:04:10 N 087:09:30 W. UID DA069
+11:42:28 <WF_Shoresy> Cyber_ops: @hydro_stk C, stby TOT ref TM555/TM556
+11:42:40 <White> AOC_Ops (Air Operations Center): @Hydro_Strike (CRE) Who do we have that can intercept and prosecute the 2x H6s. UID DA069
+11:42:55 <WF_Shoresy> SPACE_DO: @hydro_sl C, engaging 
+11:43:22 <hydro_sl> @CROSSBOW, do you have any hotline comms / fiber / phone / sat direct to Battalion11-4 about inbound choppers?
+11:43:26 <Hydro_Tank> DA016 standby working 
+11:43:26 <hydro_sl> @CRUSHER: same question
+11:44:17 <WF_Beep> aoc_bcd: TIC a02 bt11, cigar 224/35, no jtac, on hf, req cas and intx helos
+11:44:19 <hydro_stk> @cyber ops, ref: CEREAL spt, ZEUS enter sam MRIR in approx 10m
+11:44:34 <Hydro_Tank> DA016 TM573 B/E 138/45
+11:44:56 <WF_Shoresy> cyber ops: @hydro_stk C, engaging in 10m
+11:45:56 <WF_Chairman> Crusher_SL: @Hydro_SL, negative comms with Battalion11-4
+11:46:11 <WF_Pilot2> @hydro, SAHARA, Battalion 11 17QQE 65156 04618
+11:46:24 <WF_Pilot2> unable comms... radios were shot 
+11:47:05 <hydro_stk> @cyber_ops, expect LRASM flight through MRIR from hades to TM557
+11:47:55 Omni has joined
+11:47:59 <hydro_sl> battalion 11-4 situation, multiple casualties, working CAS and package right now, will be shifting CAS/SEAD/ESCORT players to central CUBA to support // @AOC_COD: I assess this is the priority task in the AO, request JPRC monitor situation, may need RV assets immediately when we are able to achieve air superiority
+11:48:13 <WF_Beep> vegas_sl: copy bn11-4
+11:48:38 <WF_Shoresy> cyber_ops: @hydro_stk C, LRASM flight through
+11:48:43 <WF_Chairman> Crusher_SL: @Hydro_SL, advise if you require spt ref Batallion 11-4
+11:49:21 <hydro_sl> @Crusher, request your air to air and air to ground assets with th ebest playtime available right now to check in with HYDRO for tasking and to please reference 255/42
+11:50:34 <hydro_sl> @CRUSHER: please confirm you are not tracking any friendly helicopters below coordination altitude in central cuba ATT
+11:51:06 <WF_Chairman> Crusher_SL: @Hydro_SL, affirm negative friendlies IVO central cuba
+11:51:09 <Hydro_Tank> MR01 pushing KNIGHTS FWD
+11:51:52 <hydro_defense> @crusher ops request DN71/72 support escort MSTIC 21/23  TM574
+11:51:55 <WF_Chairman> Crusher_SL: @Hydro_SL, Dolphin71 and Pikachu81 coming to you 
+11:53:04 <hydro_sl> c dolphin71 and pkiachu81 thanks
+11:53:10 <hydro_surv> match effector rank for DA016: Rank 1) Vader 2) Pikachu71 3) firecracker
+11:54:02 <WF_Shoresy> cyber_ops: @hydro_stk engaging TM555/TM556 ETC 1m
+11:57:16 — 11:59:18 jarvis_monitor_molnar and Omni have quit
+12:00:25 <WF_Chairman> -----------------------END RACKNER RUN-----------------------
+12:03:26 <hydro_sl> .
+12:03:26 <hydro_sl> .
+12:03:25 <hydro_sl> .
+12:03:25 <hydro_sl> .
+12:03:25 <hydro_sl> .
+12:03:26 <hydro_sl> .
+12:03:27 <hydro_sl> .
+12:03:27 <hydro_sl> .
+12:03:28 <hydro_sl> .
+12:05:28 — 12:07:01 Omni and omni have joined, leidos_molnar and Omni have quit
+12:07:27 <omni> http://10.5.184.23:5173/
+12:07:35 <WF_Beep> ^^^url for omni tool
+12:07:42 — 12:08:46 molnar_leidos and omnibot-pae have joined, reaper-isu-bot has quit
+12:09:11 <WF_Beep> TEST:  TN 43824 - Prioritized Response: 1. Photon Platform: Space Defense Satellite 1, Payload: Space SIGINT 2. BOURNE01 Platform: RC135VW, Payload: SIGINT sensors 3. Wolf Platform: DCO Prime, Payload: Radio Listen
+12:11:02 <WF_Beep> --------------------TM-DASH 2 MEF run for Omni----------------------
+12:11:51 — 12:12:04 jarvis_monitor_molnar and WF_Sim have joined
+12:12:18 <hydro_sl> frag delta
+12:17:20 <hydro_defense> def, c frag delta and ready
+12:17:31 <hydro_surv> c frag delta, ready
+12:17:57 <hydro_sl> thanks
+12:20:35 <WF_Beep> vegas_sl: copy hydro on station, let me know when you have force acct for wynn thx
+12:20:38 <hydro_sl> wilco
+12:20:49 <hydro_sl> we have FA for Frag Delta
+12:21:06 <Hydro_Tank> .
+12:21:13 <Hydro_Tank> frag delta rdy
+12:21:20 <hydro_sl> ..
+12:23:20 <hydro_stk> .
+12:26:18 <hydro_sl> ficeON
+12:27:09 <WF_Shoresy> Intel_Ops (Intelligence Operations Center): @AOC_Ops (Air Operations Center) High confidence that an EW radar is located at 25:42:49 N 080:55:24 W.  UID DA328
+12:27:29 <hydro_surv> @Omni bot can you find sensors to ID TM555
+12:27:53 <hydro_stk> DA328 JTN TM556
+12:28:28 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_tank (CRE) Whats avaliable to disrupt the EW radar. ref 25:42:49 N 080:55:24 W UID DA328
+12:28:35 <hydro_defense> Defense working DA328
+12:28:43 <WF_Shoresy> NEPTUNE26 (SOF): @AOC_Ops (Air Operations Center) Large enemy contact, 4x armored transport, 2x heavy transport, 2x armor spotted at 21:35:29 N 077:49:40 W. Request support in Paris BMA. UID DA064
+12:28:56 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_def (CRE) find something to disable those vehicles ref NEPTUNE26 4x armored transport, 2x heavy transport, 2x armor spotted at 21:35:29 N 077:49:40 W in Paris BMA. UID DA064
+12:29:05 <WF_Beep> cjsotf: TIC a07, lynx 34, purple12/crimson57, cigar 004/141, ground forces and drones attacking, effective fires, 2 wia
+12:29:09 <WF_Shoresy> SWIFT01 (C-17): @AOC_Ops (Air Operations Center)  Group B/E 205/205NM  31k hostile heavy 4 contacts. Request immediate support! UID DA054
+12:29:21 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_def (CRE) Find someone to kill those contacts, ref SWIFT01. UID DA054
+12:29:47 <WF_Shoresy> Cyber_OPS (Cyber Operations Center) @AOC_Ops (Air Operations Center) Discovered network traffic with radar tracks IVO 29:46:09 N 081:28:41 W. UID DA033
+12:29:54 <hydro_stk> DA064 JTN TM557
+12:30:00 <hydro_stk> Stk working
+12:30:10 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_tank (CRE) What do we have available to take down that radar traffic, ref IVO 29:46:09 N 081:28:41 W . UID DA033
+12:30:18 <hydro_sl> @AOC_OPS: clean CIGAR 205/205 DA054
+12:30:40 <hydro_surv> Ref TM555 to ID have Sahara working, rank2 2 Wombat
+12:30:48 <Hydro_Tank> wkg DA033
+12:31:11 <hydro_defense> Hydro_Defense - DA328 EW RADAR SITE - Rank: 1. Light Platform: DCO Prime, Payload: Geolocation 2. Wolf Platform: DCO Prime, Payload: DDOS 3. Condor Platform: OCO Prime, Payload: DOS, ALL RANKS REQUIRE JFC APPROVAL
+12:32:01 <WF_Beep> space_sigint: aoc_intel possible adv aew radar, out of band but could be wartime reserve mode, working, ivo miami
+12:32:13 <WF_Beep> aoc_intel: c aew
+12:32:17 <WF_Shoresy> SWIFT01 (C-17): @AOC_Ops (Air Operations Center) UPDATE! Group B/E 240/160NM  31k hostile heavy 4 contacts. Request immediate support! UID DA054
+12:32:19 <hydro_sl> @JARHEAD: please confirm location
+12:32:31 <hydro_sl> contact 240/160, wkg
+12:33:17 <hydro_surv> @ Sahara, hydro still had you comming in broken, please provide information on E-tacrep in chat
+12:33:19 <WF_Beep> aoc_intel: space_sigint, we see the adv aew signal, but we're getting simultaneous signals that look like 5th gen air intx radars, do you see that?
+12:33:20 <Hydro_Tank> ref DA033 Hydro_Tank - EW RADAR COMMS - Prioritized Response: 1. Light Platform: DCO Prime, Payload: DDOS 1. Light Platform: DCO Prime, Payload: DDOS 2. Wolf Platform: DCO Prime, Payload: Geolocation 2. Wolf Platform: DCO Prime, Payload: Geolocation 3. Cereal Platform: OCO Prime, Payload: DOS 3. Cereal Platform: OCO Prime, Payload: DOS
+12:33:24 <hydro_sl> @Crusher, request air to air fighters your BMA to commit 3 grp VIC 235/153
+12:33:36 <hydro_sl> @Crusher ref DA054
+12:33:42 <hydro_surv> @sahara, hydro do you have ID on TM555?
+12:34:03 <hydro_defense> @CYBER, could we get Light, Wolf, condor, or cereal to support DA328?
+12:34:19 <hydro_sl> @AOC_OPS: copy DA054, showing contacts 185NM away from PARIS CAP locations, will commit at 100NM criteria trip
+12:34:23 <WF_Chairman> Crusher_SL: @Hydro_SL c, pikachu 82/83 committed
+12:34:53 <hydro_sl> ref DA054 PKACHU82/83 commit 3grp VIC
+12:35:14 <hydro_sl> @Crusher: c, will need more air to air weapons to prosecute 6x contacts, recommends shark
+12:35:17 <hydro_surv> E601 AEW TM555 3ghz
+12:35:28 <WF_Shoresy> Cyber_ops: @hydro_defense C, cereal on station, building standing by for TOT Ref DA328
+12:35:45 <WF_Beep> vegas_surv: @hydro_surv, copied adv aew, you working id matrix?
+12:35:51 <hydro_stk> DA064 1. JARHEAD Platform: USMC LRF Unit 2, Payload: ATACMS 2. RAINMAKER Platform: USMC LRF Unit 1, Payload: PrSM 3. SHARPSHOOTER Platform: Army Hypersonic Unit 2, Payload: S/S HW vB*
+12:36:45 <WF_Beep> space_ops: HEADS UP 5th gen sam active on bahamas in search mode, stby track
+12:36:58 <hydro_stk> @Crusher will any of the above^^ be able to support strike on TM557 enemy transport/armory
+12:37:38 <hydro_surv> @omni bot could you find effectors to destroy TM555?
+12:38:07 <Hydro_Tank> upd ref DA033 Hydro_Tank - COMMS NETWORK NODE - Prioritized Response: 1. Photon Platform: Space Defense Satellite 1, Payload: DRFM 2. Wolf Platform: DCO Prime, Payload: Radar denial 3. Cereal Platform: OCO Prime, Payload: System Denial
+12:38:09 <hydro_defense> @CYBER, affirm can you get CEREAL to support DA328
+12:38:20 <WF_Beep> aoc_bcd: @cjsotf update t!c a07, we have your team in the link cttn 2538, jtn tm570, BREAK @hydro any luck on cas?
+12:38:34 <WF_Chairman> Crusher_SL: Hydro_SL, affirm Sharks are in CAP, standing by. Their comms and link are intermittent
+12:39:06 <WF_Shoresy> Cyber_ops: @hydro_defense C, cereal msn built standing by for TOT ref DA328
+12:39:21 <WF_Chairman> Crusher_SL: @Hydro_strike, unable to spt TM557 att. Sby, may be able to support at a later time
+12:39:23 <hydro_defense> @OMNI disrupt enemy SAM TM557
+12:40:07 jarvis_monitor_molnar has quit
+12:40:52 <hydro_stk> stk, copy
+12:41:45 <WF_Beep> aoc_intel:  @hydro HEADS UP down ech comms from adv aew to unknown callsign with directions to attach friendlies on Bahamas
+12:41:52 <hydro_sl> c AOC_Intel
+12:42:01 <hydro_defense> @CYBER, can you get CEREAL to disrupt SAM TM557?
+12:42:50 <WF_Shoresy> Cyber_ops: @Hydro_defense  C  Task ASAP? ref TM557
+12:42:53 <hydro_stk> @SPACE, req GMTI/IMINT TM557
+12:42:57 <WF_Beep> afc_battlecab:  SINATRA DIRECTS SMACK cttn 43551 jtn tm574 adv aew cigar 353/189 asap
+12:43:39 <hydro_surv> @ defense I think you can use Mcccains tomahawks for the sam
+12:44:18 <hydro_sl> LRKC for enemy AEW pair wombat/sunny shot now
+12:44:19 <White> SPACE_OPS: @hydro_defense c, working TM557
+12:44:49 <WF_Beep> afc_battlecab: update aew cttn 59998 jtn ac002
+12:46:04 <hydro_sl> AC002 shots in the air, wgk
+12:46:34 <hydro_sl> AC002 timeout, showing intermittent tracks that can be jitter, sb1
+12:46:36 <hydro_surv> @omnibot find sensors to put on TM577 to get cat 2 location
+12:46:39 <hydro_defense> @SPACE, affirm TM557 priority 1 ASAP and TM556 priority 2
+12:47:19 <WF_Chairman> Crusher_SL: @Hydro_SL, request spt for Grp B/E 190/116 24k 4 ship reported bombers. We've lost voice comms.
+12:47:27 <hydro_stk> DA064 Rank 1, Floater11, Rank 2 Yama, Rank 3 Sharpshooter
+12:47:41 <hydro_surv> @space_ops can you get IMINT of TM577 B/E 005/120
+12:48:10 <hydro_stk> @space, req update gmti TM557
+12:49:45 <White> Cyber_OPS (Cyber Operations Center): @AOC_Ops (Air Operations Center) Network traffic shows local communications around 25:59:13 N 081:17:17 W.  UID DA026
+12:49:52 <WF_Beep> aoc_missile_desk:  @space_ops, can you get more info on that possilbe tbm uplink ivo havana?
+12:50:04 <WF_Beep> @space_ops: c tbm uplink working
+12:50:21 <White> AOC_Ops (Air Operations Center): @hydro_surv (CRE) Locate what buildings are in the area of 25:59:13 N 081:17:17 W. UID DA026
+12:50:42 <hydro_stk> @crusher req update sharpshooter availability DA064
+12:50:43 <WF_Shoresy> Space_ops: @hydro_surv TM557  cat 1 18QTJ0714790211, last known
+12:50:46 <WF_Chairman> Hydro_SL: Through chat relay, Grp B/E 176/123 24k hostile heavy 4 contacts print 4x H6
+12:50:53 <hydro_stk> @Space, stk copy
+12:51:17 <hydro_surv> @space_ops conffirm you are working TM577?
+12:51:23 <hydro_stk> DA026 Rank 1 floater11, rank 2 yamma, rank 3 sharpshooter if available
+12:51:30 <WF_Beep> aoc_missile_desk:  ALL PLAYERS HEADS UP deployed tbm launcher ivo havana confirmed up echelon comms ready to fire awating orders
+12:52:00 <White> "Space_Ops (Space Operations Center): @AOC_Ops (Air Operations Center) OPIR indicates GMTI of 3x trucks IVO 20:25:11 N 076:11:13 W, we cant tell who they are in Paris BMA. UID DA045"
+12:52:27 <White> AOC_Ops (Air Operations Center): @hydro_Surv (CRE) Find out who those trucks are and what theyre doing, ref 20:25:11 N 076:11:13 W. UID DA045
+12:52:27 <WF_Chairman> Hydro_SL: Grp B/E 179/117 24k hostile heavy 4 contacts print J-15s
+12:52:30 <WF_Beep> vegas_def: c tbm launcher ivo havana @hydro @taipan @hydro ack pls
+12:52:40 <WF_Shoresy> Space_ops: @hydro_suf  c, TM577 18QTM1514955265 cat 1
+12:52:44 <hydro_sl> c H-6s and J-15s
+12:53:12 <hydro_surv> @maritime_ops, working to get cat 2 location on TM577 req Mccain to use Tomahawks to destroy SAM
+12:53:28 <hydro_defense> @CYBER, could I get status on TM557 PRIORITY 1 and TM556 PRIORITY 2?
+12:54:00 <White> Floater09_OPS (USS McCain DDG): @Maritime_OPS (Maritime Operations Center) Initiated strike on target BE-169, 24 TLAMS launched, had an issue with 6 launch cells and unable to complete strike on C2 bunker at 28:08:42 N 081:04:31 W. UID DA042
+12:54:06 <hydro_sl> @Crusher: status engagements of J15s and H6s
+12:54:15 <WF_Shoresy> Cyber_ops: Hydro_defense, standing by for TOT ready to engage ref TM557 TM556
+12:54:25 <WF_Beep> aoc_missile_watch:  MISSILE LAUNCH *** MISSILE LAUNCH *** MISSILE LAUNCH *** launch point ivo havana, stby impact area estimate
+12:54:26 <White> Maritime_OPS (Maritime Operations Center): @Hydro_Strike (CRE) Task someone to pick up the slack for BE-169 at 28:08:42 N 081:04:31 W. UID DA042
+12:54:46 <WF_Beep> vegas_def: @hydro @taipan @crusher ack missile launch pls
+12:54:46 <hydro_stk> stk copies
+12:54:55 <WF_Chairman> Crusher_SL: Hydro_SL SHARK71 and PIKACHU81 flt are committed on the H6s/J15s
+12:55:15 <hydro_surv> @maritime_ops, TM577 is at 18QTM1514955265 cat 1, please have Mccain strike it as soon as possible
+12:55:24 <Hydro_Tank> AR chg: TR03 V+35 w/ RL35 for 10k, MO01 V+40 w/ RLMR01 for 10k, MO03 V+45 w/ RT55 for 15k
+12:56:06 <hydro_sl> @KRAIT req COVER TBM TRK 43564 2x contacts 
+12:56:08 <WF_Beep> aoc_missile_desk:  @vegas tbm impact area estimate 50nm circle centered at cigar 050/168
+12:56:26 <hydro_sl> trackin
+12:56:28 <WF_Chairman> Crusher_SL: Ack missile launch CTTN 43564/43565
+12:56:42 <WF_Chairman> Taipan_SL: Ack missile launch as well
+12:56:53 <WF_Pilot2> @hydro, ZUMWALT, 4x greyhounds away TM557
+12:56:55 <hydro_stk> DA042 JTN TM615
+12:57:02 <hydro_defense> @KRAIT, request immediate support 035/125
+12:57:03 <WF_Beep> krait_cic: c birds affirm cttn 43564
+12:57:14 <hydro_sl> @KRAIT Engage TBM TRK 43564 2x contacts
+12:57:15 <WF_Shoresy> Cyber_ops: Hydro_defense engaging TM557 TM556 ETC 1min  20min till effect lost
+12:57:29 <WF_Beep> krait_cic: birds away x2
+12:57:36 <WF_Chairman> KRAIT_Ops: @Hydro_SL, copy cover. Engaging 43564/43565
+12:57:45 <hydro_defense> c, TM557 and TM556
+12:58:00 reaper-isu-bot and reaper-mef-bot-dj-O-657 have joined
+12:58:11 <hydro_surv> @space_ops can you put sensors on 3x trucks IVO 20:25:11 N 076:11:13 W TM616?
+12:58:27 <hydro_sl> off station
+12:58:27 <WF_Chairman> Hydro_SL: Shark flight reporting splash 4x J-15s, Pikachu Flight reporting splash 4x H6s
+12:58:36 <hydro_sl> c splash tyvm!
+13:00:33 reaper-mef-bot-dj-O-657 has quit
+13:01:00 <WF_Chairman> -----------------------END OMNI RUN-----------------------
+13:13:44 — 15:55:27 IG has joined, WF_Pilot2 and Myabut have left, omnibot-pae, omni, RacknerPAEBot, Cooper, reaper-isu-bot, afrl-test-logger, JordanNP, Jordan, afrl-skuenneke, IG, molnar_leidos, cc, WF_Sim2, WF_Shoresy, WF_Chairman, WF_Chairman1, White, hydro_surv, hydro_stk, WF_Beep, hydro_sl, hydro_defense, Hydro_Tank, WF_Sim1 and wf_shields have quit
+07/31/2025
+08:27:39 — 08:43:47 WF_Beep, Myabut, jarvis_monitor_eric, leidos_eric and WF_Sim1 have joined, dyeee, jarvis_monitor_eric and leidos_eric have quit
+08:44:09 <WF_Sim1> .
+08:44:09 <WF_Sim1> .
+08:44:09 <WF_Sim1> .
+08:44:10 <WF_Sim1> .
+08:44:10 <WF_Sim1> .
+08:44:11 <WF_Sim1> .
+08:44:12 <WF_Sim1> .
+08:44:12 <WF_Sim1> .
+08:44:13 <WF_Sim1> .
+08:44:14 <WF_Sim1> .
+08:44:14 <WF_Sim1> .
+08:44:48 <Myabut> ..
+08:53:16 — 08:58:59 WF_Chairman1, leidos_molnar, WF_Sim, jarvis_monitor_molnar and jarvis_monitor_eric have joined, omni has quit
+09:01:19 <WF_Pilot2> .
+09:01:25 <WF_Sim> ..
+09:01:38 <WF_Beep> to load anduril tool:  https://embm-ext.anduril.com/c2/
+09:03:38 IG has quit
+09:03:56 <WF_Shoresy> .
+09:07:43 <WF_Beep> to log in at that url^^^ - user name:  abm@internal.local     password:  mefSHOC2025
+09:10:14 — 09:11:39 111 and IG have joined
+09:16:14 <WF_Beep> ---------------------------------TM-DASH 2 MEF run for Anduril----------------------------
+09:17:21 <hydro_sl> vegas_sl: good morning, glad to be back, good s/a and f/a on frag gulf. 
+09:18:31 <WF_Chairman> Vegas_SL: @Hydro_SL, Good morning to you too my American brother. Everything as fragged currently. Looking forward to todayy.
+09:19:54 <WF_Beep> vegas_sl: copy been a busy morning, we need y'all, stby updates
+09:20:38 <hydro_sl> ficeOn
+09:20:47 <WF_Beep> moc_watch: sitrep update adversary carrier strike group is operating in the florida transit shipping lane, still have multiple commercial vessels in the lane as well // commmarforgulflant confirms 2nd Battalion engaged on cuba, taking arty and attack helos, marine aviation moving into position to support
+09:21:09 <hydro_sl> c SITREP
+09:22:13 <WF_Shoresy> Cyber_OPS (Cyber Operations Center): @Intel_Ops (Intelligence Operations Center) Discovered plans to attack Hydro in network traffic originating from a possible C2 building at 22:28:47N 080:17:16W. UID DA032
+09:22:48 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_surv (CRE) Find something to locate where those plans originated from, we dont want them making more. Ref 22:28:47 N 080:17:16 W. UID DA032
+09:23:11 <WF_Shoresy> Floater02_OPS (MAYA DDG): @Maritime_OPS (Maritime Operations Center) Fast Assault Boats detected at 22:04:21.82 N 073:53:11.13 W, track east, spd 20 kts. UID DA132
+09:23:19 <WF_Beep> tacc_lead: @moc request cas for 4th platoon 2nd battalion, taking heavy fires, on back up comms, cigar 033/144, more to follow
+09:23:23 <WF_Shoresy> Maritime_OPS (Maritime Operations Center): @Hydro_Strike (CRE) Who do you have that can assist MAYA in destroying the fast boats? UID DA132
+09:23:40 <WF_Shoresy> Floater09_OPS (McCAIN DDG): @Maritime_OPS (Maritime Operations Center) 4xSM6 launched for track #L0032 from the panhandle to our NW track SE, presumed target Hydro. UID DA006
+09:23:57 <WF_Shoresy> Maritime_OPS (Maritime Operations Center): @hydro_def (CRE) What do you have to engage track #L0032 (TBM type 1)?  UID DA006
+09:24:09 <WF_Beep> aoc_bcd: @tacc c
+09:24:19 <WF_Shoresy> Ryker_OPS (Ryker AFB Wing Ops): @AOC_Ops (Air Operations Center) BANG02 (KC135) is RTB due to a hydraulic issue in Wynn BMA. UID DA008
+09:24:22 <Hydro_Tank> wkng DA006
+09:24:27 <WF_Shoresy> AOC_Ops (Air Operations Center): @hydro_tank (CRE) Can you rework the AR plan for the impacted receivers from BANG02? UID DA008
+09:25:06 <WF_Beep> aoc_bcd: TIC a12 4-2 Platoon, cigar 033/144, arty helo sm arms, on hf green12, request cas, comms relay, air support counter helo, HEADS UP friendly helos enroute
+09:25:37 <hydro_sl> good morning everyone, hydro copy DA132, DA032, DA006, DA008, the Bang01 situation in addition to DA008 // also looking to MEF CAS to support on-going CUBA ground force battle
+09:26:23 <WF_Beep> vegas_sl: c t!c a12, @hydro, let me know what options y'all can come up with for cas
+09:27:12 <Hydro_Tank> rank DA002 1. KRAIT / 2. Michael murphy / 3. Liberty / 4. Freedom
+09:27:47 <Hydro_Tank> @vegas_adafco + @AW, req cover trk L0032
+09:27:48 <hydro_sl> moving orca and bourne to HVAA fwd to provide layered sensor coverage for mult unknown surface tracks, HARPY to support DCA if req'd
+09:28:16 leidos_eric has joined
+09:28:23 <WF_Beep> aoc_bcd: update t!c a12 4-2 platoon location cigar 265/47
+09:29:06 <hydro_sl> @Crusher, showing track 43365 2x contacts look to be Helo profile, are you matching any available DCA to support the GFC?
+09:29:15 <hydro_sl> ^ 210/44 2x contacts
+09:29:40 <Hydro_Tank> working DA008
+09:29:44 <hydro_sl> Wombat moving HVAA south to provide low alt coverage
+09:30:20 dyeee has joined
+09:30:35 <WF_Beep> vegas_surv: @hydro_surv, do you have anything working the id's on the ships in the florida shipping lane?
+09:30:50 <hydro_sl> @Crusher: recommend dolphin or sunny for support 2x helos operating border of our BMAs 211/46
+09:30:52 <hydro_surv> Ref DA132 Rank 1. DOLPHIN AGM158 Rank 2. CROSSBOW ATACMS Rank 3. CYCLOPS AGM114
+09:31:01 <hydro_stk> de strike, CAS RANK, Rank 1. THOR Rank 2. CROSSBOW Rank 3. CYCLOPS 
+09:31:15 D_Bot has joined
+09:31:17 <hydro_sl> @Vegas_Surv: affirm we are working assets ORCA + BOURNE to categorize the surface picture west of cuba, HARPY DCA support as req'd
+09:31:18 <hydro_defense> ref DA032 match effector: 1) Cereal 2) Thor01
+09:31:24 dyeee has quit
+09:31:25 <WF_Chairman> Crusher_SL: Hydro_SL, affirm showing same working plan. We're passing friendly Apaches to the JTAC on the ground
+09:31:29 Dyeee has joined
+09:32:04 <WF_Beep> space_sigint: @aoc_sigint, we've got multiple hits on an enemy destroyer ttr active in calibration mode southeast of florida, working ellipse
+09:32:53 <WF_Beep> aoc_sigint: @space_sigint, copy looking at those isochrones, that looks like the new variant, am I reading that right?
+09:33:05 <WF_Beep> space_sigint: affirm
